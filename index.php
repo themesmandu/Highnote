@@ -1,75 +1,100 @@
 <?php
 /**
- * The main template file.
+ * The main template file
  *
  * This is the most generic template file in a WordPress theme
  * and one of the two required files for a theme (the other being style.css).
  * It is used to display a page when nothing more specific matches a query.
  * E.g., it puts together the home page when no home.php file exists.
- * Learn more: http://codex.wordpress.org/Template_Hierarchy
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
  * @package highnote
  */
 
-// Exit if accessed directly.
-defined( 'ABSPATH' ) || exit;
-
 get_header();
 
-$container = get_theme_mod( 'highnote_container_type' );
+/**
+ *
+ * Include a template part that displays a featured post.
+ */
+if ( is_home() ) {
+	get_template_part( 'template-parts/post/featured' );
+}
 ?>
 
-<?php if ( is_front_page() && is_home() ) : ?>
-	<?php get_template_part( 'global-templates/hero' ); ?>
-<?php endif; ?>
 
-<div class="wrapper" id="index-wrapper">
+<div class="container">
+	<div class="row">
 
-	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
+		<div id="primary" class="content-area<?php highnote_content_class(); ?>">
+		<main id="main" class="site-main" role="main">
 
-		<div class="row">
+	<?php
+	if ( have_posts() ) :
 
-			<!-- Do the left sidebar check and opens the primary div -->
-			<?php get_template_part( 'global-templates/left-sidebar-check' ); ?>
+		if ( is_home() && ! is_front_page() ) :
+			?>
+				<header>
+					<h1 class="page-title screen-reader-text">
+					<?php single_post_title(); ?>
+					</h1>
+				</header>
+			<?php
+			endif;
 
-			<main class="site-main" id="main">
+		if ( is_archive() ) :
+			?>
+				<header class="archive-header pb-4">
+				<?php
+					the_archive_title( '<h1 class="page-title">', '</h1>' );
+					the_archive_description( '<div class="archive-description">', '</div>' );
+				?>
+				</header>
+			<?php
+			endif;
 
-				<?php if ( have_posts() ) : ?>
+		/* Start the Loop */
+		while ( have_posts() ) :
+			the_post();
 
-					<?php /* Start the Loop */ ?>
+			/*
+			 * Include the Post-Type-specific template for the content.
+			 * If you want to override this in a child theme, then include a file
+			 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
+			 */
+			get_template_part( 'template-parts/content', get_post_type() );
 
-					<?php while ( have_posts() ) : the_post(); ?>
+			// If comments are open or we have at least one comment, load up the comment template.
+			if ( comments_open() || get_comments_number() ) :
+				comments_template();
+				endif;
 
-						<?php
+			endwhile;
 
-						/*
-						 * Include the Post-Format-specific template for the content.
-						 * If you want to override this in a child theme, then include a file
-						 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-						 */
-						get_template_part( 'loop-templates/content', get_post_format() );
-						?>
+		if ( get_theme_mod( 'blog_pagination_mode' ) === 'numeric' ) {
+			the_posts_pagination();
+		} else {
+			the_posts_navigation();
+		}
 
-					<?php endwhile; ?>
+		else :
 
-				<?php else : ?>
+			get_template_part( 'template-parts/content', 'none' );
 
-					<?php get_template_part( 'loop-templates/content', 'none' ); ?>
+		endif;
+		?>
 
-				<?php endif; ?>
+		</main>
+		</div><!-- #primary -->
 
-			</main><!-- #main -->
+<?php
+	/* Get Sidebar #secondary */
+	get_sidebar();
+?>
 
-			<!-- The pagination component -->
-			<?php highnote_pagination(); ?>
+	</div><!-- /.row -->
+</div><!-- /.container -->
 
-			<!-- Do the right sidebar check -->
-			<?php get_template_part( 'global-templates/right-sidebar-check' ); ?>
-
-		</div><!-- .row -->
-
-	</div><!-- #content -->
-
-</div><!-- #index-wrapper -->
-
-<?php get_footer(); ?>
+<?php
+get_footer();

@@ -1,57 +1,50 @@
 <?php
 /**
- * The template for displaying all pages.
+ * The template for displaying all pages
  *
  * This is the template that displays all pages by default.
  * Please note that this is the WordPress construct of pages
- * and that other 'pages' on your WordPress site will use a
+ * and that other 'pages' on your WordPress site may use a
  * different template.
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
  * @package highnote
  */
 
-// Exit if accessed directly.
-defined( 'ABSPATH' ) || exit;
-
 get_header();
-
-$container = get_theme_mod( 'highnote_container_type' );
-
 ?>
 
-<div class="wrapper" id="page-wrapper">
+<div class="container">
+	<div class="row">
 
-	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
+	<div id="primary" class="content-area<?php highnote_content_class(); ?>">
+		<main id="main" class="site-main">
 
-		<div class="row">
+		<?php
+		while ( have_posts() ) :
+			the_post();
 
-			<!-- Do the left sidebar check -->
-			<?php get_template_part( 'global-templates/left-sidebar-check' ); ?>
+			get_template_part( 'template-parts/content', 'page' );
 
-			<main class="site-main" id="main">
+			// If comments are open or we have at least one comment, load up the comment template.
+			if ( comments_open() || get_comments_number() ) :
+				comments_template();
+			endif;
 
-				<?php while ( have_posts() ) : the_post(); ?>
+		endwhile; // End of the loop.
+		?>
 
-					<?php get_template_part( 'loop-templates/content', 'page' ); ?>
+		</main><!-- #main -->
+	</div><!-- #primary -->
 
-					<?php
-					// If comments are open or we have at least one comment, load up the comment template.
-					if ( comments_open() || get_comments_number() ) :
-						comments_template();
-					endif;
-					?>
+<?php
+/* Get Sidebar #secondary */
+get_sidebar();
+?>
 
-				<?php endwhile; // end of the loop. ?>
+	</div><!-- /.row -->
+</div><!-- /.container -->
 
-			</main><!-- #main -->
-
-			<!-- Do the right sidebar check -->
-			<?php get_template_part( 'global-templates/right-sidebar-check' ); ?>
-
-		</div><!-- .row -->
-
-	</div><!-- #content -->
-
-</div><!-- #page-wrapper -->
-
-<?php get_footer(); ?>
+<?php
+get_footer();
