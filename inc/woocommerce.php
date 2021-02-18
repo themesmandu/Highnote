@@ -1,227 +1,163 @@
 <?php
 /**
- * WooCommerce Compatibility File
+ * Add WooCommerce support
  *
- * @link https://woocommerce.com/
- *
- * @package Highnote
+ * @package highnote
  */
 
-/**
- * WooCommerce setup function.
- *
- * @link https://docs.woocommerce.com/document/third-party-custom-theme-compatibility/
- * @link https://github.com/woocommerce/woocommerce/wiki/Enabling-product-gallery-features-(zoom,-swipe,-lightbox)
- * @link https://github.com/woocommerce/woocommerce/wiki/Declaring-WooCommerce-support-in-themes
- *
- * @return void
- */
-function highnote_woocommerce_setup() {
-	add_theme_support(
-		'woocommerce',
-		array(
-			'thumbnail_image_width' => 150,
-			'single_image_width'    => 300,
-			'product_grid'          => array(
-				'default_rows'    => 3,
-				'min_rows'        => 1,
-				'default_columns' => 4,
-				'min_columns'     => 1,
-				'max_columns'     => 6,
-			),
-		)
-	);
-	add_theme_support( 'wc-product-gallery-zoom' );
-	add_theme_support( 'wc-product-gallery-lightbox' );
-	add_theme_support( 'wc-product-gallery-slider' );
+// Exit if accessed directly.
+defined( 'ABSPATH' ) || exit;
+
+add_action( 'after_setup_theme', 'highnote_woocommerce_support' );
+if ( ! function_exists( 'highnote_woocommerce_support' ) ) {
+	/**
+	 * Declares WooCommerce theme support.
+	 */
+	function highnote_woocommerce_support() {
+		add_theme_support( 'woocommerce' );
+
+		// Add New Woocommerce 3.0.0 Product Gallery support.
+		add_theme_support( 'wc-product-gallery-lightbox' );
+		add_theme_support( 'wc-product-gallery-zoom' );
+		add_theme_support( 'wc-product-gallery-slider' );
+
+		// hook in and customizer form fields.
+		add_filter( 'woocommerce_form_field_args', 'highnote_wc_form_field_args', 10, 3 );
+	}
 }
-add_action( 'after_setup_theme', 'highnote_woocommerce_setup' );
 
 /**
- * WooCommerce specific scripts & stylesheets.
- *
- * @return void
- */
-function highnote_woocommerce_scripts() {
-	wp_enqueue_style( 'highnote-woocommerce-style', get_template_directory_uri() . '/woocommerce.css', array(), _S_VERSION );
-
-	$font_path   = WC()->plugin_url() . '/assets/fonts/';
-	$inline_font = '@font-face {
-			font-family: "star";
-			src: url("' . $font_path . 'star.eot");
-			src: url("' . $font_path . 'star.eot?#iefix") format("embedded-opentype"),
-				url("' . $font_path . 'star.woff") format("woff"),
-				url("' . $font_path . 'star.ttf") format("truetype"),
-				url("' . $font_path . 'star.svg#star") format("svg");
-			font-weight: normal;
-			font-style: normal;
-		}';
-
-	wp_add_inline_style( 'highnote-woocommerce-style', $inline_font );
-}
-add_action( 'wp_enqueue_scripts', 'highnote_woocommerce_scripts' );
-
-/**
- * Disable the default WooCommerce stylesheet.
- *
- * Removing the default WooCommerce stylesheet and enqueing your own will
- * protect you during WooCommerce core updates.
- *
- * @link https://docs.woocommerce.com/document/disable-the-default-stylesheet/
- */
-add_filter( 'woocommerce_enqueue_styles', '__return_empty_array' );
-
-/**
- * Add 'woocommerce-active' class to the body tag.
- *
- * @param  array $classes CSS classes applied to the body tag.
- * @return array $classes modified to include 'woocommerce-active' class.
- */
-function highnote_woocommerce_active_body_class( $classes ) {
-	$classes[] = 'woocommerce-active';
-
-	return $classes;
-}
-add_filter( 'body_class', 'highnote_woocommerce_active_body_class' );
-
-/**
- * Related Products Args.
- *
- * @param array $args related products args.
- * @return array $args related products args.
- */
-function highnote_woocommerce_related_products_args( $args ) {
-	$defaults = array(
-		'posts_per_page' => 3,
-		'columns'        => 3,
-	);
-
-	$args = wp_parse_args( $defaults, $args );
-
-	return $args;
-}
-add_filter( 'woocommerce_output_related_products_args', 'highnote_woocommerce_related_products_args' );
-
-/**
- * Remove default WooCommerce wrapper.
+ * First unhook the WooCommerce wrappers
  */
 remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10 );
 remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10 );
 
-if ( ! function_exists( 'highnote_woocommerce_wrapper_before' ) ) {
-	/**
-	 * Before Content.
-	 *
-	 * Wraps all WooCommerce content in wrappers which match the theme markup.
-	 *
-	 * @return void
-	 */
-	function highnote_woocommerce_wrapper_before() {
-		?>
-			<main id="primary" class="site-main">
-		<?php
+/**
+ * Then hook in your own functions to display the wrappers your theme requires
+ */
+add_action( 'woocommerce_before_main_content', 'highnote_woocommerce_wrapper_start', 10 );
+add_action( 'woocommerce_after_main_content', 'highnote_woocommerce_wrapper_end', 10 );
+if ( ! function_exists( 'highnote_woocommerce_wrapper_start' ) ) {
+	function highnote_woocommerce_wrapper_start() {
+		$container = get_theme_mod( 'highnote_container_type' );
+		echo '<div class="wrapper" id="woocommerce-wrapper">';
+		echo '<div class="' . esc_attr( $container ) . '" id="content" tabindex="-1">';
+		echo '<div class="row">';
+		get_template_part( 'global-templates/left-sidebar-check' );
+		echo '<main class="site-main" id="main">';
 	}
 }
-add_action( 'woocommerce_before_main_content', 'highnote_woocommerce_wrapper_before' );
+if ( ! function_exists( 'highnote_woocommerce_wrapper_end' ) ) {
+	function highnote_woocommerce_wrapper_end() {
+		echo '</main><!-- #main -->';
+		get_template_part( 'global-templates/right-sidebar-check' );
+		echo '</div><!-- .row -->';
+		echo '</div><!-- Container end -->';
+		echo '</div><!-- Wrapper end -->';
+	}
+}
 
-if ( ! function_exists( 'highnote_woocommerce_wrapper_after' ) ) {
-	/**
-	 * After Content.
-	 *
-	 * Closes the wrapping divs.
-	 *
-	 * @return void
-	 */
-	function highnote_woocommerce_wrapper_after() {
-		?>
-			</main><!-- #main -->
-		<?php
-	}
-}
-add_action( 'woocommerce_after_main_content', 'highnote_woocommerce_wrapper_after' );
 
 /**
- * Sample implementation of the WooCommerce Mini Cart.
+ * Filter hook function monkey patching form classes
+ * Author: Adriano Monecchi http://stackoverflow.com/a/36724593/307826
  *
- * You can add the WooCommerce Mini Cart to header.php like so ...
+ * @param string $args Form attributes.
+ * @param string $key Not in use.
+ * @param null   $value Not in use.
  *
-	<?php
-		if ( function_exists( 'highnote_woocommerce_header_cart' ) ) {
-			highnote_woocommerce_header_cart();
-		}
-	?>
+ * @return mixed
  */
-
-if ( ! function_exists( 'highnote_woocommerce_cart_link_fragment' ) ) {
-	/**
-	 * Cart Fragments.
-	 *
-	 * Ensure cart contents update when products are added to the cart via AJAX.
-	 *
-	 * @param array $fragments Fragments to refresh via AJAX.
-	 * @return array Fragments to refresh via AJAX.
-	 */
-	function highnote_woocommerce_cart_link_fragment( $fragments ) {
-		ob_start();
-		highnote_woocommerce_cart_link();
-		$fragments['a.cart-contents'] = ob_get_clean();
-
-		return $fragments;
-	}
-}
-add_filter( 'woocommerce_add_to_cart_fragments', 'highnote_woocommerce_cart_link_fragment' );
-
-if ( ! function_exists( 'highnote_woocommerce_cart_link' ) ) {
-	/**
-	 * Cart Link.
-	 *
-	 * Displayed a link to the cart including the number of items present and the cart total.
-	 *
-	 * @return void
-	 */
-	function highnote_woocommerce_cart_link() {
-		?>
-		<a class="cart-contents" href="<?php echo esc_url( wc_get_cart_url() ); ?>" title="<?php esc_attr_e( 'View your shopping cart', 'highnote' ); ?>">
-			<?php
-			$item_count_text = sprintf(
-				/* translators: number of items in the mini cart. */
-				_n( '%d item', '%d items', WC()->cart->get_cart_contents_count(), 'highnote' ),
-				WC()->cart->get_cart_contents_count()
-			);
-			?>
-			<span class="amount"><?php echo wp_kses_data( WC()->cart->get_cart_subtotal() ); ?></span> <span class="count"><?php echo esc_html( $item_count_text ); ?></span>
-		</a>
-		<?php
-	}
-}
-
-if ( ! function_exists( 'highnote_woocommerce_header_cart' ) ) {
-	/**
-	 * Display Header Cart.
-	 *
-	 * @return void
-	 */
-	function highnote_woocommerce_header_cart() {
-		if ( is_cart() ) {
-			$class = 'current-menu-item';
-		} else {
-			$class = '';
-		}
-		?>
-		<ul id="site-header-cart" class="site-header-cart">
-			<li class="<?php echo esc_attr( $class ); ?>">
-				<?php highnote_woocommerce_cart_link(); ?>
-			</li>
-			<li>
-				<?php
-				$instance = array(
-					'title' => '',
+if ( ! function_exists( 'highnote_wc_form_field_args' ) ) {
+	function highnote_wc_form_field_args( $args, $key, $value = null ) {
+		// Start field type switch case.
+		switch ( $args['type'] ) {
+			/* Targets all select input type elements, except the country and state select input types */
+			case 'select':
+				// Add a class to the field's html element wrapper - woocommerce
+				// input types (fields) are often wrapped within a <p></p> tag.
+				$args['class'][] = 'form-group';
+				// Add a class to the form input itself.
+				$args['input_class']       = array( 'form-control', 'input-lg' );
+				$args['label_class']       = array( 'control-label' );
+				$args['custom_attributes'] = array(
+					'data-plugin'      => 'select2',
+					'data-allow-clear' => 'true',
+					'aria-hidden'      => 'true',
+					// Add custom data attributes to the form input itself.
 				);
+				break;
+			// By default WooCommerce will populate a select with the country names - $args
+			// defined for this specific input type targets only the country select element.
+			case 'country':
+				$args['class'][]     = 'form-group single-country';
+				$args['label_class'] = array( 'control-label' );
+				break;
+			// By default WooCommerce will populate a select with state names - $args defined
+			// for this specific input type targets only the country select element.
+			case 'state':
+				// Add class to the field's html element wrapper.
+				$args['class'][] = 'form-group';
+				// add class to the form input itself.
+				$args['input_class']       = array( '', 'input-lg' );
+				$args['label_class']       = array( 'control-label' );
+				$args['custom_attributes'] = array(
+					'data-plugin'      => 'select2',
+					'data-allow-clear' => 'true',
+					'aria-hidden'      => 'true',
+				);
+				break;
+			case 'password':
+			case 'text':
+			case 'email':
+			case 'tel':
+			case 'number':
+				$args['class'][]     = 'form-group';
+				$args['input_class'] = array( 'form-control', 'input-lg' );
+				$args['label_class'] = array( 'control-label' );
+				break;
+			case 'textarea':
+				$args['input_class'] = array( 'form-control', 'input-lg' );
+				$args['label_class'] = array( 'control-label' );
+				break;
+			case 'checkbox':
+				$args['label_class'] = array( 'custom-control custom-checkbox' );
+				$args['input_class'] = array( 'custom-control-input', 'input-lg' );
+				break;
+			case 'radio':
+				$args['label_class'] = array( 'custom-control custom-radio' );
+				$args['input_class'] = array( 'custom-control-input', 'input-lg' );
+				break;
+			default:
+				$args['class'][]     = 'form-group';
+				$args['input_class'] = array( 'form-control', 'input-lg' );
+				$args['label_class'] = array( 'control-label' );
+				break;
+		} // end switch ($args).
+		return $args;
+	}
+}
 
-				the_widget( 'WC_Widget_Cart', $instance );
-				?>
-			</li>
-		</ul>
-		<?php
+if ( ! is_admin() && ! function_exists( 'wc_review_ratings_enabled' ) ) {
+	/**
+	 * Check if reviews are enabled.
+	 *
+	 * Function introduced in WooCommerce 3.6.0., include it for backward compatibility.
+	 *
+	 * @return bool
+	 */
+	function wc_reviews_enabled() {
+		return 'yes' === get_option( 'woocommerce_enable_reviews' );
+	}
+
+	/**
+	 * Check if reviews ratings are enabled.
+	 *
+	 * Function introduced in WooCommerce 3.6.0., include it for backward compatibility.
+	 *
+	 * @return bool
+	 */
+	function wc_review_ratings_enabled() {
+		return wc_reviews_enabled() && 'yes' === get_option( 'woocommerce_enable_review_rating' );
 	}
 }
