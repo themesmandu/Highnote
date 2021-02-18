@@ -57,7 +57,7 @@ $container = get_theme_mod( 'highnote_container_type' );
 						</dl>
 					<?php endif; ?>
 
-					<h2><?php echo esc_html( 'Posts by', 'highnote' ) . ' ' . esc_html( $curauth->nickname ); ?>:</h2>
+					<h2><?php echo esc_html__( 'Posts by', 'highnote' ) . ' ' . esc_html( $curauth->nickname ); ?>:</h2>
 
 				</header><!-- .page-header -->
 
@@ -65,7 +65,10 @@ $container = get_theme_mod( 'highnote_container_type' );
 
 					<!-- The Loop -->
 					<?php if ( have_posts() ) : ?>
-						<?php while ( have_posts() ) : the_post(); ?>
+						<?php
+						while ( have_posts() ) :
+							the_post();
+							?>
 							<li>
 								<?php
 								printf(
