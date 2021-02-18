@@ -164,6 +164,12 @@ function highnote_scripts() {
 	// Loading main stylesheet.
 	wp_enqueue_style( 'main-css', get_theme_file_uri( '/assets/css/main.css' ), array( 'highnote-style' ), wp_get_theme()->get( 'Version' ) );
 
+	// Loading navbar menu stylesheet.
+	wp_enqueue_style( 'menu-css', get_theme_file_uri( '/assets/css/menu.css' ), array( 'highnote-style' ), wp_get_theme()->get( 'Version' ) );
+
+	// Loading mediascreen stylesheet.
+	wp_enqueue_style( 'mediascreen-css', get_theme_file_uri( '/assets/css/mediascreen.css' ), array( 'highnote-style' ), wp_get_theme()->get( 'Version' ) );
+
 	// Add font-awesome fonts, used in the main stylesheet.
 	wp_enqueue_style( 'highnote-font-awesome', get_theme_file_uri( '/assets/font-awesome-5.7.2/css/all.css' ), array( 'highnote-style' ), '5.7.2' );
 

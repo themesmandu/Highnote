@@ -1,0 +1,183 @@
+/* -- Main Navigation Styles -- */
+
+.main-navigation {
+    padding: 15px 0;
+    z-index: 9;
+}
+
+.main-navigation.fixed {
+    position: fixed;
+    top: 15px;
+    right: 0;
+    left: 0;
+    z-index: 9;
+    transition: .2s ease-in;
+}
+
+.main-navigation.fixed {
+    top: -70px;
+    transform: translate3d(0, 70px, 0);
+}
+
+.nav-search .navbar-nav {
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+
+/* -- Menu Dropdown Styles -- */
+
+.main-navigation .sub-menu {
+    display: block;
+    margin: 0;
+    padding: 15px 0 0;
+    border: none;
+    background-color: transparent;
+    width: 200px;
+    left: unset;
+    position: absolute;
+    top: 100%;
+    right: 9999rem;
+    opacity: 0;
+    animation: fadeInUp .2s ease-in;
+    transform: translateY(10px);
+    text-align: right;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.04);
+}
+
+.main-navigation .menu-item-has-children {
+    position: relative;
+}
+
+.main-navigation .sub-menu .menu-item .nav-link {
+    font-weight: 300;
+    background-color: #212121;
+    color: #ffffff;
+    padding: 10px 14px;
+    white-space: unset;
+    border-bottom: 1px solid rgba(123, 181, 25, 0.1);
+}
+
+@media (min-width: 1200px) {
+    .menu-item-has-children>a::after {
+        content: "\f078";
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        font-size: 9px;
+        color: #212121;
+        margin: 3px 0 0 8px;
+        vertical-align: text-top;
+        display: inline-block;
+        cursor: pointer;
+    }
+    .sub-menu .menu-item-has-children>a::after {
+        content: "\f053";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 15px;
+        color: #ffffff;
+        display: flex;
+        align-items: center;
+        margin: 0;
+    }
+    .main-navigation ul li:hover>ul {
+        right: 0;
+        opacity: 1;
+        transform: translateY(0);
+        transition: transform 0.15s;
+        padding: 0;
+    }
+    .main-navigation ul ul li:hover>ul {
+        top: 0;
+        right: 100%;
+        padding-right: 1px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .main-navigation .menu-item-has-children {
+        padding-right: 20px;
+    }
+    .main-navigation .sub-menu .menu-item-has-children {
+        padding-right: 0;
+    }
+    .caret {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .main-navigation .sub-menu .caret {
+        right: unset;
+        left: 10px;
+        top: 0;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+    }
+    .caret::before {
+        content: "\f078";
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        font-size: 10px;
+        color: #212121;
+        vertical-align: text-top;
+        display: inline-block;
+        cursor: pointer;
+        padding: 12px 8px;
+    }
+    .sub-menu .caret::before {
+        content: "\f053";
+        color: #ffffff;
+    }
+    .main-navigation ul li.menu-open>ul {
+        right: 0;
+        opacity: 1;
+        transform: translateY(0);
+        transition: transform 0.15s;
+        padding: 0;
+    }
+    .main-navigation ul ul li.menu-open>ul {
+        top: 0;
+        right: 100%;
+        padding-right: 1px;
+    }
+}
+
+@media (max-width: 991px) {
+    .main-navigation .menu-item-has-children {
+        padding: 0;
+    }
+    .main-navigation .sub-menu {
+        text-align: left;
+    }
+    .main-navigation .sub-menu .caret {
+        bottom: unset;
+        left: unset;
+        right: 0;
+    }
+    .sub-menu .caret::before {
+        content: "\f078";
+    }
+    .main-navigation ul li.menu-open>ul,
+    .main-navigation ul ul li.menu-open>ul {
+        position: unset;
+        width: auto;
+        padding: 0 0 0 22px;
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(10px);
+        -ms-transform: translateY(10px);
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
