@@ -20,6 +20,8 @@ if ( get_theme_mod( 'sidebar_position' ) === 'right' ) {
 }
 ?>
 
-<aside id="secondary" class="widget-area col-md-4 <?php echo esc_attr( $highnote_sidebar_order ); ?>">		
+<aside id="sidebar" class="widget-area col-lg-4 <?php echo esc_attr( $beatsmandu_sidebar_order ); ?>">
+	<div class="sidebar">
 		<?php dynamic_sidebar( 'sidebar-1' ); ?>
+	</div>
 </aside>
