@@ -11,9 +11,9 @@
 ?>
 <?php if ( get_theme_mod( 'mainmenu_dropdown_mode' ) !== 'bootstrap' ) { ?>
 
-	<nav class="navbar navbar-expand-lg main-navigation appear-left<?php echo esc_attr( ( get_theme_mod( 'menubar_absolute' ) ) ? ' above-navbar' : '' ); ?>">
+	<nav class="navbar navbar-expand-lg main-navigation appear-left<?php echo esc_attr( ( get_theme_mod( 'menubar_absolute' ) ) ? ' navbar-above' : '' ); ?>">
 	<?php } else { ?>
-		<nav class="navbar navbar-expand-lg main-navigation<?php echo esc_attr( ( get_theme_mod( 'menubar_absolute' ) ) ? ' above-navbar' : '' ); ?>">
+		<nav class="navbar navbar-expand-lg main-navigation<?php echo esc_attr( ( get_theme_mod( 'menubar_absolute' ) ) ? ' navbar-above' : '' ); ?>">
 		<?php } ?>
 		<div class="container">
 			<?php if ( ! has_custom_logo() ) { ?>

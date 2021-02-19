@@ -7,15 +7,15 @@ jQuery(document).ready(function($) {
         });
     });
 
-    // Add class in navigation bar
-    $(window).scroll(function() {
-        var height = $(window).scrollTop();
-        if (height > 100) {
-            $('.main-navigation').addClass('fixed');
-        } else {
-            $('.main-navigation').removeClass('fixed');
-        }
-    });
+    // // Add class in navigation bar
+    // $(window).scroll(function() {
+    //     var height = $(window).scrollTop();
+    //     if (height > 100) {
+    //         $('.main-navigation').addClass('fixed');
+    //     } else {
+    //         $('.main-navigation').removeClass('fixed');
+    //     }
+    // });
 
     // Added class on dropdown menu span
     if ($(document).width() < 1200) {

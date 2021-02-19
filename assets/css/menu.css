@@ -7,15 +7,11 @@
 
 .main-navigation.fixed {
     position: fixed;
-    top: 15px;
+    top: -70px;
     right: 0;
     left: 0;
     z-index: 9;
     transition: .2s ease-in;
-}
-
-.main-navigation.fixed {
-    top: -70px;
     transform: translate3d(0, 70px, 0);
 }
 
@@ -28,6 +24,18 @@
     font-size: 14px;
     outline-offset: -2px;
     outline-color: #ffffff;
+}
+
+
+/* -- Nabbar Above Content Styles -- */
+
+.main-navigation.navbar-above {
+    position: fixed;
+    max-width: 1920px;
+    top: 0;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
 }
 
 
