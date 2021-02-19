@@ -590,6 +590,16 @@ function highnote_customize_register( $wp_customize ) {
 }
 add_action( 'customize_register', 'highnote_customize_register' );
 
+if ( class_exists( 'Kirki' ) ) {
+
+	/**
+	* Header banner section.
+	*/
+	require get_template_directory() . '/inc/customizer/sections/head-banner-section.php';
+}
+
+
+
 /**
  * Render the site title for the selective refresh partial.
  *

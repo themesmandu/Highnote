@@ -23,25 +23,10 @@ if ( empty( $heading ) && empty( $subheading ) && empty( $bg_img ) && empty( $bt
 }
 ?>
 
-<section class="jumbotron text-center"
-<?php
-if ( ! empty( $bg_img ) ) {
-	echo ' style="background: url(' . esc_url( $img_url ) . ');"';}
-?>
->
+<section class="jumbotron text-center">
 	<div class="container">
-		<h1 class="jumbotron-heading
-		<?php
-		if ( ! empty( $bg_img ) ) {
-			echo ' text-white';}
-		?>
-		"><?php echo esc_html( $heading ); ?></h1>
-		<p class="lead
-		<?php
-		if ( ! empty( $bg_img ) ) {
-			echo ' text-white';}
-		?>
-		"><?php echo esc_html( $subheading ); ?></p>
+		<h1 class="jumbotron-heading"><?php echo esc_html( $heading ); ?></h1>
+		<p class="paragraph"><?php echo esc_html( $subheading ); ?></p>
 
 	<?php if ( ! empty( $btn_label ) ) { ?>
 		<p>

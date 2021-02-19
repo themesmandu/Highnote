@@ -36,3 +36,11 @@ if ( defined( 'JETPACK__VERSION' ) ) {
  * Include tgm required plaugins functionality.
  */
 require get_template_directory() . '/inc/tgm-plugin/tgm-required-plugins.php';
+
+
+if ( class_exists( 'Kirki' ) ) {
+	/**
+	 * Kirki configs.
+	 */
+	require get_template_directory() . '/inc/kirki-config.php';
+}
