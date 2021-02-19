@@ -153,10 +153,10 @@ add_action( 'widgets_init', 'highnote_widgets_init' );
 function highnote_scripts() {
 
 	// Bootstrap reboot styles.
-	wp_enqueue_style( 'highnote-bootstrap-reboot', get_template_directory_uri() . '/vendor/bootstrap-src/css/bootstrap-reboot.min.css', array( 'highnote-style' ), '4.1.2' );
+	wp_enqueue_style( 'highnote-bootstrap-reboot', get_template_directory_uri() . '/vendor/bootstrap-src/css/bootstrap-reboot.min.css', array( 'highnote-style' ), '5.0.0' );
 
 	// Bootstrap styles.
-	wp_enqueue_style( 'highnote-bootstrap', get_template_directory_uri() . '/vendor/bootstrap-src/css/bootstrap.min.css', array( 'highnote-style' ), '4.1.2' );
+	wp_enqueue_style( 'highnote-bootstrap', get_template_directory_uri() . '/vendor/bootstrap-src/css/bootstrap.min.css', array( 'highnote-style' ), '5.0.0' );
 
 	// Theme styles.
 	wp_enqueue_style( 'highnote-style', get_stylesheet_uri(), array(), wp_get_theme()->get( 'Version' ) );
@@ -175,8 +175,7 @@ function highnote_scripts() {
 
 	// Bootstrap core JavaScript: jQuery first, then Popper.js, then Bootstrap JS.
 	wp_enqueue_script( 'jquery' );
-	wp_enqueue_script( 'highnote-popper', get_template_directory_uri() . '/vendor/bootstrap-src/js/popper.min.js', array(), '1.14.3', true );
-	wp_enqueue_script( 'highnote-bootstrap', get_template_directory_uri() . '/vendor/bootstrap-src/js/bootstrap.min.js', array(), '4.1.2', true );
+	wp_enqueue_script( 'highnote-bootstrap', get_template_directory_uri() . '/vendor/bootstrap-src/js/bootstrap.bundle.min.js', array(), '5.0.0', true );
 
 	// Theme added JavaScript: Added by Developers.
 	wp_enqueue_script( 'highnote-basic', get_template_directory_uri() . '/assets/js/basic.js', array(), wp_get_theme()->get( 'Version' ), true );
