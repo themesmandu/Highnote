@@ -1,12 +1,10 @@
-@import "dropdown.css";
-
 /* -- All Basic Styles Of Theme -- */
 
 html,
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Nunito', sans-serif;
+    font-family: "Nunito", sans-serif;
     font-size: 16px;
     line-height: 1.5;
     word-break: break-word;
@@ -19,7 +17,7 @@ body {
 
 a {
     color: #27b0ff;
-    transition: .3s;
+    transition: 0.3s;
 }
 
 a:link {
@@ -65,13 +63,13 @@ label {
 input,
 textarea,
 select,
-.comment-respond input[type=text],
-.comment-respond input[type=email],
+.comment-respond input[type="text"],
+.comment-respond input[type="email"],
 .comment-respond .comment-form-comment textarea {
     font-size: 15px;
     color: #777777;
     outline: none;
-    border: 1px solid rgba(0, 0, 0, .14);
+    border: 1px solid rgba(0, 0, 0, 0.14);
     width: 100%;
     padding: 12px 15px;
 }
@@ -85,16 +83,16 @@ input[type="submit"] {
     padding: 15px 25px;
     line-height: 1;
     text-transform: uppercase;
-    transition: .3s;
+    transition: 0.3s;
 }
 
 input[type="submit"]:hover,
-div.wpcf7 input[type=reset]:hover {
+div.wpcf7 input[type="reset"]:hover {
     background: #e4be1a;
 }
 
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
@@ -110,14 +108,14 @@ blockquote {
 }
 
 blockquote:before {
-    font-family: 'Font Awesome\ 5 Free';
+    font-family: "Font Awesome\ 5 Free";
     content: "\f10d";
     font-size: 52px;
     font-weight: 900;
     margin-right: 10px;
     position: absolute;
     color: #1e4b8e;
-    opacity: .2;
+    opacity: 0.2;
 }
 
 blockquote p {
@@ -154,30 +152,4 @@ table caption {
 .navbar-expand-lg>.container,
 .navbar-expand-lg>.container-fluid {
     padding: 0 15px;
-}
-
-
-/* -- Main Navigation Styles -- */
-
-.main-navigation {
-    padding: 15px 0;
-    z-index: 9;
-}
-
-.main-navigation.fixed {
-    position: fixed;
-    top: 15px;
-    right: 0;
-    left: 0;
-    z-index: 9;
-    transition: all 0.3s;
-}
-
-.main-navigation.fixed {
-    top: -70px;
-    transform: translate3d(0, 70px, 0);
-}
-
-.nav-search .navbar-nav {
-    margin: auto;
 }
