@@ -31,6 +31,11 @@ require get_template_directory() . '/inc/customizer/defaults.php';
 require get_template_directory() . '/inc/helpers.php';
 
 /**
+ * Dynamic styles.
+ */
+require get_template_directory() . '/inc/dynamic-styles.php';
+
+/**
  * Customizer additions.
  */
 require get_template_directory() . '/inc/customizer.php';

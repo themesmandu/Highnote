@@ -180,6 +180,11 @@ function highnote_scripts() {
 	// Theme added JavaScript: Added by Developers.
 	wp_enqueue_script( 'highnote-basic', get_template_directory_uri() . '/assets/js/basic.js', array(), wp_get_theme()->get( 'Version' ), true );
 
+	if ( is_front_page() && ! is_home() && get_theme_mod( 'slider_toggle' ) ) {
+		// jQuery of custom image slider
+		wp_enqueue_script( 'slider-script-js', get_theme_file_uri( '/assets/js/wizslider.js' ), array(), wp_get_theme()->get( 'Version' ), true );
+	}
+
 	// Font Nunito And Advent Pro
 	wp_enqueue_style( 'highnote-custom-google-fonts', 'https://fonts.googleapis.com/css?family=Advent+Pro:400,600,700|Nunito:400,600,700&display=swap', false );
 
