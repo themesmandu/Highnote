@@ -596,6 +596,11 @@ if ( class_exists( 'Kirki' ) ) {
 	* Header banner section.
 	*/
 	require get_template_directory() . '/inc/customizer/sections/head-banner-section.php';
+
+	/**
+	* Header slider section.
+	*/
+	require get_template_directory() . '/inc/customizer/sections/head-slider-section.php';
 }
 
 
