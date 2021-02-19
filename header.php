@@ -39,11 +39,12 @@
 			// Header Image.
 			the_custom_header_markup();
 
-			if ( is_front_page() && ! is_home() ) {
+			if ( is_front_page() && ! is_home() && get_theme_mod( 'banner_toggle' ) ) {
 				// head banner on the front page if it enabled.
 				get_template_part( 'template-parts/jumbotron' );
 			}
 			?>
+			<?php get_template_part( 'template-parts/slider/custom-slider' ); ?>
 
 		</header><!-- #masthead -->
 

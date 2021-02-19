@@ -21,6 +21,16 @@ require get_template_directory() . '/inc/template-tags.php';
 require get_template_directory() . '/inc/template-functions.php';
 
 /**
+ * Customizer defaults.
+ */
+require get_template_directory() . '/inc/customizer/defaults.php';
+
+/**
+ * Helper functions.
+ */
+require get_template_directory() . '/inc/helpers.php';
+
+/**
  * Customizer additions.
  */
 require get_template_directory() . '/inc/customizer.php';
@@ -31,3 +41,17 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
+
+/**
+ * Include tgm required plaugins functionality.
+ */
+require get_template_directory() . '/inc/tgm-plugin/tgm-required-plugins.php';
+
+
+if ( class_exists( 'Kirki' ) ) {
+	/**
+	 * Kirki configs.
+	 */
+	require get_template_directory() . '/inc/kirki-config.php';
+}
+
