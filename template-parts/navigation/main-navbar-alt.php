@@ -9,26 +9,26 @@
  */
 
 ?>
-<?php if ( get_theme_mod( 'mainmenu_dropdown_mode' ) !== 'bootstrap' ) { ?>
+<?php if (get_theme_mod('mainmenu_dropdown_mode') !== 'bootstrap') { ?>
 
-	<nav class="navbar navbar-expand-lg main-navigation nav-search appear-left<?php echo esc_attr( ( get_theme_mod( 'menubar_absolute' ) ) ? ' navbar-above' : '' ); ?><?php echo esc_attr( ( get_theme_mod( 'mainmenu_style' ) === 'fixed' ) ? ' navbar-fixed' : '' ); ?>">
+	<nav class="navbar navbar-expand-lg main-navigation nav-search appear-left<?php echo esc_attr((get_theme_mod('menubar_absolute')) ? ' navbar-above' : ''); ?><?php echo esc_attr((get_theme_mod('mainmenu_style') === 'fixed') ? ' navbar-fixed' : ''); ?>">
 	<?php } else { ?>
-		<nav class="navbar navbar-expand-lg main-navigation nav-search<?php echo esc_attr( ( get_theme_mod( 'menubar_absolute' ) ) ? ' navbar-above' : '' ); ?><?php echo esc_attr( ( get_theme_mod( 'mainmenu_style' ) === 'fixed' ) ? ' navbar-fixed' : '' ); ?>">
+		<nav class="navbar navbar-expand-lg main-navigation nav-search<?php echo esc_attr((get_theme_mod('menubar_absolute')) ? ' navbar-above' : ''); ?><?php echo esc_attr((get_theme_mod('mainmenu_style') === 'fixed') ? ' navbar-fixed' : ''); ?>">
 		<?php } ?>
 		<div class="container">
 			<?php
-			if ( ! has_custom_logo() ) {
-				if ( is_front_page() && is_home() ) :
-					?>
+			if (!has_custom_logo()) {
+				if (is_front_page() && is_home()) :
+			?>
 
-					<h1 class="navbar-brand mb-0"><a rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url"><?php bloginfo( 'name' ); ?></a></h1>
-					<?php
+					<h1 class="navbar-brand mb-0"><a rel="home" href="<?php echo esc_url(home_url('/')); ?>" title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>" itemprop="url"><?php bloginfo('name'); ?></a></h1>
+				<?php
 				else :
-					?>
+				?>
 
-					<a class="navbar-brand" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url"><?php bloginfo( 'name' ); ?></a>
+					<a class="navbar-brand" rel="home" href="<?php echo esc_url(home_url('/')); ?>" title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>" itemprop="url"><?php bloginfo('name'); ?></a>
 
-					<?php
+			<?php
 				endif;
 			} else {
 				the_custom_logo();
@@ -36,6 +36,7 @@
 			?>
 
 			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="screen-reader-text">Menu</span>
 				<div class="navbar-toggler-icon">
 					<span></span>
 					<span></span>
@@ -60,7 +61,7 @@
 			?>
 
 			<?php
-			get_template_part( 'template-parts/navigation/add-item', 'search-form' );
+			get_template_part('template-parts/navigation/add-item', 'search-form');
 			?>
 
 

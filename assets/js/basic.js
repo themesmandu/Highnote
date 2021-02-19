@@ -7,18 +7,18 @@ jQuery(document).ready(function($) {
         });
     });
 
-    // // Add class in navigation bar
-    // $(window).scroll(function() {
-    //     var height = $(window).scrollTop();
-    //     if (height > 100) {
-    //         $('.main-navigation').addClass('fixed');
-    //     } else {
-    //         $('.main-navigation').removeClass('fixed');
-    //     }
-    // });
+    // Add class in navigation bar
+    $(window).scroll(function() {
+        var height = $(window).scrollTop();
+        if (height > 100) {
+            $('.navbar-fixed').addClass('fixed-top');
+        } else {
+            $('.navbar-fixed').removeClass('fixed-top');
+        }
+    });
 
     // Added class on dropdown menu span
-    if ($(document).width() < 1200) {
+    if ($(document).width() <= 1200) {
         $('.menu-item-has-children').append('<span class="caret"></span>');
 
         $('.caret').click(function() {
@@ -33,14 +33,16 @@ jQuery(document).ready(function($) {
     }
 
     // Menu show and hide in focus attributes
-    if ($(document).width() > 0) {
-        $('.menu-item-has-children').children().focusin(function() {
-            $(this).parent().addClass('focus');
-        });
+    $('.menu-item-has-children').children().focusin(function() {
+        $(this).parent().addClass('focus');
+    });
 
-        $('.menu-item-has-children').children().focusout(function() {
-            $(this).parent().removeClass('focus');
-        });
+    $('.menu-item-has-children').children().focusout(function() {
+        $(this).parent().removeClass('focus');
+    });
+
+    if ($(document).width() <= 991) {
+        $('#navbarCollapse').prepend('<button class="navbar-toggler close collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation"><span class="screen-reader-text">Menu</span><div class="navbar-toggler-icon"><span></span><span></span><span></span></div></button>');
     }
 
     // To top Java Script
@@ -55,47 +57,46 @@ jQuery(document).ready(function($) {
     $('#up-btn').click(function() {
         $('html, body').animate({ scrollTop: 0 }, 1000);
     });
-});
+    // Traping menu in smallscreen on focus
+    function screenFunction(medScreen) {
+        if (medScreen.matches) {
 
-// Traping menu in smallscreen on focus
-function screenFunction(medScreen) {
-    if (medScreen.matches) {
+            const focusableElements =
+                'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
+            const modal = document.querySelector('#navbarCollapse');
 
-        const focusableElements =
-            'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
-        const modal = document.querySelector('#navbarCollapse');
-
-        const firstFocusableElement = modal.querySelectorAll(focusableElements)[0];
-        const focusableContent = modal.querySelectorAll(focusableElements);
-        const lastFocusableElement = focusableContent[focusableContent.length - 1];
+            const firstFocusableElement = modal.querySelectorAll(focusableElements)[0];
+            const focusableContent = modal.querySelectorAll(focusableElements);
+            const lastFocusableElement = focusableContent[focusableContent.length - 1];
 
 
-        document.addEventListener('keydown', function(e) {
-            let isTabPressed = e.key === 'Tab' || e.keyCode === 9;
+            document.addEventListener('keydown', function(e) {
+                let isTabPressed = e.key === 'Tab' || e.keyCode === 9;
 
-            if (!isTabPressed) {
+                if (!isTabPressed) {
 
-            }
-
-            if (e.shiftKey) {
-                if (document.activeElement === firstFocusableElement) {
-                    lastFocusableElement.focus();
-                    e.preventDefault();
                 }
-            } else {
-                if (document.activeElement === lastFocusableElement) {
-                    firstFocusableElement.focus();
-                    e.preventDefault();
-                }
-            }
-        });
 
-        firstFocusableElement.focus();
-    } else {
-        return;
+                if (e.shiftKey) {
+                    if (document.activeElement === firstFocusableElement) {
+                        lastFocusableElement.focus();
+                        e.preventDefault();
+                    }
+                } else {
+                    if (document.activeElement === lastFocusableElement) {
+                        firstFocusableElement.focus();
+                        e.preventDefault();
+                    }
+                }
+            });
+
+            firstFocusableElement.focus();
+        } else {
+            return;
+        }
     }
-}
 
-var medScreen = window.matchMedia("(max-width: 991px)")
-screenFunction(medScreen)
-medScreen.addListener(screenFunction)
+    var medScreen = window.matchMedia("(max-width: 991px)")
+    screenFunction(medScreen)
+    medScreen.addListener(screenFunction)
+});

@@ -10,7 +10,7 @@
 
 ?>
 
-<form class="form my-2 my-md-0 d-lg-inline" method="get" id="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>" role="search">
+<form class="form my-2 my-md-0 d-none d-lg-inline" method="get" id="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>" role="search">
 <label class="assistive-text screen-reader-text" for="s">
 	<?php esc_html_e( 'Search', 'highnote' ); ?>
 </label>

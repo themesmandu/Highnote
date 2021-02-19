@@ -97,7 +97,7 @@ Kirki::add_field(
 	array(
 		'type'     => 'radio-buttonset',
 		'settings' => 'mainmenu_style',
-		'label'    => esc_html__( 'Main Menu: Style', 'highnote' ),
+		'label'    => esc_html__( 'Main Menu: Style (On Scroll)', 'highnote' ),
 		'section'  => 'general_options',
 		'default'  => 'regular',
 		'choices'  => array(
