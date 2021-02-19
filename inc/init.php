@@ -31,3 +31,8 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
+
+/**
+ * Include tgm required plaugins functionality.
+ */
+require get_template_directory() . '/inc/tgm-plugin/tgm-required-plugins.php';
