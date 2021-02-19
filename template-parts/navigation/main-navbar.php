@@ -48,7 +48,7 @@
 				array(
 					'theme_location'  => 'primary',
 					'container'       => 'div',
-					'container_id'    => 'navbarmenus',
+					'container_id'    => 'navbarCollapse',
 					'container_class' => 'collapse navbar-collapse justify-content-end',
 					'menu_id'         => false,
 					'depth'           => 8,
