@@ -58,26 +58,4 @@ function highnote_header_background_css() {
 add_action( 'wp_head', 'highnote_header_background_css' );
 
 
-/**
- * Output generated a line of CSS from customizer values in header output.
- *
- * @link https://codex.wordpress.org/Theme_Customization_API#Sample_Theme_Customization_Class
- *
- * Used by hook: 'wp_head'
- *
- * @see add_action('wp_head',$func)
- */
-function highnote_main_menu_css() {
-	?>
-<!--main menu CSS-->
-
-<style type="text/css">
-	<?php if ( get_theme_mod( 'mainmenu_style' ) === 'fixed' ) : ?>
-		.main-navigation {max-width: 1920px;transition: all 0.3s;}.main-navigation.fixed {position: fixed;}
-	<?php endif; ?>
-
-</style>
-	<?php
-}
-add_action( 'wp_head', 'highnote_main_menu_css' );
 
