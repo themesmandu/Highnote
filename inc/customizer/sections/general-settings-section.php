@@ -64,6 +64,17 @@ Kirki::add_field(
 	)
 );
 
+Kirki::add_field(
+	'highnote_kirki_config',
+	array(
+		'type'     => 'toggle',
+		'settings' => 'menubar_absolute',
+		'label'    => esc_html__( 'Main Menu Bar Above Content', 'highnote' ),
+		'section'  => 'general_options',
+		'default'  => '0',
+	)
+);
+
 
 
 Kirki::add_field(

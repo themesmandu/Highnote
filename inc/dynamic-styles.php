@@ -76,11 +76,6 @@ function highnote_main_menu_css() {
 		.main-navigation {max-width: 1920px;transition: all 0.3s;}.main-navigation.fixed {position: fixed;}
 	<?php endif; ?>
 
-
-
-	<?php if ( is_front_page() && get_theme_mod( 'banner_toggle' ) || get_theme_mod( 'slider_toggle' ) ) : ?>
-		.main-navigation {position: absolute;}
-	<?php endif; ?>
 </style>
 	<?php
 }
