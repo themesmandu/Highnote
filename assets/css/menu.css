@@ -177,6 +177,23 @@
 }
 
 @media (max-width: 991px) {
+    body.page-overlay,
+    body.page-overlay #page {
+        overflow: hidden;
+    }
+    body.page-overlay #page::after {
+        content: '';
+        position: fixed;
+        background: rgba(255, 255, 255, 0);
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+    body.page-overlay #content,
+    body.page-overlay #footer {
+        filter: blur(4px);
+    }
     /* -- Navnar Collapse Hamburger Menu Animation Styles -- */
     .navbar-toggler {
         padding: 5px 0;
@@ -215,15 +232,15 @@
     .navbar-toggler-icon span:nth-child(3) {
         top: 14px;
     }
-    .navbar-toggler[aria-expanded="true"][aria-expanded="true"] .navbar-toggler-icon span:nth-child(1) {
+    #navbarCollapse .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon span:nth-child(1) {
         top: 11px;
         transform: rotate(135deg);
     }
-    .navbar-toggler[aria-expanded="true"][aria-expanded="true"] .navbar-toggler-icon span:nth-child(2) {
+    #navbarCollapse .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon span:nth-child(2) {
         opacity: 0;
         left: -60px;
     }
-    .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon span:nth-child(3) {
+    #navbarCollapse .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon span:nth-child(3) {
         top: 11px;
         transform: rotate(-135deg);
     }
@@ -270,6 +287,26 @@
         padding-right: 26px;
     }
     /* -- Navbar Apear From Left -- */
+    .navbar.appear-left .navbar-toggler[aria-expanded="true"] {
+        filter: blur(4px);
+        pointer-events: none;
+    }
+    #navbarCollapse .navbar-toggler[aria-expanded="true"] {
+        filter: unset;
+        pointer-events: unset;
+    }
+    .navbar.navbar.appear-left .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon span:nth-child(1) {
+        top: 11px;
+        transform: rotate(135deg);
+    }
+    .navbar.navbar.appear-left .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon span:nth-child(2) {
+        opacity: 0;
+        left: -60px;
+    }
+    .navbar.navbar.appear-left .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon span:nth-child(3) {
+        top: 11px;
+        transform: rotate(-135deg);
+    }
     .navbar.appear-left .navbar-collapse {
         background-color: #212121;
         overflow-y: auto;
