@@ -300,12 +300,38 @@ function highnote_customize_register( $wp_customize ) {
 		)
 	);
 
-
 	// END Options.
 }
 add_action( 'customize_register', 'highnote_customize_register' );
 
 if ( class_exists( 'Kirki' ) ) {
+
+	/**
+	 *
+	 * Add Panel Typography Settings
+	 */
+	Kirki::add_panel(
+		'typography_options',
+		array(
+			'priority' => 190,
+			'title'    => esc_html__( 'Typography', 'highnote' ),
+		)
+	);
+
+	/**
+	* Typography general section.
+	*/
+	require get_template_directory() . '/inc/customizer/sections/typography-general-section.php';
+
+	/**
+	* Typography headings section.
+	*/
+	require get_template_directory() . '/inc/customizer/sections/typography-headings-section.php';
+
+	/**
+	* Typography slider and banner section.
+	*/
+	require get_template_directory() . '/inc/customizer/sections/typography-slider-banner.php';
 
 	/**
 	* Header banner section.
