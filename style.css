@@ -213,6 +213,7 @@ figcaption,
     border-radius: 0;
     border: 1px solid #ffffff;
     border-right: none;
+    z-index: 99;
     transition: all .3s;
     transform: translate3d(100px, 0, 0);
 }
@@ -258,5 +259,75 @@ figcaption,
     100% {
         right: -13px;
         opacity: 0;
+    }
+}
+
+
+/* -- Animation Fade Up -- */
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* -- Animation Slide From Top -- */
+
+@keyframes viewFromTop {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, -30px, 0);
+    }
+    100% {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+
+/* -- Animation Slide From Bottom -- */
+
+@keyframes viewFromBottom {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, 300px, 0);
+    }
+    100% {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+
+/* -- Animation Slide From Left -- */
+
+@keyframes viewFromLeft {
+    0% {
+        opacity: 0;
+        transform: translate3d(-300px, 0, 0);
+    }
+    100% {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+
+/* -- Animation Slide From Right -- */
+
+@keyframes viewFromRight {
+    0% {
+        opacity: 0;
+        transform: translate3d(300px, 0, 0);
+    }
+    100% {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
     }
 }

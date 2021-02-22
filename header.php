@@ -24,7 +24,7 @@
 	<div id="page" class="site">
 		<header id="top-header" class="site-header" role="banner">
 			<?php if ( get_theme_mod( 'skip_to_content_toggle' ) ) : ?>
-			<a class="skip-link" href="#content"><?php esc_html_e( 'To the content', 'highnote' ); ?></a>
+			<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'To the content', 'highnote' ); ?></a>
 			<?php endif; ?>
 
 			<?php

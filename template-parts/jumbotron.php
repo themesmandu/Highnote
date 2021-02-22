@@ -23,17 +23,22 @@ if ( empty( $heading ) && empty( $subheading ) && empty( $bg_img ) && empty( $bt
 }
 ?>
 
-<section class="jumbotron text-center">
+<section class="jumbotron text-center header_jumbotron">
 	<div class="container">
-		<h1 class="jumbotron-heading"><?php echo esc_html( $heading ); ?></h1>
-		<p class="paragraph"><?php echo esc_html( $subheading ); ?></p>
+		<div class="content">
+			<h1 class="beats-heading from-left">
+				<?php echo esc_html( $heading ); ?>
+			</h1>
 
-	<?php if ( ! empty( $btn_label ) ) { ?>
-		<p>
-			<a href="<?php echo esc_url( $btn_link ); ?>" class="btn btn-primary">
-			<?php echo esc_html( $btn_label ); ?>
+			<p class="paragraph from-right">
+				<?php echo esc_html( $subheading ); ?>
+			</p>
+
+			<?php if ( ! empty( $btn_label ) ) { ?>
+			<a href="<?php echo esc_url( $btn_link ); ?>" class="btn btn-beats from-top">
+				<?php echo esc_html( $btn_label ); ?>
 			</a>
-		</p>
-	<?php } ?>
+			<?php } ?>
+		</div>
 	</div>
 </section>
