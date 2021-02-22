@@ -191,3 +191,15 @@ function highnote_front_page( $template ) {
 	return is_home() ? '' : $template;
 }
 add_filter( 'frontpage_template', 'highnote_front_page' );
+
+/**
+ * Adds nav-link class on menu.
+ *
+ * @param array $classes Classes for the menu items.
+ * @return array
+ */
+function highnote_add_classes_on_link_attributes( $classes ) {
+	$classes['class'] = 'nav-link';
+	return $classes;
+}
+add_filter( 'nav_menu_link_attributes', 'highnote_add_classes_on_link_attributes' );
