@@ -6,6 +6,7 @@
  */
 
 ?>
+<?php if ( get_theme_mod( 'testimonial_title' ) || get_theme_mod( 'testimonial_desc' ) ) : ?>
 <section class="section_review section_six">
 	<div class="overlay"></div>
 	<div class="container">
@@ -21,14 +22,11 @@
 		</div>
 		<?php endif; ?>
 		<?php
-		if ( get_theme_mod( 'testimonial_shortcode' ) ) :
-			echo do_shortcode( get_theme_mod( 'testimonial_shortcode' ) );
-		else :
 			$active_tesimonials = get_theme_mod( 'testimonials' );
-			if ( $active_tesimonials ) {
-				?>
+		if ( $active_tesimonials ) {
+			?>
 		<div class="testimonialslide">
-				<?php foreach ( $active_tesimonials as $key => $active_tesimonial ) : ?>
+			<?php foreach ( $active_tesimonials as $key => $active_tesimonial ) : ?>
 			<div class="test_slide">
 					<?php if ( $active_tesimonial['image'] ) : ?>
 				<img src="<?php echo esc_url( wp_get_attachment_url( $active_tesimonial['image'] ) ); ?>" alt="<?php echo esc_html__( 'Testinomial Image', 'highnote' ); ?>">
@@ -50,6 +48,6 @@
 			<?php endforeach; ?>
 		</div>
 		<?php } ?>
-		<?php endif; ?>
 	</div>
 </section>
+<?php endif; ?>

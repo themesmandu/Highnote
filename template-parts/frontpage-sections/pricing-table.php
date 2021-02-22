@@ -15,6 +15,7 @@ if (!get_theme_mod('pricing_table_shortcode')) :
 endif;
 
 ?>
+<?php if ( get_theme_mod( 'pricing_table_title' ) || get_theme_mod( 'pricing_table_desc' ) ) : ?>
 <section class="section_licensing section_three">
 	<div class="overlay"></div>
 	<div class="container <?php echo esc_html(!get_theme_mod('pricing_table_shortcode') ? $container_class : ''); ?> ">
@@ -71,6 +72,7 @@ endif;
 			<?php } ?>
 		<?php endif; ?>
 
+<<<<<<< HEAD
 		<?php
 		$active_tables_two = get_theme_mod('pricing_tables_two');
 		if ($active_tables_two) {
@@ -106,6 +108,26 @@ endif;
 									</ul>
 								<?php endif; ?>
 							</div>
+=======
+	<?php
+	$active_tables_two = get_theme_mod( 'pricing_tables_two' );
+	if ( $active_tables_two ) {
+		?>
+		<div class="row custom_beat_row">
+		<?php foreach ( $active_tables_two as $key => $active_table_two ) : ?>
+			<?php $table_currency_two = '<span class="currency">' . $active_table_two['table_currency'] . '</span>'; ?>
+			<div class="col-lg-6 column">
+				<div class="column-wrap">
+					<div class="header-wrap">
+					<?php if ( $active_table_two['table_title'] || $active_table_two['table_subtitle'] ) : ?>
+						<div class="heading">
+						<?php if ( $active_table_two['table_title'] ) : ?>
+							<h4 class="type"><?php echo esc_html( $active_table_two['table_title'] ); ?></h4>
+							<?php endif; ?>
+							<?php if ( $active_table_two['table_subtitle'] ) : ?>
+							<p class="description"><?php echo esc_html( $active_table_two['table_subtitle'] ); ?></p>
+							<?php endif; ?>
+>>>>>>> c9df8aa2be6815db96d7a1055b1863ff35e6778e
 						</div>
 					</div>
 				<?php endforeach; ?>
@@ -114,6 +136,7 @@ endif;
 		<?php } ?>
 	</div>
 </section>
+<<<<<<< HEAD
 
 <?php if (get_theme_mod('pricing_table_shortcode')) : ?>
 	<script>
@@ -123,3 +146,6 @@ endif;
 		jQuery('.rpt_recommended_plan').parent().addClass('premium-row');
 	</script>
 <?php endif; ?>
+=======
+<?php endif; ?>
+>>>>>>> c9df8aa2be6815db96d7a1055b1863ff35e6778e

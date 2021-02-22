@@ -6,6 +6,7 @@
  * @package Beatsmandu
  */
 ?>
+<?php if ( get_theme_mod( 'faqs_title' ) || get_theme_mod( 'faqs_subtitle' ) || get_theme_mod( 'faqs_desc' ) ) : ?>
 <section class="section_faqs section_four">
 	<div class="overlay"></div>
 	<div class="container">
@@ -45,4 +46,9 @@
 			<?php }; ?>
 		</div>
 	</div>
+<<<<<<< HEAD
 </section>
+=======
+</section>
+<?php endif; ?>
+>>>>>>> c9df8aa2be6815db96d7a1055b1863ff35e6778e
