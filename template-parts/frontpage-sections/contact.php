@@ -6,6 +6,7 @@
  */
 
 ?>
+<?php if ( get_theme_mod( 'contact_title' ) || get_theme_mod( 'contact_desc' ) ) : ?>
 <section class="section_contact section_seven">
 	<div class="overlay"></div>
 	<div class="container">
@@ -26,3 +27,4 @@
 		?>
 	</div>
 </section>
+<?php endif; ?>

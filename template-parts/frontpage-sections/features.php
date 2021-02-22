@@ -5,17 +5,14 @@
  * @package Beatsmandu
  */
 
-?>
+$active_features = get_theme_mod( 'front_features' );
+if ( $active_features ) {
+	?>
 <section class="section_features section_two">
 	<div class="overlay"></div>
 	<div class="container">
-		<?php
-			$active_features = get_theme_mod( 'front_features' );
-
-		if ( $active_features ) {
-			?>
 		<div class="row">
-			<?php foreach ( $active_features as $key => $active_feature ) : ?>
+	<?php foreach ( $active_features as $key => $active_feature ) : ?>
 			<div class="col-lg-4 column <?php echo esc_attr( $active_feature['feature_highlight'] ? 'selected' : '' ); ?>">
 				<div class="column-content">
 					<?php if ( $active_feature['feature_icon'] ) : ?>
@@ -35,6 +32,6 @@
 			</div>
 			<?php endforeach; ?>
 		</div>
-		<?php } ?>
 	</div>
 </section>
+<?php } ?>

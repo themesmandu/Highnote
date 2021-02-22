@@ -14,6 +14,7 @@ if ( ! get_theme_mod( 'pricing_table_shortcode' ) ) :
 endif;
 
 ?>
+<?php if ( get_theme_mod( 'pricing_table_title' ) || get_theme_mod( 'pricing_table_desc' ) ) : ?>
 <section class="section_licensing section_three">
 	<div class="overlay"></div>
 	<div class="container <?php echo esc_html( ! get_theme_mod( 'pricing_table_shortcode' ) ? $container_class : '' ); ?> ">
@@ -72,10 +73,10 @@ endif;
 		<?php } ?>
 		<?php endif; ?>
 
-<?php
-$active_tables_two = get_theme_mod( 'pricing_tables_two' );
-if ( $active_tables_two ) {
-	?>
+	<?php
+	$active_tables_two = get_theme_mod( 'pricing_tables_two' );
+	if ( $active_tables_two ) {
+		?>
 		<div class="row custom_beat_row">
 		<?php foreach ( $active_tables_two as $key => $active_table_two ) : ?>
 			<?php $table_currency_two = '<span class="currency">' . $active_table_two['table_currency'] . '</span>'; ?>
@@ -115,12 +116,4 @@ if ( $active_tables_two ) {
 		<?php } ?>
 	</div>
 </section>
-
-<?php if ( get_theme_mod( 'pricing_table_shortcode' ) ) : ?>
-<script>
-// Add class row in price plugin
-
-jQuery("#rpt_pricr div").first().addClass('row');
-jQuery('.rpt_recommended_plan').parent().addClass('premium-row');
-</script>
 <?php endif; ?>
