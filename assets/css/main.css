@@ -10,6 +10,12 @@ body {
     word-break: break-word;
 }
 
+
+/* ====== Theme Hader Styles ====== */
+
+
+/* ====== Theme Body Content Styles ====== */
+
 #page {
     max-width: 1920px;
     margin: 0 auto;
@@ -34,11 +40,17 @@ a:hover {
     text-decoration: none;
 }
 
+
+/* -- Paragraph -- */
+
 p {
     font-size: 17px;
     color: #282b30;
     line-height: 1.8;
 }
+
+
+/* -- Image Styles -- */
 
 figure,
 img,
@@ -47,10 +59,33 @@ iframe {
     object-fit: cover;
 }
 
-ul {
-    padding: 0;
-    list-style-type: none;
+
+/* -- List Styles -- */
+
+ul,
+ol {
+    list-style-type: square;
+    color: #777777;
+    margin: 20px 0 10px
 }
+
+ol {
+    list-style-type: decimal;
+}
+
+ul ul,
+ol ol,
+ol ul,
+ul ol {
+    margin: 10px 0 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+
+/* -- Form Styles -- */
 
 label {
     font-size: 14px;
@@ -62,10 +97,7 @@ label {
 
 input,
 textarea,
-select,
-.comment-respond input[type="text"],
-.comment-respond input[type="email"],
-.comment-respond .comment-form-comment textarea {
+select {
     font-size: 15px;
     color: #777777;
     outline: none;
@@ -86,8 +118,7 @@ input[type="submit"] {
     transition: 0.3s;
 }
 
-input[type="submit"]:hover,
-div.wpcf7 input[type="reset"]:hover {
+input[type="submit"]:hover {
     background: #e4be1a;
 }
 
@@ -100,6 +131,21 @@ input[type="number"]::-webkit-outer-spin-button {
 select {
     padding-left: 8px;
 }
+
+
+/* -- Buttons Styles -- */
+
+.btn-beats,
+button {
+    font-size: inherit;
+    border: none;
+    border-radius: 0;
+    outline: none !important;
+    background-image: none;
+}
+
+
+/* -- Blockquote Styles -- */
 
 blockquote {
     border-left: 4px solid #1e4b8e;
@@ -122,6 +168,9 @@ blockquote p {
     font-style: italic;
     color: #1e4b8e;
 }
+
+
+/* -- Table Styles -- */
 
 table {
     font-size: 13px;
@@ -153,3 +202,49 @@ table caption {
 .navbar-expand-lg>.container-fluid {
     padding: 0 15px;
 }
+
+
+/* -- Background Image Jumbotron Styles -- */
+
+.jumbotron {
+    border-radius: 0;
+}
+
+.header_jumbotron {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin: 0;
+    padding: 250px 0;
+}
+
+.header_jumbotron .beats-heading {
+    margin: 0;
+}
+
+.header_jumbotron .beats-heading.from-left {
+    animation: viewFromLeft 1s ease-in;
+}
+
+.header_jumbotron .paragraph {
+    font-size: 18px;
+    color: inherit;
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.header_jumbotron .paragraph.from-right {
+    animation: viewFromRight .5s ease-in;
+}
+
+.header_jumbotron .btn-beats {
+    padding: 10px 25px;
+    margin: 42px 0 0;
+}
+
+.header_jumbotron .btn-beats.from-top {
+    animation: viewFromTop 2s ease-in;
+}
+
+
+/* ====== Theme Footer Styles ====== */
