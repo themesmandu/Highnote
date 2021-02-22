@@ -263,7 +263,7 @@ Kirki::add_field(
 				'property' => 'background-color',
 			),
 			array(
-				'element'  => '.section_two .column.selected i, .section_two .column.selected h2, .section_two .column.selected h3, .section_two .column.selected p',
+				'element'  => '.section_features .selected .column-content',
 				'property' => 'color',
 			),
 		),

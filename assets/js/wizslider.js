@@ -959,12 +959,12 @@ jQuery.fn.wizSlider = function(am) {
             a0 = aI("img", f).attr("title"),
             k = aI(f).data("descr");
         //**bbk**//
-        if(a0 !== undefined){
+        if (a0 !== undefined) {
             if (!a0.replace(/\s+/g, "")) {
                 a0 = ""
             }
         }
-        return (a0 ? "<h3 class='title beats-heading'>" + a0 + "</h3>" : "") + (k ? "<div class='description'>" + k + "</div>" : "")
+        return (a0 ? "<h1 class='title beats-heading'>" + a0 + "</h1>" : "") + (k ? "<div class='description'>" + k + "</div>" : "")
     }
 
     function aX(f, a1, c) {
@@ -1048,10 +1048,10 @@ jQuery.fn.wizSlider = function(am) {
         })
     }
     //**bbk**//
-    if(y!== undefined){
-    y.wizStart = av;
-    y.wizRestart = K;
-    y.wizStop = aD;
+    if (y !== undefined) {
+        y.wizStart = av;
+        y.wizRestart = K;
+        y.wizStop = aD;
     }
     var aL = aI('<a href="#" class="wizards_playpause"><i class="fas fa-pause btn-beats"></i></a>');
 
@@ -1664,7 +1664,7 @@ function wizards_turn(d, a, b) {
         });
         wizAnimate(r.find("img"), n, m, d.duration, "easeInOutQuart")
     }
-}; 
+};
 jQuery.extend(jQuery.easing, {
     easeInOutCubic: function(e, f, a, h, g) {
         if ((f /= g / 2) < 1) {
@@ -1760,7 +1760,7 @@ function wizards_shift(k, i, c) {
             translate: [0, 0, 0]
         }, k.duration, "easeInOutCubic")
     }
-}; 
+};
 jQuery.extend(jQuery.easing, {
     easeInBack: function(e, f, a, i, h, g) {
         if (g == undefined) {
@@ -2228,7 +2228,7 @@ function wizards_louvers(f, q, g) {
         }
         return ["rgb(", j.dominant.name, ")"].join("")
     }
-}; 
+};
 jQuery.extend(jQuery.easing, {
     easeInOutBack: function(e, f, a, i, h, g) {
         if (g == undefined) {
@@ -2475,7 +2475,8 @@ function wizards_cube_over(m, k, b) {
         }
         return ["rgb(", n.dominant.name, ")"].join("")
     }
-}; 
+};
+
 function wizards_parallax(d, l, m) {
     var f = jQuery;
     var i = f(this);
@@ -2613,13 +2614,13 @@ function wizards_parallax(d, l, m) {
         var F = (parseInt(C.parent().css("z-index")) || 0) + 1;
         if (h) {
             //**bbk**//
-            if(v !== undefined){
-            var I = v.getContext("2d");
-            I.drawImage(C.get(0), 0, 0, A.width, A.height);
-            if (!a(I, 0, 0, v.width, v.height, B)) {
-                return 0
-            }
-            return f(v)
+            if (v !== undefined) {
+                var I = v.getContext("2d");
+                I.drawImage(C.get(0), 0, 0, A.width, A.height);
+                if (!a(I, 0, 0, v.width, v.height, B)) {
+                    return 0
+                }
+                return f(v)
             }
         }
         var J = f("<div></div>").css({
@@ -2810,7 +2811,7 @@ function wizards_parallax(d, l, m) {
         this.a = 0;
         this.next = null
     }
-}; 
+};
 jQuery.extend(jQuery.easing, {
     easeInBack: function(e, f, a, i, h, g) {
         if (g == undefined) {
@@ -3369,7 +3370,8 @@ function wizards_brick(f, s, g) {
         }
         return ["rgb(", j.dominant.name, ")"].join("")
     }
-}; 
+};
+
 function wizards_collage(r, I, A) {
     var y = jQuery,
         f = y(this),
@@ -3843,7 +3845,8 @@ jQuery.extend(jQuery.easing, {
         }
         return -h / 2 * ((--f) * (f - 2) - 1) + a
     }
-}); 
+});
+
 function wizards_kenburns(d, l, m) {
     var e = jQuery;
     var g = e(this);
@@ -4011,7 +4014,8 @@ function wizards_kenburns(d, l, m) {
         }, d.duration);
         q(l.get(h), c(h), 1)
     }
-}; 
+};
+
 function wizards_cube(p, k, b) {
     var e = jQuery,
         j = e(this),
@@ -4232,7 +4236,8 @@ function wizards_cube(p, k, b) {
             })
         }
     }
-}; 
+};
+
 function wizards_blur(r, p, c) {
     var h = jQuery;
     var o = h(this);
@@ -4539,7 +4544,8 @@ function wizards_blur(r, p, c) {
         this.a = 0;
         this.next = null
     }
-}; 
+};
+
 function wizards_book(p, n, b) {
     var f = jQuery;
     var m = f(this);
@@ -4838,7 +4844,8 @@ jQuery.extend(jQuery.easing, {
         }
         return h / 2 * ((f -= 2) * f * f * f * f + 2) + a
     }
-}); 
+});
+
 function wizards_rotate(i, h, a) {
     var d = jQuery;
     var g = d(this);
@@ -4896,7 +4903,7 @@ function wizards_rotate(i, h, a) {
             g.trigger("effectEnd")
         })
     }
-}; 
+};
 jQuery.extend(jQuery.easing, {
     easeInOutSine: function(j, i, b, c, d) {
         return -c / 2 * (Math.cos(Math.PI * i / d) - 1) + b
@@ -5007,7 +5014,8 @@ function wizards_domino(m, i, k) {
             scale: 1.6
         }, m.duration, m.duration * 0.2, "easeInOutSine")
     }
-}; 
+};
+
 function wizards_slices(k, h, i) {
     var b = jQuery;
     var f = b(this);
@@ -5262,7 +5270,8 @@ function wizards_slices(k, h, i) {
             c.fadeOut(k.duration)
         }
     }
-}; 
+};
+
 function wizards_blast(q, j, m) {
     var e = jQuery;
     var i = e(this);
@@ -5451,7 +5460,8 @@ function wizards_blast(q, j, m) {
         b = l;
         l = t
     }
-}; 
+};
+
 function wizards_linear(j, g, a) {
     var c = jQuery;
     var f = c(this);
@@ -5529,7 +5539,8 @@ function wizards_linear(j, g, a) {
             b.hide().find("div").html("")
         })
     }
-}; 
+};
+
 function wizards_fade(c, a, b) {
     var e = jQuery,
         g = e(this),
@@ -5571,7 +5582,8 @@ function wizards_fade(c, a, b) {
             k.remove()
         })
     }
-}; 
+};
+
 function wizards_fly(c, a, b) {
     var e = jQuery;
     var f = e(this);
@@ -6807,7 +6819,8 @@ function wizards_fly(c, a, b) {
             return c.translate(0, h)
         }
     })
-})(jQuery, this, this.document); 
+})(jQuery, this, this.document);
+
 function wizards_flip(c, n, e) {
     var f = jQuery;
     var g = f(this);
@@ -7008,7 +7021,7 @@ jQuery.extend(jQuery.easing, {
         }
         return h / 2 * ((f -= 2) * f * f + 2) + a
     }
-}); 
+});
 jQuery.extend(jQuery.easing, {
     easeOutOneBounce: function(e, i, c, a, d, g) {
         var j = 0.8;
@@ -7119,7 +7132,8 @@ function wizards_page(c, b, a) {
             })
         })
     }
-}; 
+};
+
 function wizards_stack(d, a, b) {
     var e = jQuery;
     var g = e(this);
@@ -7216,4 +7230,4 @@ function wizards_stack(d, a, b) {
         });
         wizAnimate(r, m, l, d.duration, d.duration * (i ? 0.1 : 0), "easeInOutExpo")
     }
-}; 
+};

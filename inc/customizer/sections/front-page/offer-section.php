@@ -80,7 +80,7 @@ Kirki::add_field(
 		'output'    => array(
 			array(
 				'element'  => '.section_offer .overlay',
-				'property' => 'background',
+				'property' => 'background-color',
 			),
 		),
 	)

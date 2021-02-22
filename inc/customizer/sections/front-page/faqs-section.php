@@ -370,12 +370,12 @@ Kirki::add_field(
 		'transport' => 'auto',
 		'output'    => array(
 			array(
-				'element'  => '.section_faqs .column-content.active .sub_heading',
+				'element'  => '.section_faqs .accordion-item.active .accordion-button',
 				'property' => 'background-color',
 			),
 
 			array(
-				'element'  => '.section_faqs .column-content.active .paragraph',
+				'element'  => '.section_faqs .accordion-item.active .paragraph',
 				'property' => 'border-color',
 			),
 		),

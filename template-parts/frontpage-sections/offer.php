@@ -11,7 +11,7 @@
     <div class="container">
         <div class="row">
             <?php if ( get_theme_mod( 'offer_title' ) || get_theme_mod( 'offer_desc' ) ) : ?>
-            <div class="column header-column">
+            <div class="column col-md-6">
                 <div class="section_header">
                     <?php if ( get_theme_mod( 'offer_title' ) ) : ?>
                     <h2 class="section-heading"><?php echo wp_kses_post( get_theme_mod( 'offer_title' ) ); ?></h2>
@@ -24,22 +24,22 @@
             <?php endif; ?>
 
             <?php if ( get_theme_mod( 'offer_sub_section_title' ) || get_theme_mod( 'offer_ribbon_label' ) || get_theme_mod( 'offer_sub_section_sub_title' ) || get_theme_mod( 'offer_sub_section_desc' ) ) : ?>
-            <div class="column content-column">
+            <div class="column col-md-6">
                 <div class="column-content">
                     <?php if ( get_theme_mod( 'offer_sub_section_title' ) || get_theme_mod( 'offer_ribbon_label' ) ) : ?>
                     <div class="offer-wrap">
                         <?php if ( get_theme_mod( 'offer_sub_section_title' ) ) : ?>
-                        <h5 class="offer-headline">
-                            <?php echo wp_kses_post( get_theme_mod( 'offer_sub_section_title' ) ); ?></h5>
+                        <h4 class="offer-headline">
+                            <?php echo wp_kses_post( get_theme_mod( 'offer_sub_section_title' ) ); ?></h4>
                         <?php endif; ?>
                         <?php if ( get_theme_mod( 'offer_ribbon_label' ) ) : ?>
-                        <h6 class="ribbon"><?php echo wp_kses_post( get_theme_mod( 'offer_ribbon_label' ) ); ?></h6>
+                        <span class="ribbon"><?php echo wp_kses_post( get_theme_mod( 'offer_ribbon_label' ) ); ?></span>
                         <?php endif; ?>
                     </div>
                     <?php endif; ?>
                     <?php if ( get_theme_mod( 'offer_sub_section_sub_title' ) ) : ?>
-                    <h6 class="offer-detail">
-                        <?php echo wp_kses_post( get_theme_mod( 'offer_sub_section_sub_title' ) ); ?></h6>
+                    <h5 class="offer-detail">
+                        <?php echo wp_kses_post( get_theme_mod( 'offer_sub_section_sub_title' ) ); ?></h5>
                     <?php endif; ?>
                     <?php if ( get_theme_mod( 'offer_sub_section_desc' ) ) : ?>
                     <p class="offer-description">
