@@ -138,7 +138,7 @@ Kirki::add_field(
 		'settings' => 'highnote_theme_options[slide_pauseplay]',
 		'label'    => esc_html__( 'Show Play/Pause Button', 'highnote' ),
 		'section'  => 'frontpage_slider',
-		'default'  => $defaults['slide_pauseplay'],
+		'default'  => false,
 	)
 );
 

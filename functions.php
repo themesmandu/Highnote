@@ -202,8 +202,3 @@ add_action( 'wp_enqueue_scripts', 'highnote_scripts' );
  */
 require get_template_directory() . '/inc/init.php';
 
-function wildspirit_add_classes_on_link_attributes( $classes ) {
-	$classes['class'] = 'nav-link';
-	return $classes;
-}
-add_filter( 'nav_menu_link_attributes', 'wildspirit_add_classes_on_link_attributes' );
