@@ -12,9 +12,13 @@
  */
 
 get_header();
-?>
 
 
+$highnote_front_page_sortables = get_theme_mod( 'front_page_sortable_section' );
+if ( $highnote_front_page_sortables ) {
+	foreach ( $highnote_front_page_sortables as $highnote_front_page_sortable ) {
+		get_template_part( 'template-parts/frontpage-sections/' . $highnote_front_page_sortable );
+	}
+}
 
-<?php
 get_footer();

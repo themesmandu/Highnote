@@ -347,6 +347,65 @@ if ( class_exists( 'Kirki' ) ) {
 	* General settings section.
 	*/
 	require get_template_directory() . '/inc/customizer/sections/general-settings-section.php';
+
+	/**
+ *
+ * Add Panel Front Page Settings
+ */
+Kirki::add_panel(
+	'frontpage_options',
+	array(
+		'priority'        => 190,
+		'title'           => __( 'Front Page Settings', 'highnote' ),
+		'active_callback' => 'highnote_set_front_page',
+
+	)
+);
+
+/**
+* Front page sortable sections.
+*/
+require get_template_directory() . '/inc/customizer/sections/front-page/front-page-sortable.php';
+
+/**
+* Offer section.
+*/
+require get_template_directory() . '/inc/customizer/sections/front-page/offer-section.php';
+
+/**
+* Beats player section.
+*/
+require get_template_directory() . '/inc/customizer/sections/front-page/beats-player-section.php';
+
+/**
+* Features section.
+*/
+require get_template_directory() . '/inc/customizer/sections/front-page/features-section.php';
+
+/**
+* Pricing Table section.
+*/
+require get_template_directory() . '/inc/customizer/sections/front-page/pricing-table-section.php';
+
+/**
+* FAQS section.
+*/
+require get_template_directory() . '/inc/customizer/sections/front-page/faqs-section.php';
+
+/**
+* About section.
+*/
+require get_template_directory() . '/inc/customizer/sections/front-page/about-section.php';
+
+/**
+* Testimonial section.
+*/
+require get_template_directory() . '/inc/customizer/sections/front-page/testimonial-section.php';
+
+/**
+* Contact section.
+*/
+require get_template_directory() . '/inc/customizer/sections/front-page/contact-section.php';
 }
 
 
