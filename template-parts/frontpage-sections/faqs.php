@@ -29,12 +29,12 @@
 					<?php foreach ( $active_faqs as $key => $active_faq ) : ?>
 						<div class="accordion-item <?php echo esc_attr( $active_faq['faqs_expand'] ? 'active' : '' ); ?>">
 							<?php if ( $active_faq['faq_question'] ) : ?>
-								<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-1" aria-expanded="true" aria-controls="collapseOne">
+								<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-<?php echo esc_attr( $key ); ?>" aria-expanded="true" aria-controls="collapseOne">
 									<?php echo esc_html( $active_faq['faq_question'] ); ?>
 								</button>
 							<?php endif; ?>
 							<?php if ( $active_faq['faq_answer'] ) : ?>
-								<div id="collapse-1" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#beatsAccordian">
+								<div id="collapse-<?php echo esc_attr( $key ); ?>" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#beatsAccordian">
 									<div class="paragraph accordion-body">
 										<p><?php echo esc_html( $active_faq['faq_answer'] ); ?></p>
 									</div>
