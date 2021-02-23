@@ -15,7 +15,7 @@ if ( ! get_theme_mod( 'pricing_table_shortcode' ) ) :
 endif;
 
 ?>
-<?php if ( get_theme_mod( 'pricing_table_title' ) || get_theme_mod( 'pricing_table_desc' ) ) :; ?>
+<?php if ( get_theme_mod( 'pricing_table_title' ) || get_theme_mod( 'pricing_table_desc' ) ) : ?>
 <section class="section_licensing section_three">
 	<div class="overlay"></div>
 	<div class="container <?php echo esc_html( ! get_theme_mod( 'pricing_table_shortcode' ) ? $container_class : '' ); ?> ">
@@ -115,12 +115,4 @@ endif;
 		<?php } ?>
 	</div>
 </section>
-
-<?php if ( get_theme_mod( 'pricing_table_shortcode' ) ) : ?>
-	<script>
-		// Add class row in price plugin
-
-		jQuery("#rpt_pricr div").first().addClass('row');
-		jQuery('.rpt_recommended_plan').parent().addClass('premium-row');
-	</script>
 <?php endif; ?>
