@@ -40,7 +40,6 @@
 				</figure>
 			</div>
 		</div>
-
 	</div>
 </section>
 <?php endif; ?>
