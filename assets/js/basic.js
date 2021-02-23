@@ -100,7 +100,12 @@ jQuery(document).ready(function($) {
         }
     }
 
-    var medScreen = window.matchMedia("(max-width: 991px)")
-    screenFunction(medScreen)
-    medScreen.addListener(screenFunction)
+    var medScreen = window.matchMedia("(max-width: 991px)");
+    screenFunction(medScreen);
+    medScreen.addListener(screenFunction);
+
+    // Adding active class on click and removing from its siblings
+    $('.section_faqs .accordion-button').click(function() {
+        $(this).parent().toggleClass('active').siblings().removeClass('active');
+    });
 });

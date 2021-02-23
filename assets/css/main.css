@@ -600,6 +600,7 @@ table caption {
 .accordion-item:first-of-type .accordion-button,
 .section_faqs .accordion-item .accordion-button {
     font-size: 16px;
+    color: inherit;
     margin: 0;
     position: relative;
     background: #0e0c0c;
@@ -637,7 +638,14 @@ table caption {
 }
 
 
-/* -- cColumn-2 -- */
+/* -- Section Seven [Section Contact] Styles -- */
+
+.section_contact label {
+    color: inherit;
+}
+
+
+/* -- Column-2 -- */
 
 .section_faqs .column .column-2 {
     display: flex;
