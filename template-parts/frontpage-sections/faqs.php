@@ -34,7 +34,7 @@
 								</button>
 							<?php endif; ?>
 							<?php if ( $active_faq['faq_answer'] ) : ?>
-								<div id="collapse-<?php echo esc_attr( $key ); ?>" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#beatsAccordian">
+								<div id="collapse-<?php echo esc_attr( $key ); ?>" class="accordion-collapse collapse <?php echo esc_attr( $active_faq['faqs_expand'] ? 'show' : '' ); ?>" aria-labelledby="headingOne" data-bs-parent="#beatsAccordian">
 									<div class="paragraph accordion-body">
 										<p><?php echo esc_html( $active_faq['faq_answer'] ); ?></p>
 									</div>
