@@ -31,7 +31,6 @@
 					class="btn btn-beats"><?php echo esc_html( get_theme_mod( 'about_button_label' ) ); ?></a>
 				<?php endif; ?>
 			</div>
-			<?php endif; ?>
 
 			<?php if ( get_theme_mod( 'about_featured_img' ) ) : ?>
 			<div class="col-lg-6 column">
@@ -39,6 +38,7 @@
 					<img src="<?php echo esc_url( get_theme_mod( 'about_featured_img' ) ); ?>" />
 				</figure>
 			</div>
+			<?php endif; ?>
 		</div>
 
 	</div>
