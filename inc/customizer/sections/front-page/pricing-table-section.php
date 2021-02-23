@@ -36,7 +36,7 @@ Kirki::add_field(
 		'transport' => 'auto',
 		'output'    => array(
 			array(
-				'element'       => '.section_three .container',
+				'element'       => '.section_licensing .container',
 				'property'      => 'max-width',
 				'value_pattern' => '$px',
 			),
@@ -56,7 +56,7 @@ Kirki::add_field(
 		'height'   => 1080,
 		'output'   => array(
 			array(
-				'element'  => '.section_three',
+				'element'  => '.section_licensing',
 				'property' => 'background-image',
 			),
 		),
@@ -78,7 +78,7 @@ Kirki::add_field(
 		'transport' => 'auto',
 		'output'    => array(
 			array(
-				'element'  => '.section_three .overlay',
+				'element'  => '.section_licensing .overlay',
 				'property' => 'background',
 			),
 		),
@@ -132,22 +132,22 @@ Kirki::add_field(
 		'output'    => array(
 			array(
 				'choice'   => 'padding-top',
-				'element'  => 'section.section_three',
+				'element'  => 'section.section_licensing',
 				'property' => 'padding-top',
 			),
 			array(
 				'choice'   => 'padding-right',
-				'element'  => 'section.section_three',
+				'element'  => 'section.section_licensing',
 				'property' => 'padding-right',
 			),
 			array(
 				'choice'   => 'padding-bottom',
-				'element'  => 'section.section_three',
+				'element'  => 'section.section_licensing',
 				'property' => 'padding-bottom',
 			),
 			array(
 				'choice'   => 'padding-left',
-				'element'  => 'section.section_three',
+				'element'  => 'section.section_licensing',
 				'property' => 'padding-left',
 			),
 		),
@@ -170,7 +170,7 @@ Kirki::add_field(
 		),
 		'output'   => array(
 			array(
-				'element'         => 'section.section_three',
+				'element'         => 'section.section_licensing',
 				'property'        => 'box-shadow',
 				'value_pattern'   => '0px 0px $px section_shadow_spreadpx section_shadow_color',
 				'pattern_replace' => array(
@@ -198,7 +198,7 @@ Kirki::add_field(
 		),
 		'output'   => array(
 			array(
-				'element'         => 'section.section_three',
+				'element'         => 'section.section_licensing',
 				'property'        => 'box-shadow',
 				'value_pattern'   => '0px 0px section_shadow_blurpx $px section_shadow_color',
 				'pattern_replace' => array(
@@ -224,7 +224,7 @@ Kirki::add_field(
 		),
 		'output'   => array(
 			array(
-				'element'         => 'section.section_three',
+				'element'         => 'section.section_licensing',
 				'property'        => 'box-shadow',
 				'value_pattern'   => '0px 0px section_shadow_spreadpx section_shadow_blurpx $',
 				'pattern_replace' => array(

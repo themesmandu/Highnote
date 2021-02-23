@@ -36,7 +36,7 @@ Kirki::add_field(
 		'transport' => 'auto',
 		'output'    => array(
 			array(
-				'element'       => '.section_seven .container',
+				'element'       => '.section_contact .container',
 				'property'      => 'max-width',
 				'value_pattern' => '$px',
 			),
@@ -56,7 +56,7 @@ Kirki::add_field(
 		'height'   => 1080,
 		'output'   => array(
 			array(
-				'element'  => '.section_seven',
+				'element'  => '.section_contact',
 				'property' => 'background-image',
 			),
 		),
@@ -78,7 +78,7 @@ Kirki::add_field(
 		'transport' => 'auto',
 		'output'    => array(
 			array(
-				'element'  => '.section_seven .overlay',
+				'element'  => '.section_contact .overlay',
 				'property' => 'background',
 			),
 		),
@@ -137,22 +137,22 @@ Kirki::add_field(
 		'output'    => array(
 			array(
 				'choice'   => 'padding-top',
-				'element'  => 'section.section_seven',
+				'element'  => 'section.section_contact',
 				'property' => 'padding-top',
 			),
 			array(
 				'choice'   => 'padding-right',
-				'element'  => 'section.section_seven',
+				'element'  => 'section.section_contact',
 				'property' => 'padding-right',
 			),
 			array(
 				'choice'   => 'padding-bottom',
-				'element'  => 'section.section_seven',
+				'element'  => 'section.section_contact',
 				'property' => 'padding-bottom',
 			),
 			array(
 				'choice'   => 'padding-left',
-				'element'  => 'section.section_seven',
+				'element'  => 'section.section_contact',
 				'property' => 'padding-left',
 			),
 		),
@@ -176,7 +176,7 @@ Kirki::add_field(
 		),
 		'output'   => array(
 			array(
-				'element'         => 'section.section_seven',
+				'element'         => 'section.section_contact',
 				'property'        => 'box-shadow',
 				'value_pattern'   => '0px 0px $px section_shadow_spreadpx section_shadow_color',
 				'pattern_replace' => array(
@@ -204,7 +204,7 @@ Kirki::add_field(
 		),
 		'output'   => array(
 			array(
-				'element'         => 'section.section_seven',
+				'element'         => 'section.section_contact',
 				'property'        => 'box-shadow',
 				'value_pattern'   => '0px 0px section_shadow_blurpx $px section_shadow_color',
 				'pattern_replace' => array(
@@ -230,7 +230,7 @@ Kirki::add_field(
 		),
 		'output'   => array(
 			array(
-				'element'         => 'section.section_seven',
+				'element'         => 'section.section_contact',
 				'property'        => 'box-shadow',
 				'value_pattern'   => '0px 0px section_shadow_spreadpx section_shadow_blurpx $',
 				'pattern_replace' => array(
@@ -280,7 +280,7 @@ Kirki::add_field(
 		'transport' => 'auto',
 		'output'    => array(
 			array(
-				'element'  => '.section_seven .section_header',
+				'element'  => '.section_contact .section_header',
 				'property' => 'text-align',
 			),
 		),

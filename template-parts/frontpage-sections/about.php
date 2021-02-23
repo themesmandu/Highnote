@@ -33,7 +33,7 @@
 			</div>
 
 			<?php if ( get_theme_mod( 'about_featured_img' ) ) : ?>
-			<div class="col-lg-6 column">
+			<div class="col-lg-6 column order-left">
 				<figure>
 					<img src="<?php echo esc_url( get_theme_mod( 'about_featured_img' ) ); ?>" />
 				</figure>

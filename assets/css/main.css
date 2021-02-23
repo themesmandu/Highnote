@@ -89,8 +89,6 @@ li {
 
 label {
     font-size: 14px;
-    text-transform: uppercase;
-    font-weight: 700;
     color: #353638;
     display: block;
 }
@@ -114,7 +112,6 @@ input[type="submit"] {
     border: none;
     padding: 15px 25px;
     line-height: 1;
-    text-transform: uppercase;
     transition: 0.3s;
 }
 
@@ -192,7 +189,7 @@ table caption {
 }
 
 
-/* -- Container Styles -- */
+/* -- Container And Row Styles -- */
 
 .container {
     max-width: 1230px;
@@ -251,6 +248,9 @@ table caption {
 
 #content section {
     position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .overlay {
@@ -642,6 +642,10 @@ table caption {
 
 .section_contact label {
     color: inherit;
+}
+
+.section_contact form p:nth-last-child(2) {
+    margin-bottom: 0;
 }
 
 
