@@ -11,7 +11,7 @@ function highnote_dynamic_slider_script() {
 
 	if ( is_front_page() && ! is_home() && get_theme_mod( 'slider_toggle' ) ) {
 		?>
-<script>
+<script type="text/javascript">
 jQuery("#wizards_slider").wizSlider({
 		<?php $animations = highnote_get_theme_option( 'slider_animations' ); ?>
 	effect: "<?php foreach ( $animations as $animation ) : ?>
