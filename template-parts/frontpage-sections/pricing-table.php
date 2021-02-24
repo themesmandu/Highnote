@@ -5,19 +5,11 @@
  * @package Beatsmandu
  */
 
-if ( ! get_theme_mod( 'pricing_table_shortcode' ) ) :
-	$active_tables = get_theme_mod( 'pricing_tables' );
-	if ( $active_tables ) {
-		$class_count     = count( $active_tables );
-		$container_class = 'container_' . $class_count;
-	}
-endif;
-
 ?>
 <?php if ( get_theme_mod( 'pricing_table_title' ) || get_theme_mod( 'pricing_table_desc' ) ) : ?>
 	<section class="section_licensing section_three">
 		<div class="overlay"></div>
-		<div class="container <?php echo esc_html( ! get_theme_mod( 'pricing_table_shortcode' ) ? $container_class : '' ); ?> ">
+		<div class="container">
 			<?php if ( get_theme_mod( 'pricing_table_title' ) || get_theme_mod( 'pricing_table_desc' ) ) : ?>
 				<div class="section_header">
 					<?php if ( get_theme_mod( 'pricing_table_title' ) ) : ?>
@@ -30,23 +22,20 @@ endif;
 				</div>
 			<?php endif; ?>
 			<?php
-			if ( get_theme_mod( 'pricing_table_shortcode' ) ) :
-				echo do_shortcode( get_theme_mod( 'pricing_table_shortcode' ) );
-			else :
 				$active_tables = get_theme_mod( 'pricing_tables' );
-				if ( $active_tables ) {
-					?>
+			if ( $active_tables ) {
+				?>
 					<div class="row table-<?php echo count( $active_tables ); ?> ">
-						<?php foreach ( $active_tables as $key => $active_table ) : ?>
+					<?php foreach ( $active_tables as $key => $active_table ) : ?>
 							<?php
 							$table_currency = '<span class="currency">' . $active_table['table_currency'] . '</span>';
-							if ( 4 === count( $active_tables ) || 8 === count( $active_tables ) ) {
+							if ( 4 === count( $active_tables ) || 8 === count( $active_tables ) || 12 === count( $active_tables ) ) {
 								$column_class = 3;
 							} else {
 								$column_class = 4;
 							}
 							?>
-							<div class="col-md-<?php echo esc_attr( $column_class ); ?> column table-col-<?php echo esc_attr( count( $active_tables ) ); ?>">
+							<div class="col-md-<?php echo esc_attr( $column_class ); ?> column">
 								<div class="col-wrap <?php echo esc_attr( $active_table['table_highlight'] ? 'highlighted' : '' ); ?>">
 									<div class="col-content">
 										<?php if ( $active_table['table_title'] ) : ?>
@@ -55,9 +44,11 @@ endif;
 										<?php if ( $active_table['table_subtitle'] ) : ?>
 											<span class="sub-type"><?php echo esc_html( $active_table['table_subtitle'] ); ?></span>
 										<?php endif; ?>
+										<?php if ( $active_table['table_price'] ) : ?>
 										<h3 class="price">
-											<?php echo wp_kses_post( 'first' === $active_table['table_currency_position'] ? $table_currency : '' ); ?><?php echo wp_kses_post( $active_table['table_price'] ); ?><?php echo wp_kses_post( 'last' === $active_table['table_currency_position'] ? '<span class="currency last">' . $active_table['table_currency'] . '</span>': '' ); ?>
+											<?php echo wp_kses_post( 'first' === $active_table['table_currency_position'] ? $table_currency : '' ); ?><?php echo wp_kses_post( $active_table['table_price'] ); ?><?php echo wp_kses_post( 'last' === $active_table['table_currency_position'] ? '<span class="currency last">' . $active_table['table_currency'] . '</span>' : '' ); ?>
 										</h3>
+										<?php endif; ?>
 										<?php if ( $active_table['table_features'] ) : ?>
 											<ul class="features">
 												<?php echo wp_kses_post( wpautop( $active_table['table_features'] ) ); ?>
@@ -69,7 +60,6 @@ endif;
 						<?php endforeach; ?>
 					</div>
 				<?php } ?>
-			<?php endif; ?>
 
 			<?php
 			$active_tables_two = get_theme_mod( 'pricing_tables_two' );
