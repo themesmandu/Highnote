@@ -91,9 +91,11 @@ endif;
 											<?php endif; ?>
 										</div>
 									<?php endif; ?>
+									<?php if ( $active_table_two['table_price'] ) : ?>
 									<h3 class="price">
 										<?php echo wp_kses_post( 'first' === $active_table_two['table_currency_position'] ? $table_currency_two : '' ); ?><?php echo wp_kses_post( $active_table_two['table_price'] ); ?><?php echo wp_kses_post( 'last' === $active_table_two['table_currency_position'] ? $table_currency_two : '' ); ?>
 									</h3>
+									<?php endif; ?>
 									<?php if ( $active_table_two['table_button_label'] ) : ?>
 										<a href="<?php echo esc_url( $active_table_two['table_button_link'] ); ?>" class="btn-contact"><?php echo esc_html( $active_table_two['table_button_label'] ); ?></a>
 									<?php endif; ?>
