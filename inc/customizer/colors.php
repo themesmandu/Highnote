@@ -206,7 +206,7 @@ Kirki::add_field(
 		'transport' => 'auto',
 		'output'    => array(
 			array(
-				'element'  => 'a, .page-numbers.dots, table #today, .tracks-table .beats_tags a:hover',
+				'element'  => 'a',
 				'property' => 'color',
 			),
 
@@ -233,7 +233,7 @@ Kirki::add_field(
 		'transport' => 'auto',
 		'output'    => array(
 			array(
-				'element'  => 'a:hover, li a:hover, #footer a:hover, #social-menu .nav-link:hover, .sidebar .widget li a:hover',
+				'element'  => 'a:hover',
 				'property' => 'color',
 			),
 		),
@@ -255,29 +255,8 @@ Kirki::add_field(
 		'transport' => 'auto',
 		'output'    => array(
 			array(
-				'element'  => 'button, .btn-beats, .section_four .active .sub_heading, 
-				.beats-span, #menu span, .skip-link, .testimonialslide .test_slide, .slick-initialized .slick-slide:nth-child(even) .test_slide,
-				.custom_beat_row .column-wrap',
+				'element'  => 'button, .btn-beats, input[type="submit"]',
 				'property' => 'background-color',
-			),
-			array(
-				'element'  => 'span.page-numbers.current, section .wpcf7-form p input[type="submit"], 
-				.section_review .strong-view.controls-style-buttons2 .wpmslider-prev, .section_review .strong-view.controls-style-buttons2 .wpmslider-next',
-				'property' => 'background-color',
-			),
-			array(
-				'element'  => '.testimonialslide .slick-dots .slick-active button',
-				'property' => 'background-color',
-			),
-			array(
-				'element'  => '.section_four .column-content .paragraph, .testimonialslide .slick-arrow',
-				'property' => 'border-color',
-			),
-			array(
-				'element'  => '.strong-view .wpmslider-controls .wpmslider-pager-link:hover:before,
-				.strong-view .wpmslider-controls .wpmslider-pager-link.active:before,
-				.strong-view .wpmslider-controls .wpmslider-pager-link.active:hover:before, .testimonialslide .slick-arrow:before',
-				'property' => 'color',
 			),
 		),
 	)
@@ -298,11 +277,7 @@ Kirki::add_field(
 		'transport' => 'auto',
 		'output'    => array(
 			array(
-				'element'  => 'button:hover, .btn-beats:hover, .skip-link:hover, #wizards_slider .slider_bullets .active, #wizards_slider .wiz-arrow:hover i',
-				'property' => 'background-color',
-			),
-			array(
-				'element'  => '#wizards_slider .wiz-arrow img, section .wpcf7-form p input[type="submit"]:hover, .section_review .strong-view.controls-style-buttons2 .wpmslider-prev:hover, .section_review .strong-view.controls-style-buttons2 .wpmslider-next:hover',
+				'element'  => 'button:hover, .btn-beats:hover, input[type="submit"]:hover',
 				'property' => 'background-color',
 			),
 		),
@@ -324,12 +299,7 @@ Kirki::add_field(
 		'transport' => 'auto',
 		'output'    => array(
 			array(
-				'element'  => 'button, .btn-beats, .beats-span, .skip-link, span.page-numbers.current',
-				'property' => 'color',
-			),
-			array(
-				'element'  => '.cart-pop-up .edd_price_options label:hover span, section .wpcf7-form p input[type="submit"], 
-				.section_review .strong-view.controls-style-buttons2 .wpmslider-prev, .section_review .strong-view.controls-style-buttons2 .wpmslider-next',
+				'element'  => 'button, .btn-beats, input[type="submit"]',
 				'property' => 'color',
 			),
 		),
@@ -351,8 +321,7 @@ Kirki::add_field(
 		'transport' => 'auto',
 		'output'    => array(
 			array(
-				'element'  => 'button:hover, .btn-beats:hover, section .wpcf7-form p input[type="submit"]:hover, 
-				.section_review .strong-view.controls-style-buttons2 .wpmslider-prev:hover, .section_review .strong-view.controls-style-buttons2 .wpmslider-next:hover',
+				'element'  => 'button:hover, .btn-beats:hover, input[type="submit"]:hover',
 				'property' => 'color',
 			),
 		),

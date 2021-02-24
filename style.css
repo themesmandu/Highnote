@@ -205,37 +205,18 @@ figcaption,
     visibility: hidden;
     bottom: 5%;
     right: 15px;
-    background: rgba(0, 0, 0, .3);
     padding: 0px;
     width: 40px;
     height: 40px;
-    transition: 0.5s;
+    transition: .3s;
     border-radius: 0;
-    border: 1px solid #ffffff;
     border-right: none;
     z-index: 99;
-    transition: all .3s;
     transform: translate3d(100px, 0, 0);
-}
-
-#up-btn:hover {
-    background: #3381f2;
-    border: 1px solid #3381f2;
-    border-right: none;
-}
-
-.up-btn:focus {
-    border-color: #ffffff;
 }
 
 #up-btn i {
     font-size: 18px;
-    transition: .5s;
-    color: #ffffff;
-}
-
-#up-btn:hover i {
-    color: #000000;
 }
 
 .up-btn.ayotothetop {

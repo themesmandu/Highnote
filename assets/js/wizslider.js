@@ -629,8 +629,8 @@ jQuery.fn.wizSlider = function(am) {
         ay.appendTo(O)
     }
     if (am.controls) {
-        var aj = aI('<a href="#" class="wizards_next wiz-arrow">' + am.next + "<i class='fas fa-chevron-right btn-beats'></i></a>");
-        var ad = aI('<a href="#" class="wizards_prev wiz-arrow">' + am.prev + "<i class='fas fa-chevron-left btn-beats'></i></a>");
+        var aj = aI('<a href="#" class="wizards_next wiz-arrow btn-beats">' + am.next + "<i class='fas fa-chevron-right btn-beats'></i></a>");
+        var ad = aI('<a href="#" class="wizards_prev wiz-arrow btn-beats">' + am.prev + "<i class='fas fa-chevron-left btn-beats'></i></a>");
         O.append(aj, ad);
         aj.bind("click", function(c) {
             aU(c, x + 1, 1)

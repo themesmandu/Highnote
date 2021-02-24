@@ -16,7 +16,7 @@
 						<h2 class="section-heading"><?php echo esc_html( get_theme_mod( 'pricing_table_title' ) ); ?></h2>
 					<?php endif; ?>
 					<?php if ( get_theme_mod( 'pricing_table_desc' ) ) : ?>
-						<?php echo wp_kses_post( wpautop( get_theme_mod( 'pricing_table_desc' ) ) ); ?>
+						<p class="sec-description"><?php echo wp_kses_post( get_theme_mod( 'pricing_table_desc' ) ); ?></p>
 					<?php endif; ?>
 
 				</div>

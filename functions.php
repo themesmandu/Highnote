@@ -140,8 +140,8 @@ function highnote_widgets_init() {
 			'description'   => esc_html__( 'Add widgets here.', 'highnote' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
-			'before_title'  => '<h5 class="widget-title">',
-			'after_title'   => '</h5>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
 		)
 	);
 }
@@ -177,7 +177,9 @@ function highnote_scripts() {
 	wp_enqueue_style( 'highnote-font-awesome', get_theme_file_uri( '/assets/font-awesome-5.7.2/css/all.css' ), array( 'highnote-style' ), '5.7.2' );
 
 	// Bootstrap core JavaScript: jQuery first, then Popper.js, then Bootstrap JS.
+	wp_enqueue_script( 'jquery' );
 	
+	// Bootstrap core JavaScript: jQuery first, then Popper.js, then Bootstrap JS.
 	wp_enqueue_script( 'highnote-bootstrap', get_template_directory_uri() . '/vendor/bootstrap-src/js/bootstrap.bundle.min.js', array(), '5.0.0', true );
 
 	// Theme added JavaScript: Added by Developers.

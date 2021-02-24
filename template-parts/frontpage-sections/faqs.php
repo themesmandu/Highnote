@@ -17,7 +17,7 @@
 						<h2 class="section-heading"><?php echo esc_html( get_theme_mod( 'faqs_title' ) ); ?></h2>
 					<?php endif; ?>
 					<?php if ( get_theme_mod( 'faqs_desc' ) ) : ?>
-						<?php echo wp_kses_post( wpautop( get_theme_mod( 'faqs_desc' ) ) ); ?>
+						<p class="sec-description"><?php echo wp_kses_post( get_theme_mod( 'faqs_desc' ) ); ?></p>
 					<?php endif; ?>
 				</div>
 			<?php endif; ?>
