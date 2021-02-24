@@ -332,6 +332,30 @@ Kirki::add_field(
 	)
 );
 
+Kirki::add_field(
+	'highnote_kirki_config',
+	array(
+		'type'      => 'slider',
+		'settings'  => 'table_column_padding_pricing_table_one',
+		'label'     => esc_html__( 'Pricing Table One Column Padding(px)', 'highnote' ),
+		'section'   => 'frontpage_pricing_table',
+		'default'   => 32,
+		'choices'   => array(
+			'min'  => 0,
+			'max'  => 60,
+			'step' => 1,
+		),
+		'transport' => 'auto',
+		'output'    => array(
+			array(
+				'element'       => '.section_licensing .col-content',
+				'property'      => 'padding',
+				'value_pattern' => '$px',
+			),
+		),
+	)
+);
+
 // pricing table two
 Kirki::add_field(
 	'highnote_kirki_config',
@@ -387,30 +411,6 @@ Kirki::add_field(
 	)
 );
 
-// Setting pricing table shortcode.
-Kirki::add_field(
-	'highnote_kirki_config',
-	array(
-		'type'        => 'text',
-		'settings'    => 'pricing_table_shortcode',
-		'label'       => esc_html__( 'Pricing Table Shortcode', 'highnote' ),
-		'description' => esc_html__( 'for responsive pricing table plugin if needed( will disable above table)', 'highnote' ),
-		'section'     => 'frontpage_pricing_table',
-	)
-);
-
-// Setting custom css.
-Kirki::add_field(
-	'highnote_kirki_config',
-	array(
-		'type'        => 'toggle',
-		'settings'    => 'pricing_table_css',
-		'label'       => esc_html__( 'Use Theme Custom Designs', 'highnote' ),
-		'description' => esc_html__( 'This setting overrides responsive pricing table plugin css. Note: This option doesnot work visually on customizer preview. Please check front end after publishing', 'highnote' ),
-		'section'     => 'frontpage_pricing_table',
-		'default'     => '1',
-	)
-);
 
 // lisencing border color.
 Kirki::add_field(
