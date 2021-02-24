@@ -712,13 +712,3 @@ Kirki::add_field(
 	)
 );
 
-// Setting pricing table shortcode.
-Kirki::add_field(
-	'highnote_kirki_config',
-	array(
-		'type'     => 'text',
-		'settings' => 'testimonial_shortcode',
-		'label'    => esc_html__( 'Testimonial Shortcode', 'highnote' ),
-		'section'  => 'frontpage_testimonial',
-	)
-);
