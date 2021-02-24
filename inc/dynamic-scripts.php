@@ -38,8 +38,37 @@ function highnote_dynamic_slider_script()
 			images: 0
 			});
 		</script>
+	<?php
+	}
+}
+
+add_action('wp_footer', 'highnote_dynamic_slider_script', 21);
+
+function beatsmandu_dynamic_slider_testimonial_script()
+{
+
+	if (is_front_page() && !is_home()) {
+	?>
+		<script>
+			jQuery(".testimonialslide").slick({
+				infinite: true,
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				dots: true,
+				autoplay: true,
+				autoplaySpeed: 3000,
+				speed: 500,
+				cssEase: 'ease-in-out',
+				responsive: [{
+					breakpoint: 767,
+					settings: {
+						slidesToShow: 1
+					}
+				}]
+			});
+		</script>
 <?php
 	}
 }
 
-add_action('wp_footer', 'highnote_dynamic_slider_script', 20);
+add_action('wp_footer', 'beatsmandu_dynamic_slider_testimonial_script', 20);

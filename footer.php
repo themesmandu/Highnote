@@ -37,20 +37,6 @@
 
 <?php wp_footer(); ?>
 
-<script type="text/javascript">
-/* -- slick slider java script -- */
-jQuery(document).ready(function($) {
-	$(document).on('ready', function() {
-		$(".testimonialslide").slick({
-			dots: true,
-            infinite: true,
-            slidesToShow: 1,
-            slidesToScroll: 1
-		});
-	});
-})
-</script>
-
 </body>
 
 </html>

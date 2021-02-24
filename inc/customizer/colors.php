@@ -255,7 +255,7 @@ Kirki::add_field(
 		'transport' => 'auto',
 		'output'    => array(
 			array(
-				'element'  => 'button, .btn-beats, input[type="submit"]',
+				'element'  => 'button, .btn-beats, input[type="submit"], slick-arrow, .slick-active button',
 				'property' => 'background-color',
 			),
 		),
@@ -277,7 +277,7 @@ Kirki::add_field(
 		'transport' => 'auto',
 		'output'    => array(
 			array(
-				'element'  => 'button:hover, .btn-beats:hover, input[type="submit"]:hover',
+				'element'  => 'button:hover, .btn-beats:hover, input[type="submit"]:hover, slick-arrow:hover',
 				'property' => 'background-color',
 			),
 		),
@@ -299,7 +299,7 @@ Kirki::add_field(
 		'transport' => 'auto',
 		'output'    => array(
 			array(
-				'element'  => 'button, .btn-beats, input[type="submit"]',
+				'element'  => 'button, .btn-beats, input[type="submit"], slick-arrow',
 				'property' => 'color',
 			),
 		),
@@ -321,7 +321,7 @@ Kirki::add_field(
 		'transport' => 'auto',
 		'output'    => array(
 			array(
-				'element'  => 'button:hover, .btn-beats:hover, input[type="submit"]:hover',
+				'element'  => 'button:hover, .btn-beats:hover, input[type="submit"]:hover, slick-arrow:hover',
 				'property' => 'color',
 			),
 		),
