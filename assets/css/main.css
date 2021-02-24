@@ -663,4 +663,118 @@ table caption {
 }
 
 
+/* -- Section Six [Section Reviews] Styles -- */
+
+.section_review {
+    text-align: center;
+}
+
+.slick-list {
+    overflow: hidden;
+    padding: 38px 0;
+}
+
+.slick-slide {
+    float: left;
+    z-index: 1 !important;
+    padding: 0 15px;
+}
+
+.testimonialslide {
+    position: relative;
+}
+
+.testimonialslide .slick-list {
+    padding: 38px 0 24px;
+    margin: 0 -15px;
+}
+
+.testimonialslide .test_slide {
+    padding: 30px;
+}
+
+.testimonialslide img {
+    height: 115px;
+    width: 115px;
+    border-radius: 100%;
+    margin-bottom: 15px;
+    display: inline-block;
+}
+
+.testimonialslide h6 {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.testimonialslide span {
+    display: block;
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 15px;
+}
+
+.testimonialslide span.company {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.testimonialslide .slick-arrow {
+    font-size: 0;
+    padding: 8px 12px;
+    line-height: 1;
+    background: transparent;
+    border: 1px solid transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.testimonialslide .slick-arrow:hover {
+    background: transparent;
+}
+
+.testimonialslide .slick-next {
+    left: unset;
+    right: 0;
+}
+
+.testimonialslide .slick-arrow:before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 16px;
+    content: "\f053";
+}
+
+.testimonialslide .slick-next:before {
+    content: '\f054';
+}
+
+.testimonialslide .slick-dots {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 28px 0 0;
+}
+
+.testimonialslide .slick-dots li {
+    font-size: 0;
+    margin: 0 4px;
+}
+
+.testimonialslide .slick-dots button {
+    height: 8px;
+    width: 8px;
+    border-radius: 100%;
+    background: #a3a2a1;
+    outline: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+
 /* ====== Theme Footer Styles ====== */

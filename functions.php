@@ -177,11 +177,15 @@ function highnote_scripts() {
 	wp_enqueue_style( 'highnote-font-awesome', get_theme_file_uri( '/assets/font-awesome-5.7.2/css/all.css' ), array( 'highnote-style' ), '5.7.2' );
 
 	// Bootstrap core JavaScript: jQuery first, then Popper.js, then Bootstrap JS.
-	wp_enqueue_script( 'jquery' );
+	
 	wp_enqueue_script( 'highnote-bootstrap', get_template_directory_uri() . '/vendor/bootstrap-src/js/bootstrap.bundle.min.js', array(), '5.0.0', true );
 
 	// Theme added JavaScript: Added by Developers.
 	wp_enqueue_script( 'highnote-basic', get_template_directory_uri() . '/assets/js/basic.js', array(), wp_get_theme()->get( 'Version' ), true );
+
+	// Theme added JavaScript: Added by Developers For Slick Slider.
+	wp_enqueue_script( 'highnote-slick', get_template_directory_uri() . '/assets/js/slick.js', array(), wp_get_theme()->get( 'Version' ), true );
+
 
 	if ( is_front_page() && ! is_home() && get_theme_mod( 'slider_toggle' ) ) {
 		// jQuery of custom image slider
