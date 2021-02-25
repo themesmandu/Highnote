@@ -419,7 +419,7 @@ Kirki::add_field(
 		'transport' => 'auto',
 		'output'    => array(
 			array(
-				'element'  => '.section_review .testimonialslide .test_slide',
+				'element'  => '.testimonialslide .test_slide',
 				'property' => 'background-color',
 			),
 		),
@@ -589,7 +589,7 @@ Kirki::add_field(
 		'transport' => 'auto',
 		'output'    => array(
 			array(
-				'element'  => '.section_review .slick-initialized .slick-slide:nth-child(even) .test_slide',
+				'element'  => '.testimonialslide .slick-slide:nth-child(even) .test_slide',
 				'property' => 'background-color',
 			),
 		),
@@ -610,7 +610,7 @@ Kirki::add_field(
 		),
 		'output'   => array(
 			array(
-				'element'         => '.slick-initialized .slick-slide:nth-child(even) .test_slide',
+				'element'         => '.testimonialslide .slick-slide:nth-child(even) .test_slide',
 				'property'        => 'box-shadow',
 				'value_pattern'   => 'testimonial_even_tbpx testimonial_even_lrpx testimonial_even_blurpx testimonial_even_spreadpx $',
 				'pattern_replace' => array(
@@ -641,7 +641,7 @@ Kirki::add_field(
 		),
 		'output'   => array(
 			array(
-				'element'         => '.slick-initialized .slick-slide:nth-child(even) .test_slide',
+				'element'         => '.testimonialslide .slick-slide:nth-child(even) .test_slide',
 				'property'        => 'box-shadow',
 				'value_pattern'   => '$px testimonial_even_lrpx testimonial_even_blurpx testimonial_even_spreadpx testimonial_even_color',
 				'pattern_replace' => array(
@@ -671,7 +671,7 @@ Kirki::add_field(
 		),
 		'output'   => array(
 			array(
-				'element'         => '.slick-initialized .slick-slide:nth-child(even) .test_slide',
+				'element'         => '.testimonialslide .slick-slide:nth-child(even) .test_slide',
 				'property'        => 'box-shadow',
 				'value_pattern'   => 'testimonial_even_tbpx $px testimonial_even_blurpx testimonial_even_spreadpx testimonial_even_color',
 				'pattern_replace' => array(
@@ -701,7 +701,7 @@ Kirki::add_field(
 		),
 		'output'   => array(
 			array(
-				'element'         => '.slick-initialized .slick-slide:nth-child(even) .test_slide',
+				'element'         => '.testimonialslide .slick-slide:nth-child(even) .test_slide',
 				'property'        => 'box-shadow',
 				'value_pattern'   => 'testimonial_even_tbpx testimonial_even_lrpx $px testimonial_even_spreadpx testimonial_even_color',
 				'pattern_replace' => array(
@@ -731,7 +731,7 @@ Kirki::add_field(
 		),
 		'output'   => array(
 			array(
-				'element'         => '.slick-initialized .slick-slide:nth-child(even) .test_slide',
+				'element'         => '.testimonialslide .slick-slide:nth-child(even) .test_slide',
 				'property'        => 'box-shadow',
 				'value_pattern'   => 'testimonial_even_tbpx testimonial_even_lrpx testimonial_even_blurpx $px testimonial_even_color',
 				'pattern_replace' => array(

@@ -964,7 +964,7 @@ jQuery.fn.wizSlider = function(am) {
                 a0 = ""
             }
         }
-        return (a0 ? "<h1 class='title beats-heading'>" + a0 + "</h1>" : "") + (k ? "<div class='description'>" + k + "</div>" : "")
+        return (a0 ? "<h1 class='title beats-heading'>" + a0 + "</h1>" : "") + (k ? "" + k + "" : "")
     }
 
     function aX(f, a1, c) {

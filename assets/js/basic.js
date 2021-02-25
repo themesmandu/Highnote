@@ -108,4 +108,8 @@ jQuery(document).ready(function($) {
     $('.section_faqs .accordion-button').click(function() {
         $(this).parent().toggleClass('active').siblings().removeClass('active');
     });
+
+    // Adding class if navigation arrows apears
+    $('.slick-arrow').parent().addClass('has-slick-arrow');
+
 });
