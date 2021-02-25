@@ -1,6 +1,6 @@
 <?php
 /**
- * Typography slider and banner settings section.
+ * Typography front page sections settings section.
  *
  * @package Highnote
  */
@@ -10,9 +10,9 @@
  * Add Section
  */
 Kirki::add_section(
-	'typography_slider_banner_options',
+	'typography_front_page_options',
 	array(
-		'title' => __( 'Slider And Banner Headings', 'highnote' ),
+		'title' => __( 'Front Page Section Headings', 'highnote' ),
 		'panel' => 'typography_options',
 	)
 );
@@ -21,19 +21,19 @@ Kirki::add_field(
 	'highnote_kirki_config',
 	array(
 		'type'      => 'typography',
-		'settings'  => 'typography_slider_banner',
-		'label'     => esc_html__( 'Typography(Slider And Banner Headings)', 'highnote' ),
-		'section'   => 'typography_slider_banner_options',
+		'settings'  => 'front_page_section_headings',
+		'label'     => esc_html__( 'Typography(Front Page Section Headings )', 'highnote' ),
+		'section'   => 'typography_front_page_options',
 		'default'   => array(
 			'font-family'    => '',
 			'variant'        => 'regular',
-			'font-size'      => '214px',
+			'font-size'      => '130px',
 			'line-height'    => '1.3',
 			'letter-spacing' => '0',
 		),
 		'output'    => array(
 			array(
-				'element' => '.beats-heading',
+				'element' => '.section-heading',
 			),
 		),
 		'transport' => 'auto',
@@ -45,13 +45,13 @@ Kirki::add_field(
 	'highnote_kirki_config',
 	array(
 		'type'      => 'typography',
-		'settings'  => 'typography_slider_banner_subheading',
-		'label'     => esc_html__( 'Typography(Slider And Banner Sub-Headings)', 'highnote' ),
-		'section'   => 'typography_slider_banner_options',
+		'settings'  => 'front_page_section_subheadings',
+		'label'     => esc_html__( 'Typography(Front Page Section Sub-Headings )', 'highnote' ),
+		'section'   => 'typography_front_page_options',
 		'default'   => array(
 			'font-family'    => '',
 			'variant'        => 'regular',
-			'font-size'      => '214px',
+			'font-size'      => '130px',
 			'line-height'    => '1.3',
 			'letter-spacing' => '0',
 		),
@@ -64,3 +64,4 @@ Kirki::add_field(
 
 	)
 );
+
