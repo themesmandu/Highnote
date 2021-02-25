@@ -101,8 +101,8 @@ if ( ! function_exists( 'highnote_get_default_theme_options' ) ) :
 		$defaults['testimonial_odd_bs_color']          = 'rgba(0, 0, 0, 0)';       // player Licensing area selected text color.
 		$defaults['testimonial_even_color']            = 'rgba(0, 0, 0, 0)';       // player Licensing area selected text color.
 		$defaults['testimonial_even_bs_color']         = 'rgba(0, 0, 0, 0)';       // player Licensing area selected text color.
-		$defaults['testimonial_slide_autoplay_speed']  = 3000;       // testinomial slide autoplay speed
-		$defaults['testimonial_slide_speed']           = 500;       // testinomial slide autoplay speed
+		$defaults['testimonial_slide_autoplay_speed']  = 3;       // testinomial slide autoplay speed
+		$defaults['testimonial_slide_speed']           = 5;       // testinomial slide autoplay speed
 		$defaults['testimonial_slide_autoplay_toggle'] = true;       // testinomial slide autoplay speed
 
 		//blog defaults

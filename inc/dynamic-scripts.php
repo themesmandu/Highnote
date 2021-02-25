@@ -52,8 +52,8 @@ function highnote_dynamic_slider_testimonial_script() {
 				slidesToScroll: 1,
 				dots: <?php echo ( get_theme_mod( 'testimonial_slide_nav_dots_toggle' ) ? 'true' : 'false' ); ?>,
 				autoplay: <?php echo ( highnote_get_theme_option( 'testimonial_slide_autoplay_toggle' ) ? 'true' : 'false' ); ?>,
-				autoplaySpeed: <?php echo esc_html( highnote_get_theme_option( 'testimonial_slide_autoplay_speed' ) ); ?>,
-				speed: <?php echo esc_html( highnote_get_theme_option( 'testimonial_slide_speed' ) ); ?>,
+				autoplaySpeed: <?php echo esc_html( highnote_get_theme_option( 'testimonial_slide_autoplay_speed' ) ) * 1000; ?>,
+				speed: <?php echo esc_html( highnote_get_theme_option( 'testimonial_slide_speed' ) ) * 100; ?>,
 				cssEase: 'ease-in-out',
 				responsive: [{
 					breakpoint: 767,

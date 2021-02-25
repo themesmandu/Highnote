@@ -374,13 +374,13 @@ Kirki::add_field(
 	array(
 		'type'     => 'slider',
 		'settings' => 'highnote_theme_options[testimonial_slide_autoplay_speed]',
-		'label'    => esc_html__( 'Slide Autoplay Speed', 'highnote' ),
+		'label'    => esc_html__( 'Slide Autoplay Speed (sec)', 'highnote' ),
 		'section'  => 'frontpage_testimonial',
-		'default'  => 3000,
+		'default'  => 3,
 		'choices'  => array(
-			'min'  => 0,
-			'max'  => 10000,
-			'step' => 100,
+			'min'  => 1,
+			'max'  => 10,
+			'step' => 1,
 		),
 	)
 );
@@ -391,13 +391,13 @@ Kirki::add_field(
 	array(
 		'type'     => 'slider',
 		'settings' => 'highnote_theme_options[testimonial_slide_speed]',
-		'label'    => esc_html__( 'Slide Speed', 'highnote' ),
+		'label'    => esc_html__( 'Slide Speed (milisecond)', 'highnote' ),
 		'section'  => 'frontpage_testimonial',
-		'default'  => 500,
+		'default'  => 5,
 		'choices'  => array(
-			'min'  => 0,
-			'max'  => 1000,
-			'step' => 100,
+			'min'  => 1,
+			'max'  => 10,
+			'step' => 1,
 		),
 	)
 );
