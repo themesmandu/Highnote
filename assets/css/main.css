@@ -650,9 +650,9 @@ table caption {
     border-radius: 0;
 }
 
-.section_faqs .accordion-button:after {
+.section_faqs .accordion-button::after {
     font-family: 'Font Awesome 5 Free';
-    content: "\f068";
+    content: "\f067";
     font-size: 12px;
     font-weight: 900;
     position: absolute;
@@ -664,9 +664,8 @@ table caption {
     background-image: none;
 }
 
-.section_faqs .accordion-button:not(.collapsed)::after {
-    content: "\f067";
-    transform: unset;
+.section_faqs .accordion-item.active .accordion-button::after {
+    content: "\f068";
 }
 
 .section_faqs .accordion-item .paragraph {
