@@ -58,7 +58,7 @@ Kirki::add_field(
 		'transport'   => 'auto',
 		'output'      => array(
 			array(
-				'element'  => '.main-navigation.fixed, #navbarmenus.responsive',
+				'element'  => '.navbar-fixed.fixed-top, .appear-left #navbarCollapse.responsive',
 				'property' => 'background-color',
 			),
 		),
@@ -80,16 +80,8 @@ Kirki::add_field(
 		'transport' => 'auto',
 		'output'    => array(
 			array(
-				'element'  => '.navbar .navbar-nav .nav-link, .menu-item-has-children:after, .menu-item-has-children .caret',
+				'element'  => '.navbar .navbar-nav .nav-link, .caret',
 				'property' => 'color',
-			),
-			array(
-				'element'  => '.navbar-expand-lg .navbar-nav .menu-item-has-children .sub-menu .nav-link, .main-navigation .sub-menu .menu-item-has-children .caret',
-				'property' => 'color',
-			),
-			array(
-				'element'  => '.main-navigation .menu-item.current-menu-item .nav-link:before',
-				'property' => 'background-color',
 			),
 		),
 	)
@@ -110,12 +102,8 @@ Kirki::add_field(
 		'transport' => 'auto',
 		'output'    => array(
 			array(
-				'element'  => '.navbar .navbar-nav .nav-link:hover, .main-navigation .menu-item-has-children:hover:after',
+				'element'  => '.navbar .navbar-nav .nav-link:hover',
 				'property' => 'color',
-			),
-			array(
-				'element'  => '.main-navigation .menu-item.current-menu-item .nav-link:hover:before',
-				'property' => 'background-color',
 			),
 		),
 	)
@@ -255,7 +243,7 @@ Kirki::add_field(
 		'transport' => 'auto',
 		'output'    => array(
 			array(
-				'element'  => 'button, .btn-beats, input[type="submit"], slick-arrow, .slick-active button',
+				'element'  => 'button, .btn-beats, input[type="submit"], slick-arrow, .slick-active button, .navbar-toggler-icon span',
 				'property' => 'background-color',
 			),
 		),

@@ -18,7 +18,7 @@
 							<h2 class="section-heading"><?php echo esc_html(get_theme_mod('about_title')); ?></h2>
 						<?php endif; ?>
 						<?php if (get_theme_mod('about_sub_title')) : ?>
-							<p class="sec-description"><?php echo wp_kses_post(get_theme_mod('about_sub_title')); ?></p>
+							<h3 class="sec-description"><?php echo wp_kses_post(get_theme_mod('about_sub_title')); ?></h3>
 						<?php endif; ?>
 					</div>
 					<?php if (get_theme_mod('about_desc')) : ?>

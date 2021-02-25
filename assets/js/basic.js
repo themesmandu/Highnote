@@ -43,6 +43,7 @@ jQuery(document).ready(function($) {
 
     if ($(document).width() <= 991) {
         $('#navbarCollapse').prepend('<button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation"><span class="screen-reader-text">Menu</span><div class="navbar-toggler-icon"><span></span><span></span><span></span></div></button>');
+        $('#navbarCollapse').addClass('responsive');
     }
 
     $('.navbar.appear-left .navbar-toggler').click(function() {

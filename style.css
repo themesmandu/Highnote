@@ -200,7 +200,7 @@ figcaption,
 
 /* -- to the top css -- */
 
-.up-btn {
+#up-btn {
     position: fixed;
     visibility: hidden;
     bottom: 5%;
@@ -219,7 +219,7 @@ figcaption,
     font-size: 18px;
 }
 
-.up-btn.ayotothetop {
+#up-btn.ayotothetop {
     visibility: visible;
     transform: translate3d(0, 0, 0);
 }

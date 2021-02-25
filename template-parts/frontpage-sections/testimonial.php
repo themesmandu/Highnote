@@ -17,7 +17,7 @@
 						<h2 class="section-heading"><?php echo esc_html(get_theme_mod('testimonial_title')); ?></h2>
 					<?php endif; ?>
 					<?php if (get_theme_mod('testimonial_desc')) : ?>
-						<p class="sec-description"><?php echo wp_kses_post(get_theme_mod('testimonial_desc')); ?></p>
+						<h3 class="sec-description"><?php echo wp_kses_post(get_theme_mod('testimonial_desc')); ?></h3>
 					<?php endif; ?>
 				</div>
 			<?php endif; ?>

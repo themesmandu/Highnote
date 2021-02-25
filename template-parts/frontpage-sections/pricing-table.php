@@ -9,14 +9,14 @@
 <?php if ( get_theme_mod( 'pricing_table_title' ) || get_theme_mod( 'pricing_table_desc' ) ) : ?>
 	<section class="section_licensing section_three">
 		<div class="overlay"></div>
-		<div class="container">
+		<div class="container container-boxed-small">
 			<?php if ( get_theme_mod( 'pricing_table_title' ) || get_theme_mod( 'pricing_table_desc' ) ) : ?>
 				<div class="section_header">
 					<?php if ( get_theme_mod( 'pricing_table_title' ) ) : ?>
 						<h2 class="section-heading"><?php echo esc_html( get_theme_mod( 'pricing_table_title' ) ); ?></h2>
 					<?php endif; ?>
 					<?php if ( get_theme_mod( 'pricing_table_desc' ) ) : ?>
-						<p class="sec-description"><?php echo wp_kses_post( get_theme_mod( 'pricing_table_desc' ) ); ?></p>
+						<h3 class="sec-description"><?php echo wp_kses_post( get_theme_mod( 'pricing_table_desc' ) ); ?></h3>
 					<?php endif; ?>
 
 				</div>
@@ -39,15 +39,15 @@
 								<div class="col-wrap">
 									<div class="col-content">
 										<?php if ( $active_table['table_title'] ) : ?>
-											<h3 class="type"><?php echo esc_html( $active_table['table_title'] ); ?></h3>
+											<h4 class="type"><?php echo esc_html( $active_table['table_title'] ); ?></h4>
 										<?php endif; ?>
 										<?php if ( $active_table['table_subtitle'] ) : ?>
 											<span class="sub-type"><?php echo esc_html( $active_table['table_subtitle'] ); ?></span>
 										<?php endif; ?>
 										<?php if ( $active_table['table_price'] ) : ?>
-										<h3 class="price">
+										<h5 class="price">
 											<?php echo wp_kses_post( 'first' === $active_table['table_currency_position'] ? $table_currency : '' ); ?><?php echo wp_kses_post( $active_table['table_price'] ); ?><?php echo wp_kses_post( 'last' === $active_table['table_currency_position'] ? '<span class="currency last">' . $active_table['table_currency'] . '</span>' : '' ); ?>
-										</h3>
+										</h5>
 										<?php endif; ?>
 										<?php if ( $active_table['table_features'] ) : ?>
 											<ul class="features">
@@ -74,7 +74,7 @@
 									<?php if ( $active_table_two['table_title'] || $active_table_two['table_subtitle'] ) : ?>
 										<div class="heading">
 											<?php if ( $active_table_two['table_title'] ) : ?>
-												<h3 class="type"><?php echo esc_html( $active_table_two['table_title'] ); ?></h3>
+												<h4 class="type"><?php echo esc_html( $active_table_two['table_title'] ); ?></h4>
 											<?php endif; ?>
 											<?php if ( $active_table_two['table_subtitle'] ) : ?>
 												<p class="description"><?php echo esc_html( $active_table_two['table_subtitle'] ); ?></p>
@@ -82,9 +82,9 @@
 										</div>
 									<?php endif; ?>
 									<?php if ( $active_table_two['table_price'] ) : ?>
-									<h3 class="price">
+									<h4 class="price">
 										<?php echo wp_kses_post( 'first' === $active_table_two['table_currency_position'] ? $table_currency_two : '' ); ?><?php echo wp_kses_post( $active_table_two['table_price'] ); ?><?php echo wp_kses_post( 'last' === $active_table_two['table_currency_position'] ? $table_currency_two : '' ); ?>
-									</h3>
+									</h4>
 									<?php endif; ?>
 									<?php if ( $active_table_two['table_button_label'] ) : ?>
 										<a href="<?php echo esc_url( $active_table_two['table_button_link'] ); ?>" class="btn-contact"><?php echo esc_html( $active_table_two['table_button_label'] ); ?></a>

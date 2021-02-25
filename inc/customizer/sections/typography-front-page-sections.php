@@ -57,7 +57,7 @@ Kirki::add_field(
 		),
 		'output'    => array(
 			array(
-				'element' => '',
+				'element' => '.sec-description',
 			),
 		),
 		'transport' => 'auto',
