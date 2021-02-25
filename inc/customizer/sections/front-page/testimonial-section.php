@@ -361,10 +361,10 @@ Kirki::add_field(
 	'highnote_kirki_config',
 	array(
 		'type'     => 'toggle',
-		'settings' => 'testimonial_slide_autoplay_toggle',
+		'settings' => 'highnote_theme_options[testimonial_slide_autoplay_toggle]',
 		'label'    => esc_html__( 'Slide Autoplay', 'highnote' ),
 		'section'  => 'frontpage_testimonial',
-		'default'  => '0',
+		'default'  => '1',
 	)
 );
 
