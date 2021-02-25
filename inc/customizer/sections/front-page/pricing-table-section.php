@@ -427,20 +427,13 @@ Kirki::add_field(
 		'transport' => 'auto',
 		'output'    => array(
 			array(
-				'element'  => '.rpt_plan .column-content',
-				'property' => 'border-color',
-			),
-			array(
-				'element'  => '.rpt_plan:before, .rpt_plan:after, .rpt_plan .column-content:before, .rpt_plan .column-content::after',
-				'property' => 'background-color',
-			),
-			array(
-				'element'  => '.section_licensing .col-wrap:before, .section_licensing .col-wrap:after, .section_licensing .col-content:before, .section_licensing .col-content:after',
-				'property' => 'background-color',
-			),
-			array(
 				'element'  => '.section_licensing .col-content',
 				'property' => 'border-color',
+			),
+			array(
+				'element'  => '.section_licensing .col-wrap:before, .section_licensing .col-wrap:after,
+				.section_licensing .col-content:before, .section_licensing .col-content:after',
+				'property' => 'background-color',
 			),
 		),
 	)
@@ -460,10 +453,6 @@ Kirki::add_field(
 		),
 		'transport' => 'auto',
 		'output'    => array(
-			array(
-				'element'  => '.rpt_plan .column-content',
-				'property' => 'background-color',
-			),
 			array(
 				'element'  => '.section_licensing .col-content',
 				'property' => 'background-color',
@@ -487,10 +476,6 @@ Kirki::add_field(
 		'transport' => 'auto',
 		'output'    => array(
 			array(
-				'element'  => '.rpt_plan .column-content',
-				'property' => 'color',
-			),
-			array(
 				'element'  => '.section_licensing .col-content',
 				'property' => 'color',
 			),
@@ -513,24 +498,11 @@ Kirki::add_field(
 		'transport' => 'auto',
 		'output'    => array(
 			array(
-				'element'  => '.rpt_recommended_plan .column-content',
+				'element'  => '.section_licensing .highlighted .col-content',
 				'property' => 'border-color',
 			),
 			array(
-				'element'  => '.rpt_recommended_plan .column-content, .rpt_recommended_plan:before, .rpt_recommended_plan:after, .rpt_recommended_plan .column-content:before, .rpt_recommended_plan .column-content:after',
-				'property' => 'background-color',
-			),
-			array(
-				'element'  => '.rpt_style_basic .rpt_plan.rpt_recommended_plan .rpt_head .rpt_price .rpt_currency',
-				'property' => 'color',
-			),
-
-			array(
-				'element'  => '.section_licensing .col-wrap.highlighted .col-content',
-				'property' => 'border-color',
-			),
-			array(
-				'element'  => '.section_licensing .col-wrap.highlighted .col-content, .section_licensing .col-wrap.highlighted:before, .section_licensing .col-wrap.highlighted:after, 
+				'element'  => '.section_licensing .highlighted .col-content, .section_licensing .highlighted .col-wrap:before, .section_licensing .highlighted .col-wrap:after,
 				.section_licensing .highlighted .col-content:before, .section_licensing .highlighted .col-content:after',
 				'property' => 'background-color',
 			),
@@ -553,11 +525,7 @@ Kirki::add_field(
 		'transport' => 'auto',
 		'output'    => array(
 			array(
-				'element'  => '.rpt_recommended_plan .column-content',
-				'property' => 'color',
-			),
-			array(
-				'element'  => '.section_licensing .col-wrap.highlighted .col-content',
+				'element'  => '.section_licensing .highlighted .col-content',
 				'property' => 'color',
 			),
 		),

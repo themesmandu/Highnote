@@ -499,7 +499,7 @@ table caption {
     padding: 52px;
 }
 
-.section_licensing .col-wrap.highlighted .col-content {
+.section_licensing .highlighted .col-wrap {
     transform: scale(1, 1.07);
 }
 
@@ -532,10 +532,6 @@ table caption {
     font-size: 56px;
     font-weight: 600;
     margin-bottom: 15px;
-}
-
-.section_licensing .highlighted .col-content .price {
-    font-size: 68px;
 }
 
 .section_licensing .col-wrap .currency {
