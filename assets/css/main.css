@@ -119,6 +119,7 @@ select {
 
 .btn-beats,
 button {
+    padding: 10px 15px;
     border: none;
     border-radius: 0;
     outline: none !important;
@@ -201,18 +202,6 @@ table caption {
 
 .header_jumbotron .beats-heading {
     margin: 0;
-}
-
-.from-top {
-    animation: viewFromTop 2s ease-in;
-}
-
-.from-right {
-    animation: viewFromRight .5s ease-in;
-}
-
-.from-left {
-    animation: viewFromLeft 1s ease-in;
 }
 
 .header_jumbotron .paragraph {

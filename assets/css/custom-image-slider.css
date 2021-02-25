@@ -151,7 +151,7 @@
     right: 0;
     z-index: 9;
     text-align: center;
-    padding: 0 15px;
+    padding: 15px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -161,37 +161,24 @@
     position: relative;
 }
 
-.slider-title .title,
-.slider-title .description span,
-.slider-title .description button {
+.slider-title .title {
     display: block;
     margin: 0;
 }
 
-.slider-title .description {
-    max-width: 700px;
-    margin: 0 auto;
-}
-
-.slider-title .description .sub-heading.from-bottom {
-    animation: viewFromBottom 1s ease-in;
-}
-
-.slider-title .description span {
+.slider-title span {
     font-size: 24px;
     display: inline-block;
     margin-top: 20px;
 }
 
-.slider-title .description button {
+.slider-title button {
     margin: 20px auto 0;
-    padding: 0;
 }
 
-.slider-title .description button a {
+.slider-title button a {
     font-size: 18px;
     font-weight: 500;
-    padding: 10px 15px;
 }
 
 @media (max-width:1200px) {

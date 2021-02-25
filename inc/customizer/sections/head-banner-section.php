@@ -83,7 +83,7 @@ Kirki::add_field(
 		),
 		'output'    => array(
 			array(
-				'element'  => '.front-page .jumbotron',
+				'element'  => '.header_jumbotron',
 				'property' => 'background-color',
 			),
 		),
@@ -104,7 +104,7 @@ Kirki::add_field(
 		),
 		'output'    => array(
 			array(
-				'element'  => '.front-page .jumbotron',
+				'element'  => '.header_jumbotron',
 				'property' => 'color',
 			),
 		),
@@ -123,7 +123,7 @@ Kirki::add_field(
 		'height'   => 1080,
 		'output'   => array(
 			array(
-				'element'  => '.front-page .jumbotron',
+				'element'  => '.header_jumbotron',
 				'property' => 'background-image',
 			),
 		),
@@ -155,22 +155,22 @@ Kirki::add_field(
 		'output'    => array(
 			array(
 				'choice'   => 'padding-top',
-				'element'  => '.front-page .jumbotron',
+				'element'  => '.header_jumbotron',
 				'property' => 'padding-top',
 			),
 			array(
 				'choice'   => 'padding-right',
-				'element'  => '.front-page .jumbotron',
+				'element'  => '.header_jumbotron',
 				'property' => 'padding-right',
 			),
 			array(
 				'choice'   => 'padding-bottom',
-				'element'  => '.front-page .jumbotron',
+				'element'  => '.header_jumbotron',
 				'property' => 'padding-bottom',
 			),
 			array(
 				'choice'   => 'padding-left',
-				'element'  => '.front-page .jumbotron',
+				'element'  => '.header_jumbotron',
 				'property' => 'padding-left',
 			),
 		),

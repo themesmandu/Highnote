@@ -20,7 +20,7 @@ if ( is_front_page() && ! is_home() && get_theme_mod( 'slider_toggle' ) ) : ?>
 				<h2 class="beats-sub-heading from-bottom"><?php echo esc_html( $active_slider['slider_subheading'] ); ?></h2>
 				<?php endif; ?>
 				<?php if ( $active_slider['slider_button_text'] || $active_slider['slider_button_link'] ) : ?>
-				<button><a href="<?php echo esc_url( $active_slider['slider_button_link'] ); ?>" class="btn btn-beats"><?php echo esc_html( $active_slider['slider_button_text'] ); ?></a></button>
+				<button class="btn btn-beats"><a href="<?php echo esc_url( $active_slider['slider_button_link'] ); ?>"><?php echo esc_html( $active_slider['slider_button_text'] ); ?></a></button>
 				<?php endif; ?>
 			</li>
 			<?php endforeach; ?>

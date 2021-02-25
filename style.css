@@ -225,6 +225,25 @@ figcaption,
 }
 
 
+/* -- Animation Class Styles -- */
+
+.from-top {
+    animation: viewFromTop 2s ease-in;
+}
+
+.from-bottom {
+    animation: viewFromBottom 1s ease-in;
+}
+
+.from-right {
+    animation: viewFromRight .5s ease-in;
+}
+
+.from-left {
+    animation: viewFromLeft 1s ease-in;
+}
+
+
 /* -- Animation To The Content -- */
 
 @keyframes scroll {
