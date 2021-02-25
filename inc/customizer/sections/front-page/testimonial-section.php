@@ -356,6 +356,54 @@ Kirki::add_field(
 	)
 );
 
+// Setting toggle autoplay.
+Kirki::add_field(
+	'highnote_kirki_config',
+	array(
+		'type'     => 'toggle',
+		'settings' => 'testimonial_slide_autoplay_toggle',
+		'label'    => esc_html__( 'Slide Autoplay', 'highnote' ),
+		'section'  => 'frontpage_testimonial',
+		'default'  => '0',
+	)
+);
+
+// Setting autoplay speed.
+Kirki::add_field(
+	'highnote_kirki_config',
+	array(
+		'type'     => 'slider',
+		'settings' => 'highnote_theme_options[testimonial_slide_autoplay_speed]',
+		'label'    => esc_html__( 'Slide Autoplay Speed', 'highnote' ),
+		'section'  => 'frontpage_testimonial',
+		'default'  => 3000,
+		'choices'  => array(
+			'min'  => 0,
+			'max'  => 10000,
+			'step' => 100,
+		),
+	)
+);
+
+// Setting autoplay speed.
+Kirki::add_field(
+	'highnote_kirki_config',
+	array(
+		'type'     => 'slider',
+		'settings' => 'highnote_theme_options[testimonial_slide_speed]',
+		'label'    => esc_html__( 'Slide Speed', 'highnote' ),
+		'section'  => 'frontpage_testimonial',
+		'default'  => 500,
+		'choices'  => array(
+			'min'  => 0,
+			'max'  => 1000,
+			'step' => 100,
+		),
+	)
+);
+
+
+
 // Setting color odd.
 Kirki::add_field(
 	'highnote_kirki_config',

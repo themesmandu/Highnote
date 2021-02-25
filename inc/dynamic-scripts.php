@@ -48,11 +48,12 @@ function highnote_dynamic_slider_testimonial_script() {
 			jQuery(".testimonialslide").slick({
 				infinite: true,
 				slidesToShow: <?php echo esc_html( highnote_get_theme_option( 'testimonial_rows' ) ); ?>,
+				arrows: <?php echo ( get_theme_mod( 'testimonial_slide_nav_arrows_toggle' ) ? 'true' : 'false' ); ?>,
 				slidesToScroll: 1,
 				dots: <?php echo ( get_theme_mod( 'testimonial_slide_nav_dots_toggle' ) ? 'true' : 'false' ); ?>,
-				autoplay: true,
-				autoplaySpeed: 3000,
-				speed: 500,
+				autoplay: <?php echo ( get_theme_mod( 'testimonial_slide_autoplay_toggle' ) ? 'true' : 'false' ); ?>,
+				autoplaySpeed: <?php echo esc_html( highnote_get_theme_option( 'testimonial_slide_autoplay_speed' ) ); ?>,
+				speed: <?php echo esc_html( highnote_get_theme_option( 'testimonial_slide_speed' ) ); ?>,
 				cssEase: 'ease-in-out',
 				responsive: [{
 					breakpoint: 767,

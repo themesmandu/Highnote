@@ -39,7 +39,6 @@
 						<?php if ( $active_feature['feature_description'] ) : ?>
 						<p><?php echo esc_html( $active_feature['feature_description'] ); ?></p>
 						<?php endif; ?>
-
 					</div>
 				</div>
 			</div>
