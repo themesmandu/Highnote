@@ -236,6 +236,28 @@ Kirki::add_field(
 	)
 );
 
+// Setting section heading.
+Kirki::add_field(
+	'highnote_kirki_config',
+	array(
+		'type'     => 'text',
+		'settings' => 'feature_title',
+		'label'    => esc_html__( 'Section Heading', 'highnote' ),
+		'section'  => 'frontpage_features',
+	)
+);
+
+// Setting section description.
+Kirki::add_field(
+	'highnote_kirki_config',
+	array(
+		'type'     => 'textarea',
+		'settings' => 'feature_desc',
+		'label'    => esc_html__( 'Section Description', 'highnote' ),
+		'section'  => 'frontpage_features',
+	)
+);
+
 // Feature highlight color.
 Kirki::add_field(
 	'highnote_kirki_config',

@@ -207,6 +207,11 @@ if ( class_exists( 'Kirki' ) ) {
 	require get_template_directory() . '/inc/customizer/sections/typography-slider-banner.php';
 
 	/**
+	* Typography frotn page headings section.
+	*/
+	require get_template_directory() . '/inc/customizer/sections/typography-front-page-sections.php';
+
+	/**
 	* Header banner section.
 	*/
 	require get_template_directory() . '/inc/customizer/sections/head-banner-section.php';
