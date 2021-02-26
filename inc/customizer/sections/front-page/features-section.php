@@ -258,6 +258,29 @@ Kirki::add_field(
 	)
 );
 
+Kirki::add_field(
+	'highnote_kirki_config',
+	array(
+		'type'      => 'radio-buttonset',
+		'settings'  => 'feature_heading_text_align',
+		'label'     => esc_html__( 'Text Align (Heading)', 'highnote' ),
+		'section'   => 'frontpage_features',
+		'default'   => 'left',
+		'choices'   => array(
+			'left'   => esc_html__( 'Left', 'highnote' ),
+			'center' => esc_html__( 'Center', 'highnote' ),
+			'right'  => esc_html__( 'Right', 'highnote' ),
+		),
+		'transport' => 'auto',
+		'output'    => array(
+			array(
+				'element'  => '.section_features .section_header',
+				'property' => 'text-align',
+			),
+		),
+	)
+);
+
 // Feature highlight color.
 Kirki::add_field(
 	'highnote_kirki_config',
