@@ -35,7 +35,7 @@
 								$column_class = 4;
 							}
 							?>
-							<div class="col-md-<?php echo esc_attr( $column_class ); ?> column <?php echo esc_attr( $active_table['table_highlight'] ? 'highlighted' : '' ); ?>">
+							<div class="col-lg-<?php echo esc_attr( $column_class ); ?> col-md-4 column <?php echo esc_attr( $active_table['table_highlight'] ? 'highlighted' : '' ); ?>">
 								<div class="col-wrap">
 									<div class="col-content">
 										<?php if ( $active_table['table_title'] ) : ?>

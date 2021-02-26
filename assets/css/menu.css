@@ -87,6 +87,10 @@
     border-bottom: 1px solid rgba(123, 181, 25, 0.1);
 }
 
+.main-navigation .sub-menu .menu-item .nav-link:hover {
+    color: #ffffff;
+}
+
 .main-navigation .sub-menu .menu-item.menu-item-has-children .nav-link {
     padding-left: 30px;
     color: #ffffff;

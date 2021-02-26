@@ -78,6 +78,10 @@ li {
 
 /* -- Form Styles -- */
 
+.form-control {
+    border-radius: 0;
+}
+
 label {
     font-size: 14px;
     color: #353638;
@@ -412,7 +416,7 @@ section .sec-description {
 }
 
 .section_licensing .highlighted {
-    transform: scale(1, 1.07);
+    transform: scale(1, 1.1);
 }
 
 .section_licensing .col-content:before {

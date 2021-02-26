@@ -1,11 +1,20 @@
 @media (max-width: 1200px) {
-    .section_licensing .table-4 .column {
+    .table-4 .column,
+    .table-8 .column,
+    .table-12 .column {
         width: 50%;
         transform: none;
     }
-    .section_licensing .table-4 .column:nth-last-child(1),
-    .section_licensing .table-4 .column:nth-last-child(2) {
+    .table-4 .column:nth-last-child(1),
+    .table-4 .column:nth-last-child(2),
+    .table-8 .column:nth-last-child(1),
+    .table-8 .column:nth-last-child(2),
+    .table-12 .column:nth-last-child(1),
+    .table-12.column:nth-last-child(2) {
         margin-bottom: 0;
+    }
+    .section_licensing .highlighted {
+        transform: unset;
     }
 }
 
