@@ -307,7 +307,7 @@ Kirki::add_field(
 		'settings'     => 'front_features',
 		'fields'       => array(
 			'feature_title'       => array(
-				'type'  => 'text',
+				'type'  => 'textarea',
 				'label' => esc_html__( 'Feature Title', 'highnote' ),
 			),
 			'feature_icon'        => array(
