@@ -312,13 +312,20 @@ section .sec-description {
 
 /* -- Section Two [Section Features] Styles -- */
 
-.section_features .row {
-    align-items: center;
-}
-
 .section_features .column {
     position: relative;
     margin-bottom: 30px;
+}
+
+.section_licensing .pricing-row .column:nth-last-child(1),
+.section_licensing .pricing-row .column:nth-last-child(2),
+.section_licensing .pricing-row .column:nth-last-child(3),
+.section_licensing .pricing-row .column:nth-last-child(4),
+.section_features .column:nth-last-child(1),
+.section_features .column:nth-last-child(2),
+.section_features .column:nth-last-child(3),
+.section_features .column:nth-last-child(4) {
+    margin-bottom: 0;
 }
 
 .section_features .column-content {
@@ -481,7 +488,7 @@ section .sec-description {
 /* --- Licensing Custom Beats -- */
 
 .custom_beat_row {
-    margin-top: 30px;
+    margin-top: 60px;
 }
 
 .custom_beat_row .column {

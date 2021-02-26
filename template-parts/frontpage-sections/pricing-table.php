@@ -9,7 +9,7 @@
 <?php if ( get_theme_mod( 'pricing_table_title' ) || get_theme_mod( 'pricing_table_desc' ) ) : ?>
 	<section class="section_licensing section_three">
 		<div class="overlay"></div>
-		<div class="container container-boxed-small">
+		<div class="container">
 			<?php if ( get_theme_mod( 'pricing_table_title' ) || get_theme_mod( 'pricing_table_desc' ) ) : ?>
 				<div class="section_header">
 					<?php if ( get_theme_mod( 'pricing_table_title' ) ) : ?>
@@ -25,17 +25,17 @@
 				$active_tables = get_theme_mod( 'pricing_tables' );
 			if ( $active_tables ) {
 				?>
-					<div class="row table-<?php echo count( $active_tables ); ?> ">
+					<div class="row pricing-row table-<?php echo count( $active_tables ); ?> ">
 					<?php foreach ( $active_tables as $key => $active_table ) : ?>
 							<?php
 							$table_currency = '<span class="currency">' . $active_table['table_currency'] . '</span>';
-							if ( 4 === count( $active_tables ) || 8 === count( $active_tables ) || 12 === count( $active_tables ) ) {
-								$column_class = 3;
-							} else {
+							if ( 3 === count( $active_tables ) || 6 === count( $active_tables ) ) {
 								$column_class = 4;
+							} else {
+								$column_class = 3;
 							}
 							?>
-							<div class="col-lg-<?php echo esc_attr( $column_class ); ?> col-md-4 column <?php echo esc_attr( $active_table['table_highlight'] ? 'highlighted' : '' ); ?>">
+							<div class="col-lg-<?php echo esc_attr( $column_class ); ?> column <?php echo esc_attr( $active_table['table_highlight'] ? 'highlighted' : '' ); ?>">
 								<div class="col-wrap">
 									<div class="col-content">
 										<?php if ( $active_table['table_title'] ) : ?>

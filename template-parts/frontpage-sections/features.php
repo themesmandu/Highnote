@@ -9,7 +9,7 @@
 ?>
 <section class="section_features section_two">
 	<div class="overlay"></div>
-	<div class="container container-boxed-small">
+	<div class="container">
 	<?php if ( get_theme_mod( 'feature_title' ) || get_theme_mod( 'feature_desc' ) ) : ?>
 		<div class="section_header">
 			<?php if ( get_theme_mod( 'feature_title' ) ) : ?>
@@ -27,10 +27,10 @@
 		<div class="row table-<?php echo count( $active_features ); ?>">
 			<?php foreach ( $active_features as $key => $active_feature ) : ?>
 				<?php
-				if ( 4 === count( $active_features ) || 8 === count( $active_features ) || 12 === count( $active_features ) ) {
-					$column_class_feature = 3;
-				} else {
+				if ( 3 === count( $active_features ) || 6 === count( $active_features ) ) {
 					$column_class_feature = 4;
+				} else {
+					$column_class_feature = 3;
 				}
 				?>
 			<div class="col-md-<?php echo esc_attr( $column_class_feature ); ?> column <?php echo esc_attr( $active_feature['feature_highlight'] ? 'selected' : '' ); ?>">

@@ -1,20 +1,15 @@
 @media (max-width: 1200px) {
-    .table-4 .column,
-    .table-8 .column,
-    .table-12 .column {
-        width: 50%;
+    .section_licensing .pricing-row .column,
+    .section_features .column {
+        width: 33.3333333333%;
         transform: none;
     }
-    .table-4 .column:nth-last-child(1),
-    .table-4 .column:nth-last-child(2),
-    .table-8 .column:nth-last-child(1),
-    .table-8 .column:nth-last-child(2),
-    .table-12 .column:nth-last-child(1),
-    .table-12.column:nth-last-child(2) {
-        margin-bottom: 0;
+    .section_licensing .pricing-row .column:nth-last-child(4),
+    .section_features .column:nth-last-child(4) {
+        margin-bottom: 30px;
     }
-    .section_licensing .highlighted {
-        transform: unset;
+    .custom_beat_row {
+        margin-top: 30px;
     }
 }
 
@@ -34,18 +29,22 @@
     section .section_header {
         margin-bottom: 32px;
     }
-    .section_features .column:nth-last-child(2),
-    .section_features .column:nth-last-child(3),
     .custom_beat_row .column,
     .section_about .column {
+        margin-bottom: 30px;
+    }
+    .section_licensing .pricing-row .column,
+    .section_features .column {
+        width: 50%;
+    }
+    .section_licensing .pricing-row .column:nth-last-child(3),
+    .section_features .column:nth-last-child(3),
+    .section_offer .column {
         margin-bottom: 30px;
     }
     .custom_beat_row .column:nth-last-child(1),
     .section_about .column:nth-last-child(2) {
         margin-bottom: 0;
-    }
-    .section_offer .column {
-        margin-bottom: 30px;
     }
     .section_offer .column:last-child {
         margin: 0;
@@ -59,12 +58,6 @@
     #content section .container-boxed-small {
         max-width: 450px;
     }
-    .table-4 .column {
-        width: 100%;
-    }
-    .table-4 .column:nth-last-child(2) {
-        margin-bottom: 30px;
-    }
     .custom_beat_row .header-wrap,
     .custom_beat_row .content-wrap {
         padding: 20px;
@@ -74,6 +67,16 @@
 @media (max-width: 576px) {
     .slick-dots {
         margin-top: 32px;
+    }
+    .section_licensing .pricing-row .column,
+    .section_features .column {
+        width: 100%;
+        max-width: 340px;
+        margin: 0 auto 30px;
+    }
+    .section_licensing .pricing-row .column:nth-last-child(2),
+    .section_features .column:nth-last-child(2) {
+        margin-bottom: 30px;
     }
 }
 
