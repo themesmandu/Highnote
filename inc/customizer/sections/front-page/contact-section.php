@@ -287,6 +287,30 @@ Kirki::add_field(
 	)
 );
 
+Kirki::add_field(
+	'highnote_kirki_config',
+	array(
+		'type'      => 'slider',
+		'settings'  => 'contact_heading_width',
+		'label'     => esc_html__( 'Heading Width(px)', 'highnote' ),
+		'section'   => 'frontpage_contact',
+		'default'   => 570,
+		'choices'   => array(
+			'min'  => 0,
+			'max'  => 1900,
+			'step' => 5,
+		),
+		'transport' => 'auto',
+		'output'    => array(
+			array(
+				'element'       => '.section_contact .section_header',
+				'property'      => 'max-width',
+				'value_pattern' => '$px',
+			),
+		),
+	)
+);
+
 // Setting Contact shortcode.
 Kirki::add_field(
 	'highnote_kirki_config',

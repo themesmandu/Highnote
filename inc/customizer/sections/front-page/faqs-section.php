@@ -281,6 +281,30 @@ Kirki::add_field(
 	)
 );
 
+Kirki::add_field(
+	'highnote_kirki_config',
+	array(
+		'type'      => 'slider',
+		'settings'  => 'faqs_heading_width',
+		'label'     => esc_html__( 'Heading Width(px)', 'highnote' ),
+		'section'   => 'frontpage_faqs',
+		'default'   => 570,
+		'choices'   => array(
+			'min'  => 0,
+			'max'  => 1900,
+			'step' => 5,
+		),
+		'transport' => 'auto',
+		'output'    => array(
+			array(
+				'element'       => '.section_four .section_header',
+				'property'      => 'max-width',
+				'value_pattern' => '$px',
+			),
+		),
+	)
+);
+
 // faqs position
 Kirki::add_field(
 	'highnote_kirki_config',
