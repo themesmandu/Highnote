@@ -24,9 +24,16 @@
 		$active_features = get_theme_mod( 'front_features' );
 		if ( $active_features ) {
 			?>
-		<div class="row">
+		<div class="row table-<?php echo count( $active_features ); ?>">
 			<?php foreach ( $active_features as $key => $active_feature ) : ?>
-			<div class="col-lg-3 col-md-6 column <?php echo esc_attr( $active_feature['feature_highlight'] ? 'selected' : '' ); ?>">
+				<?php
+				if ( 4 === count( $active_features ) || 8 === count( $active_features ) || 12 === count( $active_features ) ) {
+					$column_class_feature = 3;
+				} else {
+					$column_class_feature = 4;
+				}
+				?>
+			<div class="col-md-<?php echo esc_attr( $column_class_feature ); ?> column <?php echo esc_attr( $active_feature['feature_highlight'] ? 'selected' : '' ); ?>">
 				<div class="column-content">
 					<?php if ( $active_feature['feature_icon'] ) : ?>
 					<i class="<?php echo esc_html( $active_feature['feature_icon'] ); ?>"></i>
