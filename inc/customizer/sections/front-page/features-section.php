@@ -306,15 +306,19 @@ Kirki::add_field(
 		'button_label' => esc_html__( 'Add New Feature', 'highnote' ),
 		'settings'     => 'front_features',
 		'fields'       => array(
+			'feature_title'       => array(
+				'type'  => 'text',
+				'label' => esc_html__( 'Feature Title', 'highnote' ),
+			),
 			'feature_icon'        => array(
 				'type'        => 'text',
 				'label'       => esc_html__( 'Feature Icon', 'highnote' ),
 				'description' => esc_html__( 'Font Awesome icons. Ex: fas fa-ad ', 'highnote' ) . ' <a href="https://fontawesome.com/v5.14.0/icons/" target="_blank"><strong>' . esc_html__( 'View All', 'highnote' ) . ' </strong></a>',
 
 			),
-			'feature_title'       => array(
+			'feature_subtitle'    => array(
 				'type'  => 'text',
-				'label' => esc_html__( 'Feature Title', 'highnote' ),
+				'label' => esc_html__( 'Feature Sub-Title', 'highnote' ),
 			),
 			'feature_description' => array(
 				'type'  => 'textarea',

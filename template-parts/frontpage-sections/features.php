@@ -39,9 +39,11 @@
 					<i class="<?php echo esc_html( $active_feature['feature_icon'] ); ?>"></i>
 					<?php endif; ?>
 					<div class="content">
-						<h3 class="count">0<?php echo esc_html( $key + 1 ); ?></h3>
 						<?php if ( $active_feature['feature_title'] ) : ?>
-						<h4 class="title"><?php echo esc_html( $active_feature['feature_title'] ); ?></h4>
+						<h3 class="count"><?php echo wp_kses_post( $active_feature['feature_title'] ); ?></h3>
+						<?php endif; ?>
+						<?php if ( $active_feature['feature_subtitle'] ) : ?>
+						<h4 class="title"><?php echo esc_html( $active_feature['feature_subtitle'] ); ?></h4>
 						<?php endif; ?>
 						<?php if ( $active_feature['feature_description'] ) : ?>
 						<p><?php echo esc_html( $active_feature['feature_description'] ); ?></p>
