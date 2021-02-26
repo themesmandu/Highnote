@@ -35,7 +35,7 @@
 				?>
 			<div class="col-md-<?php echo esc_attr( $column_class_feature ); ?> column <?php echo esc_attr( $active_feature['feature_highlight'] ? 'selected' : '' ); ?>">
 				<div class="column-content">
-					<?php if ( $active_feature['feature_icon'] ) : ?>
+					<?php if ( $active_feature['feature_icon'] && highnote_get_theme_option( 'feature_show_icon' ) ) : ?>
 					<i class="<?php echo esc_html( $active_feature['feature_icon'] ); ?>"></i>
 					<?php endif; ?>
 					<div class="content">

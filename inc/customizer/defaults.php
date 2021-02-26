@@ -125,6 +125,11 @@ if ( ! function_exists( 'highnote_get_default_theme_options' ) ) :
 		$defaults['slide_bullet']      = true;   //slide caption.
 		$defaults['slide_gesture']     = false;   //slide caption.
 
+		// feature section show icon
+		$defaults['feature_show_icon']     = true;   //slide caption.
+
+
+
 		// Pass through filter.
 		$defaults = apply_filters( 'highnote_get_default_theme_options', $defaults );
 		return $defaults;
