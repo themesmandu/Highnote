@@ -49,7 +49,8 @@ Kirki::add_field(
 		'label'     => esc_html__( 'Typography(body) Tablet', 'highnote' ),
 		'section'   => 'typography_general_options',
 		'default'   => array(
-			'font-size' => '16px',
+			'font-size'   => '16px',
+			'line-height' => '1.5',
 		),
 		'output'    => array(
 			array(
@@ -69,7 +70,8 @@ Kirki::add_field(
 		'label'     => esc_html__( 'Typography(body) Mobile', 'highnote' ),
 		'section'   => 'typography_general_options',
 		'default'   => array(
-			'font-size' => '16px',
+			'font-size'   => '16px',
+			'line-height' => '1.5',
 		),
 		'output'    => array(
 			array(
