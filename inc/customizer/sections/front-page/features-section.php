@@ -366,3 +366,25 @@ Kirki::add_field(
 	)
 );
 
+Kirki::add_field(
+	'highnote_kirki_config',
+	array(
+		'type'     => 'toggle',
+		'settings' => 'highnote_theme_options[feature_show_icon_tablet]',
+		'label'    => esc_html__( 'Show Icon Tablet View', 'highnote' ),
+		'section'  => 'frontpage_features',
+		'default'  => $defaults['feature_show_icon_tablet'],
+	)
+);
+
+Kirki::add_field(
+	'highnote_kirki_config',
+	array(
+		'type'     => 'toggle',
+		'settings' => 'highnote_theme_options[feature_show_icon_mobile]',
+		'label'    => esc_html__( 'Show Icon Mobile View', 'highnote' ),
+		'section'  => 'frontpage_features',
+		'default'  => $defaults['feature_show_icon_mobile'],
+	)
+);
+
