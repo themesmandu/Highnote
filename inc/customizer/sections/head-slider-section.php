@@ -30,6 +30,53 @@ Kirki::add_field(
 	)
 );
 
+Kirki::add_field(
+	'highnote_kirki_config',
+	array(
+		'type'      => 'slider',
+		'settings'  => 'container_width_slider',
+		'label'     => esc_html__( 'Container Width(px)', 'highnote' ),
+		'section'   => 'frontpage_slider',
+		'default'   => 1200,
+		'choices'   => array(
+			'min'  => 0,
+			'max'  => 1900,
+			'step' => 5,
+		),
+		'transport' => 'auto',
+		'output'    => array(
+			array(
+				'element'       => '.container.slider-title-wrapper',
+				'property'      => 'max-width',
+				'value_pattern' => '$px',
+			),
+		),
+	)
+);
+
+Kirki::add_field(
+	'highnote_kirki_config',
+	array(
+		'type'      => 'radio-buttonset',
+		'settings'  => 'slider_heading_text_align',
+		'label'     => esc_html__( 'Text Align (Heading)', 'highnote' ),
+		'section'   => 'frontpage_slider',
+		'default'   => 'left',
+		'choices'   => array(
+			'left'   => esc_html__( 'Left', 'highnote' ),
+			'center' => esc_html__( 'Center', 'highnote' ),
+			'right'  => esc_html__( 'Right', 'highnote' ),
+		),
+		'transport' => 'auto',
+		'output'    => array(
+			array(
+				'element'  => '.container.slider-title-wrapper',
+				'property' => 'text-align',
+			),
+		),
+	)
+);
+
 // Setting color.
 Kirki::add_field(
 	'highnote_kirki_config',

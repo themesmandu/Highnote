@@ -31,6 +31,53 @@ Kirki::add_field(
 Kirki::add_field(
 	'highnote_kirki_config',
 	array(
+		'type'      => 'slider',
+		'settings'  => 'container_width_banner',
+		'label'     => esc_html__( 'Container Width(px)', 'highnote' ),
+		'section'   => 'frontpage_banner',
+		'default'   => 1200,
+		'choices'   => array(
+			'min'  => 0,
+			'max'  => 1900,
+			'step' => 5,
+		),
+		'transport' => 'auto',
+		'output'    => array(
+			array(
+				'element'       => '.header_jumbotron .container',
+				'property'      => 'max-width',
+				'value_pattern' => '$px',
+			),
+		),
+	)
+);
+
+Kirki::add_field(
+	'highnote_kirki_config',
+	array(
+		'type'      => 'radio-buttonset',
+		'settings'  => 'banner_heading_text_align',
+		'label'     => esc_html__( 'Text Align (Heading)', 'highnote' ),
+		'section'   => 'frontpage_banner',
+		'default'   => 'left',
+		'choices'   => array(
+			'left'   => esc_html__( 'Left', 'highnote' ),
+			'center' => esc_html__( 'Center', 'highnote' ),
+			'right'  => esc_html__( 'Right', 'highnote' ),
+		),
+		'transport' => 'auto',
+		'output'    => array(
+			array(
+				'element'  => '.header_jumbotron .container',
+				'property' => 'text-align',
+			),
+		),
+	)
+);
+
+Kirki::add_field(
+	'highnote_kirki_config',
+	array(
 		'type'     => 'text',
 		'settings' => 'banner_title',
 		'label'    => esc_html__( 'Heading', 'highnote' ),
@@ -47,6 +94,8 @@ Kirki::add_field(
 		'section'  => 'frontpage_banner',
 	)
 );
+
+
 
 Kirki::add_field(
 	'highnote_kirki_config',
