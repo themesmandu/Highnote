@@ -45,6 +45,38 @@ Kirki::add_field(
 	'highnote_kirki_config',
 	array(
 		'type'      => 'typography',
+		'settings'  => 'typography_slider_banner_tablet',
+		'label'     => esc_html__( 'Typography(Slider And Banner Headings) Tablet', 'highnote' ),
+		'section'   => 'typography_slider_banner_options',
+		'default'   => array(
+			'font-size'   => '',
+			'line-height' => '',
+		),
+		'transport' => 'refresh',
+
+	)
+);
+
+Kirki::add_field(
+	'highnote_kirki_config',
+	array(
+		'type'      => 'typography',
+		'settings'  => 'typography_slider_banner_mobile',
+		'label'     => esc_html__( 'Typography(Slider And Banner Headings) Mobile', 'highnote' ),
+		'section'   => 'typography_slider_banner_options',
+		'default'   => array(
+			'font-size'   => '',
+			'line-height' => '',
+		),
+		'transport' => 'refresh',
+
+	)
+);
+
+Kirki::add_field(
+	'highnote_kirki_config',
+	array(
+		'type'      => 'typography',
 		'settings'  => 'typography_slider_banner_subheading',
 		'label'     => esc_html__( 'Typography(Slider And Banner Sub-Headings)', 'highnote' ),
 		'section'   => 'typography_slider_banner_options',
@@ -61,6 +93,38 @@ Kirki::add_field(
 			),
 		),
 		'transport' => 'auto',
+
+	)
+);
+
+Kirki::add_field(
+	'highnote_kirki_config',
+	array(
+		'type'      => 'typography',
+		'settings'  => 'typography_slider_banner_subheading_tablet',
+		'label'     => esc_html__( 'Typography(Slider And Banner Sub-Headings) Tablet', 'highnote' ),
+		'section'   => 'typography_slider_banner_options',
+		'default'   => array(
+			'font-size'   => '',
+			'line-height' => '',
+		),
+		'transport' => 'refresh',
+
+	)
+);
+
+Kirki::add_field(
+	'highnote_kirki_config',
+	array(
+		'type'      => 'typography',
+		'settings'  => 'typography_slider_banner_subheading_mobile',
+		'label'     => esc_html__( 'Typography(Slider And Banner Sub-Headings) Mobile', 'highnote' ),
+		'section'   => 'typography_slider_banner_options',
+		'default'   => array(
+			'font-size'   => '',
+			'line-height' => '',
+		),
+		'transport' => 'refresh',
 
 	)
 );

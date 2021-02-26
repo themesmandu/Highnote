@@ -80,6 +80,18 @@ function highnote_typography_mediascreen_css() {
 	$highnote_heading_h4_mobile = get_theme_mod( 'typography_headings_h4_mobile' );
 	$highnote_heading_h5_mobile = get_theme_mod( 'typography_headings_h5_mobile' );
 	$highnote_heading_h6_mobile = get_theme_mod( 'typography_headings_h6_mobile' );
+
+	$highnote_sb_heading_tablet    = get_theme_mod( 'typography_slider_banner_tablet' );
+	$highnote_sb_subheading_tablet = get_theme_mod( 'typography_slider_banner_subheading_tablet' );
+
+	$highnote_sb_heading_mobile    = get_theme_mod( 'typography_slider_banner_mobile' );
+	$highnote_sb_subheading_mobile = get_theme_mod( 'typography_slider_banner_subheading_mobile' );
+
+	$highnote_fp_heading_tablet    = get_theme_mod( 'front_page_section_headings_tablet' );
+	$highnote_fp_subheading_tablet = get_theme_mod( 'front_page_section_subheadings_tablet' );
+
+	$highnote_fp_heading_mobile    = get_theme_mod( 'front_page_section_headings_mobile' );
+	$highnote_fp_subheading_mobile = get_theme_mod( 'front_page_section_subheadings_mobile' );
 	?>
 <!--Header background CSS-->
 <style type="text/css">
@@ -102,6 +114,20 @@ function highnote_typography_mediascreen_css() {
 		<?php if ( get_theme_mod( 'typography_headings_h6_tablet' ) ) : ?>
 		h6 {font-size: <?php echo esc_html( $highnote_heading_h6_tablet['font-size'] ); ?>;line-height: <?php echo esc_html( $highnote_heading_h6_tablet['line-height'] ); ?>;}
 		<?php endif; ?>
+
+		<?php if ( get_theme_mod( 'typography_slider_banner_tablet' ) ) : ?>
+		.beats_heading {font-size: <?php echo esc_html( $highnote_sb_heading_tablet['font-size'] ); ?>;line-height: <?php echo esc_html( $highnote_sb_heading_tablet['line-height'] ); ?>;}
+		<?php endif; ?>
+		<?php if ( get_theme_mod( 'typography_slider_banner_subheading_tablet' ) ) : ?>
+		.beats-sub-heading {font-size: <?php echo esc_html( $highnote_sb_subheading_tablet['font-size'] ); ?>;line-height: <?php echo esc_html( $highnote_sb_subheading_tablet['line-height'] ); ?>;}
+		<?php endif; ?>
+
+		<?php if ( get_theme_mod( 'front_page_section_headings_tablet' ) ) : ?>
+		.section-heading {font-size: <?php echo esc_html( $highnote_fp_heading_tablet['font-size'] ); ?>;line-height: <?php echo esc_html( $highnote_fp_heading_tablet['line-height'] ); ?>;}
+		<?php endif; ?>
+		<?php if ( get_theme_mod( 'front_page_section_subheadings_tablet' ) ) : ?>
+		.sec-description {font-size: <?php echo esc_html( $highnote_fp_subheading_tablet['font-size'] ); ?>;line-height: <?php echo esc_html( $highnote_fp_subheading_tablet['line-height'] ); ?>;}
+		<?php endif; ?>
 }
 @media (max-width: 576px) {
 		<?php if ( get_theme_mod( 'typography_headings_h1_mobile' ) ) : ?>
@@ -121,6 +147,20 @@ function highnote_typography_mediascreen_css() {
 		<?php endif; ?>
 		<?php if ( get_theme_mod( 'typography_headings_h6_mobile' ) ) : ?>
 		h6 {font-size: <?php echo esc_html( $highnote_heading_h6_mobile['font-size'] ); ?>;line-height: <?php echo esc_html( $highnote_heading_h6_mobile['line-height'] ); ?>;}
+		<?php endif; ?>
+
+		<?php if ( get_theme_mod( 'typography_slider_banner_mobile' ) ) : ?>
+		.beats_heading {font-size: <?php echo esc_html( $highnote_sb_heading_mobile['font-size'] ); ?>;line-height: <?php echo esc_html( $highnote_sb_heading_mobile['line-height'] ); ?>;}
+		<?php endif; ?>
+		<?php if ( get_theme_mod( 'typography_slider_banner_subheading_mobile' ) ) : ?>
+		.beats-sub-heading {font-size: <?php echo esc_html( $highnote_sb_subheading_mobile['font-size'] ); ?>;line-height: <?php echo esc_html( $highnote_sb_subheading_mobile['line-height'] ); ?>;}
+		<?php endif; ?>
+
+		<?php if ( get_theme_mod( 'front_page_section_headings_mobile' ) ) : ?>
+		.section-heading {font-size: <?php echo esc_html( $highnote_fp_heading_mobile['font-size'] ); ?>;line-height: <?php echo esc_html( $highnote_fp_heading_mobile['line-height'] ); ?>;}
+		<?php endif; ?>
+		<?php if ( get_theme_mod( 'front_page_section_subheadings_mobile' ) ) : ?>
+		.sec-description {font-size: <?php echo esc_html( $highnote_fp_subheading_mobile['font-size'] ); ?>;line-height: <?php echo esc_html( $highnote_fp_subheading_mobile['line-height'] ); ?>;}
 		<?php endif; ?>
 }
 
