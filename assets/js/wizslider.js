@@ -927,7 +927,7 @@ jQuery.fn.wizSlider = function(am) {
     if (am.caption) {
         var D = aI("<div class='slider-title' style='display:none'></div>");
         var aF = aI();
-        aI("<div class='slider-title-wrapper'>").append(D, aF).appendTo(au);
+        aI("<div class='container slider-title-wrapper'>").append(D, aF).appendTo(au);
         D.bind("mouseover", function(c) {
             if (!at || !at.playing()) {
                 af()

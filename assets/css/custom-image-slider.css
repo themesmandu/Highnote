@@ -151,7 +151,6 @@
     right: 0;
     z-index: 9;
     text-align: center;
-    padding: 15px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -190,9 +189,6 @@
     #wizards_slider img {
         height: 650px;
     }
-    .slider-title .title {
-        font-size: 114px;
-    }
     .slider-title .description {
         max-width: 525px;
     }
@@ -209,9 +205,6 @@
     #wizards_slider img {
         height: 550px;
     }
-    .slider-title .title {
-        font-size: 74px;
-    }
     #wizards_slider .wiz-arrow i {
         display: none;
     }
@@ -220,9 +213,6 @@
 @media (max-width:576px) {
     #wizards_slider img {
         height: 475px;
-    }
-    .slider-title .title {
-        font-size: 58px;
     }
     .slider-title .description span {
         font-size: 16px;
