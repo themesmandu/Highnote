@@ -265,7 +265,7 @@ Kirki::add_field(
 		'settings'  => 'testimonial_heading_text_align',
 		'label'     => esc_html__( 'Text Align (Heading)', 'highnote' ),
 		'section'   => 'frontpage_testimonial',
-		'default'   => 'left',
+		'default'   => 'center',
 		'choices'   => array(
 			'left'   => esc_html__( 'Left', 'highnote' ),
 			'center' => esc_html__( 'Center', 'highnote' ),
