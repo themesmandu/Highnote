@@ -30,6 +30,30 @@ Kirki::add_field(
 	)
 );
 
+Kirki::add_field(
+	'highnote_kirki_config',
+	array(
+		'type'      => 'slider',
+		'settings'  => 'container_width_slider',
+		'label'     => esc_html__( 'Container Width(px)', 'highnote' ),
+		'section'   => 'frontpage_slider',
+		'default'   => 1200,
+		'choices'   => array(
+			'min'  => 0,
+			'max'  => 1900,
+			'step' => 5,
+		),
+		'transport' => 'auto',
+		'output'    => array(
+			array(
+				'element'       => '.container.slider-title-wrapper',
+				'property'      => 'max-width',
+				'value_pattern' => '$px',
+			),
+		),
+	)
+);
+
 // Setting color.
 Kirki::add_field(
 	'highnote_kirki_config',

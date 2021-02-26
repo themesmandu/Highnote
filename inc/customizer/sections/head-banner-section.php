@@ -31,6 +31,30 @@ Kirki::add_field(
 Kirki::add_field(
 	'highnote_kirki_config',
 	array(
+		'type'      => 'slider',
+		'settings'  => 'container_width_banner',
+		'label'     => esc_html__( 'Container Width(px)', 'highnote' ),
+		'section'   => 'frontpage_banner',
+		'default'   => 1200,
+		'choices'   => array(
+			'min'  => 0,
+			'max'  => 1900,
+			'step' => 5,
+		),
+		'transport' => 'auto',
+		'output'    => array(
+			array(
+				'element'       => '.header_jumbotron .container',
+				'property'      => 'max-width',
+				'value_pattern' => '$px',
+			),
+		),
+	)
+);
+
+Kirki::add_field(
+	'highnote_kirki_config',
+	array(
 		'type'     => 'text',
 		'settings' => 'banner_title',
 		'label'    => esc_html__( 'Heading', 'highnote' ),
