@@ -57,5 +57,24 @@ function highnote_header_background_css() {
 }
 add_action( 'wp_head', 'highnote_header_background_css' );
 
+/**
+ * Output generated a line of CSS from customizer values in header output.
+ *
+ * @link https://codex.wordpress.org/Theme_Customization_API#Sample_Theme_Customization_Class
+ *
+ * Used by hook: 'wp_head'
+ *
+ * @see add_action('wp_head',$func)
+ */
+function highnote_typography_mediascreen_css() {
+	?>
+<!--Header background CSS-->
+<style type="text/css">
+
+</style>
+
+	<?php
+}
+add_action( 'wp_head', 'highnote_typography_mediascreen_css' );
 
 

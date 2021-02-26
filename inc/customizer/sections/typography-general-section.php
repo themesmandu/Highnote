@@ -52,12 +52,7 @@ Kirki::add_field(
 			'font-size'   => '16px',
 			'line-height' => '1.5',
 		),
-		'output'    => array(
-			array(
-				'element' => 'body',
-			),
-		),
-		'transport' => 'auto',
+		'transport' => 'refresh',
 
 	)
 );
