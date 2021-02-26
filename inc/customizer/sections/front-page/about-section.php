@@ -300,7 +300,7 @@ Kirki::add_field(
 		'settings'  => 'about_heading_width',
 		'label'     => esc_html__( 'Heading Width(px)', 'highnote' ),
 		'section'   => 'frontpage_about',
-		'default'   => 570,
+		'default'   => 1900,
 		'choices'   => array(
 			'min'  => 0,
 			'max'  => 1900,

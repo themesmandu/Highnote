@@ -377,6 +377,10 @@ section .sec-description {
     margin-bottom: 12px;
 }
 
+.section_features .column p {
+    margin: 0;
+}
+
 
 /* -- Section Three [Section Licensing] Styles -- */
 

@@ -40,9 +40,6 @@
     .section_about .column {
         margin-bottom: 30px;
     }
-    .section_features h2 {
-        font-size: 36px;
-    }
     .custom_beat_row .column:nth-last-child(1),
     .section_about .column:nth-last-child(2) {
         margin-bottom: 0;
@@ -62,10 +59,10 @@
     #content section .container-boxed-small {
         max-width: 450px;
     }
-    .section_licensing .table-4 .column {
+    .table-4 .column {
         width: 100%;
     }
-    .section_licensing .table-4 .column:nth-last-child(2) {
+    .table-4 .column:nth-last-child(2) {
         margin-bottom: 30px;
     }
     .custom_beat_row .header-wrap,

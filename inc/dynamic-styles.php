@@ -182,7 +182,7 @@ add_action( 'wp_head', 'highnote_typography_mediascreen_css', 9999 );
 function highnote_feature_section_icon_mediascreen_css() {
 	?>
 <style type="text/css">
-@media (max-width: 991px) {
+@media (max-width: 991px) and (min-width: 768px) {
 	<?php if ( ! highnote_get_theme_option( 'feature_show_icon_tablet' ) ) : ?>
 	.section_features .column i {display: none;}
 	<?php endif; ?>
