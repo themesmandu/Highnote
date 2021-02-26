@@ -288,7 +288,7 @@ Kirki::add_field(
 		'settings'  => 'faqs_heading_width',
 		'label'     => esc_html__( 'Heading Width(px)', 'highnote' ),
 		'section'   => 'frontpage_faqs',
-		'default'   => 570,
+		'default'   => 930,
 		'choices'   => array(
 			'min'  => 0,
 			'max'  => 1900,
