@@ -45,43 +45,6 @@ Kirki::add_field(
 	'highnote_kirki_config',
 	array(
 		'type'      => 'typography',
-		'settings'  => 'typography_general_tablet',
-		'label'     => esc_html__( 'Typography(body) Tablet', 'highnote' ),
-		'section'   => 'typography_general_options',
-		'default'   => array(
-			'font-size'   => '16px',
-			'line-height' => '1.5',
-		),
-		'transport' => 'refresh',
-
-	)
-);
-
-Kirki::add_field(
-	'highnote_kirki_config',
-	array(
-		'type'      => 'typography',
-		'settings'  => 'typography_general_mobile',
-		'label'     => esc_html__( 'Typography(body) Mobile', 'highnote' ),
-		'section'   => 'typography_general_options',
-		'default'   => array(
-			'font-size'   => '16px',
-			'line-height' => '1.5',
-		),
-		'output'    => array(
-			array(
-				'element' => 'body',
-			),
-		),
-		'transport' => 'auto',
-
-	)
-);
-
-Kirki::add_field(
-	'highnote_kirki_config',
-	array(
-		'type'      => 'typography',
 		'settings'  => 'typography_paragraph',
 		'label'     => esc_html__( 'Typography(paragraph)', 'highnote' ),
 		'section'   => 'typography_general_options',

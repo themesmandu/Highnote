@@ -47,6 +47,22 @@ Kirki::add_field(
 	'highnote_kirki_config',
 	array(
 		'type'      => 'typography',
+		'settings'  => 'typography_headings_h1_tablet',
+		'label'     => esc_html__( 'H1 Tablet', 'highnote' ),
+		'section'   => 'typography_headings_options',
+		'default'   => array(
+			'font-size'   => '',
+			'line-height' => '',
+		),
+		'transport' => 'refresh',
+
+	)
+);
+
+Kirki::add_field(
+	'highnote_kirki_config',
+	array(
+		'type'      => 'typography',
 		'settings'  => 'typography_headings_h2',
 		'label'     => esc_html__( 'H2', 'highnote' ),
 		'section'   => 'typography_headings_options',

@@ -70,6 +70,11 @@ function highnote_typography_mediascreen_css() {
 	?>
 <!--Header background CSS-->
 <style type="text/css">
+@media (max-width: 991px) {
+	h1 {
+		font-size: <?php echo esc_html( get_theme_mod( 'typography_headings_h1_tablet' ) ); ?>;
+	}
+}
 
 </style>
 
