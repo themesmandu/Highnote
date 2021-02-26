@@ -326,7 +326,6 @@ section .sec-description {
     position: relative;
     border-right: 3px solid transparent;
     border-left: 3px solid transparent;
-    padding: 42px;
 }
 
 .section_features .column:before,
