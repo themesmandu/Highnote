@@ -79,6 +79,6 @@ function highnote_typography_mediascreen_css() {
 
 	<?php
 }
-add_action( 'wp_head', 'highnote_typography_mediascreen_css' );
+add_action( 'wp_head', 'highnote_typography_mediascreen_css', 9999 );
 
 
