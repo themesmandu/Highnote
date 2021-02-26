@@ -87,6 +87,22 @@ Kirki::add_field(
 	'highnote_kirki_config',
 	array(
 		'type'      => 'typography',
+		'settings'  => 'typography_headings_h2_tablet',
+		'label'     => esc_html__( 'H2 Tablet', 'highnote' ),
+		'section'   => 'typography_headings_options',
+		'default'   => array(
+			'font-size'   => '',
+			'line-height' => '',
+		),
+		'transport' => 'refresh',
+
+	)
+);
+
+Kirki::add_field(
+	'highnote_kirki_config',
+	array(
+		'type'      => 'typography',
 		'settings'  => 'typography_headings_h3',
 		'label'     => esc_html__( 'H3', 'highnote' ),
 		'section'   => 'typography_headings_options',
@@ -103,6 +119,22 @@ Kirki::add_field(
 			),
 		),
 		'transport' => 'auto',
+
+	)
+);
+
+Kirki::add_field(
+	'highnote_kirki_config',
+	array(
+		'type'      => 'typography',
+		'settings'  => 'typography_headings_h3_tablet',
+		'label'     => esc_html__( 'H3 Tablet', 'highnote' ),
+		'section'   => 'typography_headings_options',
+		'default'   => array(
+			'font-size'   => '',
+			'line-height' => '',
+		),
+		'transport' => 'refresh',
 
 	)
 );

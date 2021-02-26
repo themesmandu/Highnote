@@ -67,14 +67,12 @@ add_action( 'wp_head', 'highnote_header_background_css' );
  * @see add_action('wp_head',$func)
  */
 function highnote_typography_mediascreen_css() {
+	$highnote_heading_h1_tablet = get_theme_mod( 'typography_headings_h1_tablet' );
 	?>
 <!--Header background CSS-->
 <style type="text/css">
 @media (max-width: 991px) {
-		h1 {font-size: <?php echo esc_html( get_theme_mod( 'typography_headings_h1_tablet' )[ array( 'font-size' ) ] ); ?>;line-height: <?php echo esc_html( get_theme_mod( 'typography_headings_h1_tablet' )[ array( 'line-height' ) ] ); ?>;}
-		h2{
-
-		}
+		h1 {font-size: <?php echo esc_html( $highnote_heading_h1_tablet['font-size'] ); ?>;line-height: <?php echo esc_html( $highnote_heading_h1_tablet['line-height'] ); ?>;}
 }
 
 </style>
