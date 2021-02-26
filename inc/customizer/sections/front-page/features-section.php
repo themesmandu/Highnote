@@ -358,6 +358,30 @@ Kirki::add_field(
 Kirki::add_field(
 	'highnote_kirki_config',
 	array(
+		'type'      => 'slider',
+		'settings'  => 'feature_column_padding',
+		'label'     => esc_html__( 'Feature Column Padding(px)', 'highnote' ),
+		'section'   => 'frontpage_features',
+		'default'   => 42,
+		'choices'   => array(
+			'min'  => 0,
+			'max'  => 60,
+			'step' => 1,
+		),
+		'transport' => 'auto',
+		'output'    => array(
+			array(
+				'element'       => '.section_features .column-content',
+				'property'      => 'padding',
+				'value_pattern' => '$px',
+			),
+		),
+	)
+);
+
+Kirki::add_field(
+	'highnote_kirki_config',
+	array(
 		'type'     => 'toggle',
 		'settings' => 'highnote_theme_options[feature_show_icon]',
 		'label'    => esc_html__( 'Show Icon', 'highnote' ),
