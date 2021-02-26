@@ -639,8 +639,8 @@ section .sec-description {
 }
 
 .testimonialslide img {
-    height: 115px;
-    width: 115px;
+    max-height: 100px;
+    max-width: 100px;
     border-radius: 100%;
     margin-bottom: 15px;
     display: inline-block;
