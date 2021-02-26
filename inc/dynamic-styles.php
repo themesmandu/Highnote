@@ -93,7 +93,7 @@ function highnote_typography_mediascreen_css() {
 	$highnote_fp_heading_mobile    = get_theme_mod( 'front_page_section_headings_mobile' );
 	$highnote_fp_subheading_mobile = get_theme_mod( 'front_page_section_subheadings_mobile' );
 	?>
-<!--Header background CSS-->
+
 <style type="text/css">
 @media (max-width: 991px) {
 		<?php if ( get_theme_mod( 'typography_headings_h1_tablet' ) ) : ?>
@@ -116,7 +116,7 @@ function highnote_typography_mediascreen_css() {
 		<?php endif; ?>
 
 		<?php if ( get_theme_mod( 'typography_slider_banner_tablet' ) ) : ?>
-		.beats_heading {font-size: <?php echo esc_html( $highnote_sb_heading_tablet['font-size'] ); ?>;line-height: <?php echo esc_html( $highnote_sb_heading_tablet['line-height'] ); ?>;}
+		.beats-heading {font-size: <?php echo esc_html( $highnote_sb_heading_tablet['font-size'] ); ?>;line-height: <?php echo esc_html( $highnote_sb_heading_tablet['line-height'] ); ?>;}
 		<?php endif; ?>
 		<?php if ( get_theme_mod( 'typography_slider_banner_subheading_tablet' ) ) : ?>
 		.beats-sub-heading {font-size: <?php echo esc_html( $highnote_sb_subheading_tablet['font-size'] ); ?>;line-height: <?php echo esc_html( $highnote_sb_subheading_tablet['line-height'] ); ?>;}
@@ -150,7 +150,7 @@ function highnote_typography_mediascreen_css() {
 		<?php endif; ?>
 
 		<?php if ( get_theme_mod( 'typography_slider_banner_mobile' ) ) : ?>
-		.beats_heading {font-size: <?php echo esc_html( $highnote_sb_heading_mobile['font-size'] ); ?>;line-height: <?php echo esc_html( $highnote_sb_heading_mobile['line-height'] ); ?>;}
+		.beats-heading {font-size: <?php echo esc_html( $highnote_sb_heading_mobile['font-size'] ); ?>;line-height: <?php echo esc_html( $highnote_sb_heading_mobile['line-height'] ); ?>;}
 		<?php endif; ?>
 		<?php if ( get_theme_mod( 'typography_slider_banner_subheading_mobile' ) ) : ?>
 		.beats-sub-heading {font-size: <?php echo esc_html( $highnote_sb_subheading_mobile['font-size'] ); ?>;line-height: <?php echo esc_html( $highnote_sb_subheading_mobile['line-height'] ); ?>;}
@@ -170,4 +170,32 @@ function highnote_typography_mediascreen_css() {
 }
 add_action( 'wp_head', 'highnote_typography_mediascreen_css', 9999 );
 
+/**
+ * Output generated a line of CSS from customizer values in header output.
+ *
+ * @link https://codex.wordpress.org/Theme_Customization_API#Sample_Theme_Customization_Class
+ *
+ * Used by hook: 'wp_head'
+ *
+ * @see add_action('wp_head',$func)
+ */
+function highnote_feature_section_icon_mediascreen_css() {
+	?>
+<style type="text/css">
+@media (max-width: 991px) {
+	<?php if ( ! highnote_get_theme_option( 'feature_show_icon_tablet' ) ) : ?>
+	.section_features .column i {display: none;}
+	<?php endif; ?>
+}
 
+@media (max-width: 767px) {
+	<?php if ( ! highnote_get_theme_option( 'feature_show_icon_mobile' ) ) : ?>
+	.section_features .column i {display: none;}
+	<?php endif; ?>
+}
+</style>
+	<?php
+}
+
+
+	add_action( 'wp_head', 'highnote_feature_section_icon_mediascreen_css', 9999 );
