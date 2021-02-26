@@ -236,7 +236,7 @@ table caption {
 }
 
 section .section_header {
-    margin-bottom: 48px;
+    margin: 0 auto 48px;
 }
 
 section .sec-description {
