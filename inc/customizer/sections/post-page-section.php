@@ -290,8 +290,7 @@ Kirki::add_field(
 			),
 
 			array(
-				'element'  => 'input, textarea, select, .comment-respond input[type=text], .comment-respond input[type=email], .comment-respond .comment-form-comment textarea,
-				#edd_checkout_form_wrap input',
+				'element'  => 'input, textarea, select, .comment-respond input[type=text], .comment-respond input[type=email], .comment-respond .comment-form-comment textarea',
 				'property' => 'border-color',
 			),
 
