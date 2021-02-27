@@ -6,6 +6,8 @@
  */
 
 ?>
+<?php if ( has_post_thumbnail() ) : ?>
 <figure class="col-md-4 column">
-<?php the_post_thumbnail(); ?>
+	<?php the_post_thumbnail(); ?>
 </figure>
+<?php endif; ?>

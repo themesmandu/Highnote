@@ -6,6 +6,8 @@
  */
 
 ?>
+<?php if ( has_post_thumbnail() ) : ?>
 <figure>
 	<?php the_post_thumbnail(); ?>
 </figure>
+<?php endif; ?>
