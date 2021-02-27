@@ -811,10 +811,6 @@ article time.updated.published {
     margin: 0;
 }
 
-article .post-wrap {
-    padding: 20px;
-}
-
 article figure {
     margin-bottom: 24px;
 }
@@ -822,7 +818,7 @@ article figure {
 article .attachment-post-thumbnail {
     height: auto;
     width: auto;
-    min-height: 100%;
+    min-height: 250px;
 }
 
 article .entry-title {
@@ -881,14 +877,6 @@ article span i {
 
 article.list-view figure {
     margin: 0;
-}
-
-article.list-view div.column {
-    padding: 15px;
-}
-
-article div.column div:last-child {
-    margin: 10px 0 0;
 }
 
 article.post .entry-meta {
