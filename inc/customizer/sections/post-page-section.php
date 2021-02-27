@@ -238,7 +238,7 @@ Kirki::add_field(
 		'transport' => 'auto',
 		'output'    => array(
 			array(
-				'element'       => 'article .post-wrap, article.list-view .column',
+				'element'       => 'article .post-wrap',
 				'property'      => 'padding',
 				'value_pattern' => '$px',
 			),
