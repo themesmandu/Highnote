@@ -187,3 +187,13 @@ function highnote_customize_preview_js() {
 }
 add_action( 'customize_preview_init', 'highnote_customize_preview_js' );
 
+function highnote_post_page_setting_js() {
+	wp_enqueue_script( 'highnote-post-page-setting-js', get_template_directory_uri() . '/assets/admin/customizer/js/post-page-setting.js', array( 'customize-controls' ), wp_get_theme()->get( 'Version' ), true );
+}
+add_action( 'customize_controls_enqueue_scripts', 'highnote_post_page_setting_js' );
+
+function highnote_kirki_multicheck_css() {
+	wp_enqueue_style( 'highnote-multickeck', get_template_directory_uri() . '/assets/admin/customizer/css/kirki-multicheck.css', array(), wp_get_theme()->get( 'Version' ) );
+}
+add_action( 'customize_controls_print_styles', 'highnote_kirki_multicheck_css' );
+
