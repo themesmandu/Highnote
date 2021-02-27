@@ -58,7 +58,67 @@ Kirki::add_field(
 	)
 );
 
+//post box shadow top-bottom
+Kirki::add_field(
+	'highnote_kirki_config',
+	array(
+		'type'     => 'slider',
+		'settings' => 'post_bs_tb',
+		'label'    => esc_html__( 'Post Box Shadow Top-Bottom(px)', 'highnote' ),
+		'section'  => 'blog_options',
+		'default'  => 0,
+		'choices'  => array(
+			'min'  => -50,
+			'max'  => 50,
+			'step' => 1,
+		),
+		'output'   => array(
+			array(
+				'element'         => 'article.post, article.page, .single-download article, .archive article.type-download',
+				'property'        => 'box-shadow',
+				'value_pattern'   => '$px shadow_lrpx shadow_blurpx shadow_spreadpx shadow_color',
+				'pattern_replace' => array(
+					'shadow_lr'     => 'post_bs_lr',
+					'shadow_blur'   => 'post_bs_blur',
+					'shadow_spread' => 'post_bs_spread',
+					'shadow_color'  => 'post_bs_color',
+				),
+			),
+		),
+	)
+);
 
+//post box shadow left-right
+Kirki::add_field(
+	'highnote_kirki_config',
+	array(
+		'type'     => 'slider',
+		'settings' => 'post_bs_lr',
+		'label'    => esc_html__( 'Post Box Shadow Left-Right(px)', 'highnote' ),
+		'section'  => 'blog_options',
+		'default'  => 0,
+		'choices'  => array(
+			'min'  => -50,
+			'max'  => 50,
+			'step' => 1,
+		),
+		'output'   => array(
+			array(
+				'element'         => 'article.post, article.page, .single-download article, .archive article.type-download',
+				'property'        => 'box-shadow',
+				'value_pattern'   => 'shadow_tbpx $px shadow_blurpx shadow_spreadpx shadow_color',
+				'pattern_replace' => array(
+					'shadow_tb'     => 'post_bs_tb',
+					'shadow_blur'   => 'post_bs_blur',
+					'shadow_spread' => 'post_bs_spread',
+					'shadow_color'  => 'post_bs_color',
+				),
+			),
+		),
+	)
+);
+
+//post box shadow blur
 Kirki::add_field(
 	'highnote_kirki_config',
 	array(
@@ -76,8 +136,10 @@ Kirki::add_field(
 			array(
 				'element'         => 'article.post, article.page, .single-download article, .archive article.type-download',
 				'property'        => 'box-shadow',
-				'value_pattern'   => '0px 0px $px shadow_spreadpx shadow_color',
+				'value_pattern'   => 'shadow_tbpx shadow_lrpx $px shadow_spreadpx shadow_color',
 				'pattern_replace' => array(
+					'shadow_tb'     => 'post_bs_tb',
+					'shadow_lr'     => 'post_bs_lr',
 					'shadow_spread' => 'post_bs_spread',
 					'shadow_color'  => 'post_bs_color',
 				),
@@ -86,6 +148,7 @@ Kirki::add_field(
 	)
 );
 
+//post box shadow spread
 Kirki::add_field(
 	'highnote_kirki_config',
 	array(
@@ -103,8 +166,10 @@ Kirki::add_field(
 			array(
 				'element'         => 'article.post, article.page, .single-download article, .archive article.type-download',
 				'property'        => 'box-shadow',
-				'value_pattern'   => '0px 0px shadow_blurpx $px shadow_color',
+				'value_pattern'   => 'shadow_tbpx shadow_lrpx shadow_blurpx $px shadow_color',
 				'pattern_replace' => array(
+					'shadow_tb'    => 'post_bs_tb',
+					'shadow_lr'    => 'post_bs_lr',
 					'shadow_blur'  => 'post_bs_blur',
 					'shadow_color' => 'post_bs_color',
 				),
@@ -113,6 +178,7 @@ Kirki::add_field(
 	)
 );
 
+//post box shadow color
 Kirki::add_field(
 	'highnote_kirki_config',
 	array(
@@ -128,8 +194,10 @@ Kirki::add_field(
 			array(
 				'element'         => 'article.post, article.page, .single-download article, .archive article.type-download',
 				'property'        => 'box-shadow',
-				'value_pattern'   => '0px 0px shadow_blurpx shadow_spreadpx $',
+				'value_pattern'   => 'shadow_tbpx shadow_lrpx shadow_blurpx shadow_spreadpx $',
 				'pattern_replace' => array(
+					'shadow_tb'     => 'post_bs_tb',
+					'shadow_lr'     => 'post_bs_lr',
 					'shadow_blur'   => 'post_bs_blur',
 					'shadow_spread' => 'post_bs_spread',
 				),

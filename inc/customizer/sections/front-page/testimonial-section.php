@@ -477,7 +477,7 @@ Kirki::add_field(
 		),
 	)
 );
-
+ 
 //odd box shadow top-bottom
 Kirki::add_field(
 	'highnote_kirki_config',
