@@ -359,6 +359,26 @@ Kirki::add_field(
 Kirki::add_field(
 	'highnote_kirki_config',
 	array(
+		'type'      => 'typography',
+		'settings'  => 'pricing_table_price',
+		'label'     => esc_html__( 'Typography Table One Price', 'highnote' ),
+		'section'   => 'frontpage_pricing_table',
+		'default'   => array(
+			'font-size'      => '56px',
+		),
+		'output'    => array(
+			array(
+				'element' => '.section_licensing .col-content .price',
+			),
+		),
+		'transport' => 'auto',
+
+	)
+);
+
+Kirki::add_field(
+	'highnote_kirki_config',
+	array(
 		'type'      => 'slider',
 		'settings'  => 'table_column_padding_pricing_table_one',
 		'label'     => esc_html__( 'Pricing Table One Column Padding(px)', 'highnote' ),

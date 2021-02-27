@@ -455,7 +455,6 @@ section .sec-description {
 .section_licensing .col-content .price {
     display: flex;
     align-items: center;
-    font-size: 56px;
     font-weight: 600;
     margin-bottom: 15px;
 }
