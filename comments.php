@@ -7,7 +7,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package highnote
+ * @package Beatsmandu
  */
 
 if ( post_password_required() ) {
@@ -19,65 +19,61 @@ if ( post_password_required() ) {
 	return;
 }
 ?>
-
+<?php
+	// You can start editing here -- including this comment!
+if ( have_comments() ) :
+	?>
 <div id="comments" class="comments-area">
 
+
+	<h2 class="comments-title">
 	<?php
-	// You can start editing here -- including this comment!
-	if ( have_comments() ) :
-		?>
-		<h2 class="comments-title">
-			<?php
 			$highnote_comment_count = get_comments_number();
-			if ( '1' === $highnote_comment_count ) {
-				printf(// WPCS: XSS OK.
-					/* translators: 1: title. */
-					esc_html__( 'One thought on &ldquo;%1$s&rdquo;', 'highnote' ),
-					'<span>' . get_the_title() . '</span>'
-				);
-			} else {
-				printf( // WPCS: XSS OK.
-					/* translators: 1: comment count number, 2: title. */
-					esc_html( _nx( '%1$s thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', $highnote_comment_count, 'comments title', 'highnote' ) ),
-					number_format_i18n( $highnote_comment_count ),
-					'<span>' . get_the_title() . '</span>'
-				);
-			}
-			?>
-		</h2><!-- .comments-title -->
+			printf( // WPCS: XSS OK.
+				/* translators: 1: comment count number, 2: title. */
+				esc_html( _nx( '%1$s comment', '%1$s comments', $highnote_comment_count, 'comments title', 'highnote' ) ),
+				number_format_i18n( $highnote_comment_count ),
+				'<span>' . get_the_title() . '</span>'
+			);
+	?>
+	</h2><!-- .comments-title -->
 
-		<?php the_comments_navigation(); ?>
+	<ul class="comment-list">
+		<?php
+		wp_list_comments(
+			array(
+				'avatar_size' => 55,
+			)
+		);
+		?>
+	</ul>
 
-		<ul class="comment-list">
-			<?php
-			wp_list_comments(
+
+
+	<div class="comment_pagination">
+		<?php
+			paginate_comments_links(
 				array(
-					'callback'    => 'highnote_comment',
-					'avatar_size' => 55,
+					'mid_size'  => 2,
+					'prev_text' => '<span class="previous">' . __( 'Prev', 'highnote' ),
+					'next_text' => '<span class="next">' . __( 'Next', 'highnote' ),
 				)
 			);
-			?>
-		</ul>
+		?>
+	</div>
 
+	<?php
+
+	// If comments are closed and there are comments, let's leave a little note, shall we?
+	if ( ! comments_open() ) :
+		?>
+	<p class="no-comment beats-notice"><?php esc_html_e( 'Comments are closed.', 'highnote' ); ?></p>
 		<?php
-		the_comments_navigation();
-
-		// If comments are closed and there are comments, let's leave a little note, shall we?
-		if ( ! comments_open() ) :
-			?>
-			<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'highnote' ); ?></p>
-			<?php
 		endif;
-
-	endif; // Check for have_comments().
-
-	comment_form(
-		array(
-			'class_form'    => 'comment-form',
-			'class_submit'  => 'btn btn-primary',
-			'comment_field' => '<div class="form-group"><textarea id="comment" class="form-control" name="comment" cols="45" rows="8" aria-required="true"></textarea></div>',
-		)
-	);
 	?>
-
 </div><!-- #comments -->
+
+	<?php
+	endif; // Check for have_comments().
+	comment_form();
+?>

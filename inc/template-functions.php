@@ -138,22 +138,6 @@ add_filter( 'next_posts_link_attributes', 'highnote_posts_link_attributes' );
 add_filter( 'previous_posts_link_attributes', 'highnote_posts_link_attributes' );
 
 /**
- * Comment form container.
- */
-function highnote_comment_form_wrap_start() {
-	echo '<div class="card my-4"><div class="card-body">';
-}
-
-/**
- * Comment form wrapper.
- */
-function highnote_comment_form_wrap_end() {
-	echo '</div></div>';
-}
-add_action( 'comment_form_after', 'highnote_comment_form_wrap_end' );
-add_action( 'comment_form_before', 'highnote_comment_form_wrap_start' );
-
-/**
  * Add custom class to comment reply link.
  *
  * @param string $content comment reply link class.
