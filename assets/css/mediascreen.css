@@ -20,13 +20,13 @@
     .order-righ {
         order: 1;
     }
-    #content section {
+    section.section-frontpage {
         padding: 50px 0;
     }
-    #content section .container-boxed {
+    .container-boxed {
         max-width: 682px;
     }
-    section .section_header {
+    .section-frontpage .section_header {
         margin-bottom: 32px;
     }
     .custom_beat_row .column,
@@ -55,7 +55,7 @@
     .jumbotron.header_jumbotron {
         padding: 130px 0;
     }
-    #content section .container-boxed-small {
+    .container-boxed-small {
         max-width: 450px;
     }
     .custom_beat_row .header-wrap,

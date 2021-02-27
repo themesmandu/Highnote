@@ -233,9 +233,9 @@ body.home #content {
 }
 
 
-/* -- Content Section Styles -- */
+/* -- Frontpage Section Styles -- */
 
-.home #content section {
+.section-frontpage {
     position: relative;
     background-size: cover;
     background-repeat: no-repeat;
@@ -251,19 +251,19 @@ body.home #content {
     left: 0;
 }
 
-#content section .container {
+.section-frontpage .container {
     position: relative;
 }
 
-#content section p {
+.section-frontpage p {
     color: inherit;
 }
 
-section .section_header {
+.section-frontpage .section_header {
     margin: 0 auto 48px;
 }
 
-section .sec-description {
+.section-frontpage .sec-description {
     margin: 0;
 }
 
@@ -994,65 +994,62 @@ span.page-numbers.current {
     margin: 0 -15px;
 }
 
-body.single .navigation .column {
+.single-post .navigation .column {
     width: 50%;
     padding: 0 15px;
     display: flex;
     overflow: hidden;
 }
 
-body.single .navigation .column figure {
+.single-post .navigation .column figure {
     height: 60px;
     margin: 0 20px 0 0;
     display: inline-block;
 }
 
-body.single .navigation .column img {
+.single-post .navigation .column img {
     width: 60px;
     height: 60px;
     max-width: 60px;
     transition: all 0.3s;
 }
 
-body.single .navigation .column figure {
+.single-post .navigation .column figure {
     position: relative;
 }
 
-body.single .navigation .column figure a:before {
+.single-post .navigation .column figure a:before {
     content: '';
     background: rgba(0, 0, 0, .6);
     visibility: hidden;
 }
 
-body.single .navigation .column:hover figure a:before {
+.single-post .navigation .column:hover figure a:before {
     visibility: visible;
 }
 
-body.single .navigation span {
+.single-post .navigation span {
     color: inherit;
-}
-
-body.single .navigation span {
     font-weight: 300;
+    display: block;
 }
 
-body.single .navigation .column h4 {
+.single-post .navigation .column h4 {
     font-size: inherit;
     font-weight: 500;
     margin: 0;
 }
 
-body.single .next_post {
+.single-post .next_post {
     text-align: right;
     margin-left: auto;
 }
 
-body.single .next_post .next_title {
+.single-post .next_post .next_title {
     margin-left: auto;
 }
 
-body.single .navigation .next_post figure {
-    order: 1;
+.single-post .navigation .next_post figure {
     margin: 0 0 0 20px;
 }
 
@@ -1247,12 +1244,12 @@ body.single .navigation .next_post figure {
     order: -1;
 }
 
-#sidebar section {
+#sidebar .widget {
     padding: 0;
     margin: 0 0 48px;
 }
 
-#sidebar section:last-child {
+#sidebar .widget:last-child {
     margin: 0;
 }
 

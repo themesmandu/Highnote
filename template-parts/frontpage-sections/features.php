@@ -7,7 +7,7 @@
 
 
 ?>
-<section class="section_features section_two">
+<section class="section-frontpage section_features section_two">
 	<div class="overlay"></div>
 	<div class="container">
 	<?php if ( get_theme_mod( 'feature_title' ) || get_theme_mod( 'feature_desc' ) ) : ?>

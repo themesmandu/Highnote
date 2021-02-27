@@ -23,26 +23,24 @@
 <body <?php body_class(); ?>>
 	<div id="page" class="site">
 		<header id="top-header" class="site-header" role="banner">
-			<div class="header-wrap">
-				<?php if (get_theme_mod('skip_to_content_toggle')) : ?>
-					<a class="skip-link screen-reader-text btn btn-beats" href="#content"><?php esc_html_e('To the content', 'highnote'); ?></a>
-				<?php endif; ?>
+			<?php if (get_theme_mod('skip_to_content_toggle')) : ?>
+				<a class="skip-link screen-reader-text btn btn-beats" href="#content"><?php esc_html_e('To the content', 'highnote'); ?></a>
+			<?php endif; ?>
 
-				<?php
-				if (get_theme_mod('menubar_mode') === 'alt') {
-					// alternative navigation bar:
-					// left: logo, main menu - right: search form or something.
-					get_template_part('template-parts/navigation/main-navbar', 'alt');
-				} else {
-					// standard navigation bar:
-					// left: logo - right: main menu.
-					get_template_part('template-parts/navigation/main-navbar');
-				}
+			<?php
+			if (get_theme_mod('menubar_mode') === 'alt') {
+				// alternative navigation bar:
+				// left: logo, main menu - right: search form or something.
+				get_template_part('template-parts/navigation/main-navbar', 'alt');
+			} else {
+				// standard navigation bar:
+				// left: logo - right: main menu.
+				get_template_part('template-parts/navigation/main-navbar');
+			}
 
-				//header page title.
-				highnote_header_page_title();
-				?>
-			</div>
+			//header page title.
+			highnote_header_page_title();
+			?>
 			<?php
 
 			if (is_front_page() && !is_home() && get_theme_mod('banner_toggle')) {

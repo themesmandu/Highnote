@@ -8,7 +8,7 @@
 
 ?>
 <?php if (get_theme_mod('about_title') || get_theme_mod('about_desc') || get_theme_mod('about_button_label') || get_theme_mod('about_button_link')) : ?>
-	<section class="section_about section_five">
+	<section class="section-frontpage section_about section_five">
 		<div class="overlay"></div>
 		<div class="container">
 			<div class="row">

@@ -44,7 +44,7 @@ get_header();
 							<?php endif; ?>
 							<div class="prev_title">
 								<span><?php echo esc_html__( 'Prev Post', 'highnote' ); ?></span>
-								<?php previous_post_link( '%link', "<div class='detials'><span>%title</span></div>" ); ?>
+								<?php previous_post_link( '%link', '%title' ); ?>
 							</div>
 						</div>
 
@@ -55,17 +55,17 @@ get_header();
 							?>
 						<div class="next_post column">
 							<?php $nextthumbnail = get_the_post_thumbnail_url( $next_post->ID, 'prev-next-link-image' ); ?>
+							<div class="next_title">
+								<span><?php echo esc_html__( 'Next Post', 'highnote' ); ?></span>
+								<?php next_post_link( '%link', '%title' ); ?>
+							</div>
+
 							<?php if ( $nextthumbnail ) : ?>
 							<figure>
 								<a href="<?php echo esc_url( get_permalink( $next_post->ID ) ); ?>"><img
 										src="<?php echo esc_url( $nextthumbnail ); ?>" alt="<?php echo esc_html__( 'Next Post Thumbnail', 'highnote' ); ?>"></a>
 							</figure>
 							<?php endif; ?>
-
-							<div class="next_title">
-								<span><?php echo esc_html__( 'Next Post', 'highnote' ); ?></span>
-								<?php next_post_link( '%link', "<div class='detials'><span>%title</span></div>" ); ?>
-							</div>
 						</div>
 						<?php } ?>
 					</div>

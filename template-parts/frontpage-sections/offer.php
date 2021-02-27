@@ -7,7 +7,7 @@
 
 ?>
 <?php if ( get_theme_mod( 'offer_title' ) || get_theme_mod( 'offer_desc' ) ) : ?>
-<section class="section_offer section_eight">
+<section class="section-frontpage section_offer section_eight">
 	<div class="overlay"></div>
 	<div class="container container-boxed">
 		<div class="row">
