@@ -222,7 +222,7 @@ body.home #content {
 
 /* -- Content Section Styles -- */
 
-#content section {
+.home #content section {
     position: relative;
     background-size: cover;
     background-repeat: no-repeat;
@@ -769,9 +769,12 @@ section .sec-description {
 /* -- Blog Page Styles -- */
 
 .featured-jumbotron {
+    position: relative;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    padding: 20px;
+    margin-bottom: 32px;
 }
 
 .jumbotron-content {
@@ -856,8 +859,6 @@ article span i {
 .entry-meta a,
 .entry-footer a {
     font-size: 14px;
-    font-weight: 500;
-    color: inherit;
 }
 
 .post .card-footer {
@@ -1104,7 +1105,7 @@ body.single .navigation .next_post figure {
 
 #comments li {
     padding: 20px 0;
-    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 #comments li:last-child {
@@ -1224,6 +1225,100 @@ body.single .navigation .next_post figure {
 
 #comments .page-numbers.current {
     padding: 4px 7px;
+}
+
+
+/* -- Sidebar Styles -- */
+
+#sidebar.left-order {
+    order: -1;
+}
+
+#sidebar section {
+    padding: 0;
+    margin: 0 0 48px;
+}
+
+#sidebar section:last-child {
+    margin: 0;
+}
+
+#sidebar .sidebar {
+    background: #ffffff;
+    max-width: 380px;
+}
+
+#sidebar.right-order .sidebar {
+    margin-left: auto;
+}
+
+#sidebar.left-order .sidebar {
+    margin-right: auto;
+}
+
+.widget-title {
+    margin-bottom: 20px;
+}
+
+section.widget p {
+    color: inherit
+}
+
+.widget ul {
+    margin: 0;
+    padding-left: 18px;
+}
+
+.widget ul ul {
+    padding-left: 8px;
+}
+
+.widget li {
+    font-weight: 500;
+    color: inherit;
+    border-bottom: 1px solid rgba(0, 0, 0, .05);
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    list-style-type: square;
+}
+
+.widget li:last-child {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+.widget li a {
+    padding: 0;
+    color: inherit;
+}
+
+.widget li .post-date,
+.widget li .comment-author-link {
+    font-size: 14px;
+    color: inherit;
+    text-transform: capitalize;
+    display: block;
+    opacity: .5;
+}
+
+.widget_tag_cloud a {
+    display: inline-block;
+    border: 1px solid #e4e7eb;
+    padding: 8px 12px;
+}
+
+.widget .menu-item-has-children:after {
+    display: none;
+}
+
+.widget_search .form-title {
+    display: none;
+}
+
+.widget_tag_cloud a {
+    font-size: 13px !important;
+    margin-bottom: 4px;
 }
 
 

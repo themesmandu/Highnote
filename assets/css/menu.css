@@ -47,8 +47,8 @@
     top: -70px;
     right: 0;
     left: 0;
-    transition: .4s ease-in;
     transform: translate3d(0, 70px, 0);
+    transition: .4s ease-in;
 }
 
 

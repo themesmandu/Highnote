@@ -113,4 +113,7 @@ jQuery(document).ready(function($) {
     // Adding class if navigation arrows apears
     $('.slick-arrow').parent().addClass('has-slick-arrow');
 
+    // Removing Heading from search from in widget area
+    $('#sidebar .form-title, #footer .form-title').remove();
+
 });

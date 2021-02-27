@@ -287,11 +287,11 @@ function highnote_set_content_class( $class = '' ) {
 	// Define classes array.
 	$classes = array();
 
-	$classes[] = 'col-md-8';
+	$classes[] = 'col-lg-8 col-md-7';
 
 	// Centered.
 	if ( ! is_active_sidebar( 'sidebar-1' ) || get_theme_mod( 'sidebar_position' ) === 'none' ) {
-		$classes[] = 'offset-md-2';
+		$classes[] = 'col-md-8 offset-md-2';
 	}
 
 	$classes = array_map( 'esc_attr', $classes );
