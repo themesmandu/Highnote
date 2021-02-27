@@ -26,7 +26,7 @@ Kirki::add_field(
 		'settings' => 'blog_pagination_mode',
 		'label'    => esc_html__( 'Posts page navigation', 'highnote' ),
 		'section'  => 'blog_options',
-		'default'  => 'numeric',
+		'default'  => 'standard',
 		'choices'  => array(
 			'standard' => get_template_directory_uri() . '/assets/images/standard-pagination.png',
 			'numeric'  => get_template_directory_uri() . '/assets/images/numeric-pagination.png',
