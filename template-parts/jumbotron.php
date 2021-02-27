@@ -26,7 +26,7 @@ if ( empty( $heading ) && empty( $subheading ) && empty( $bg_img ) && empty( $bt
 <section class="jumbotron text-center header_jumbotron">
 	<div class="container">
 		<div class="content">
-			<h1 class="beats-heading from-left"><?php echo esc_html( $heading ); ?></h1>
+			<h1 class="beats-heading"><?php echo esc_html( $heading ); ?></h1>
 			<h2 class="beats-sub-heading from-right"><?php echo esc_html( $subheading ); ?></h2>
 
 			<?php if ( ! empty( $btn_label ) ) { ?>

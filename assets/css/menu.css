@@ -47,8 +47,8 @@
     top: -70px;
     right: 0;
     left: 0;
-    transform: translate3d(0, 70px, 0);
-    transition: .4s ease-in;
+    transform: translateY(70px);
+    transition: .3s ease-in;
 }
 
 
@@ -72,10 +72,15 @@
     text-align: right;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.04);
     z-index: 9;
+    visibility: hidden;
 }
 
 .main-navigation .menu-item-has-children {
     position: relative;
+}
+
+.main-navigation .menu-item-has-children:hover>.sub-menu {
+    visibility: visible;
 }
 
 .main-navigation .sub-menu .menu-item .nav-link {
