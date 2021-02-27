@@ -222,6 +222,30 @@ Kirki::add_field(
 	)
 );
 
+Kirki::add_field(
+	'highnote_kirki_config',
+	array(
+		'type'      => 'slider',
+		'settings'  => 'article_padding',
+		'label'     => esc_html__( 'Article Padding(px)', 'highnote' ),
+		'section'   => 'blog_options',
+		'default'   => 20,
+		'choices'   => array(
+			'min'  => 0,
+			'max'  => 60,
+			'step' => 1,
+		),
+		'transport' => 'auto',
+		'output'    => array(
+			array(
+				'element'       => 'article .post-wrap, article.list-view .column',
+				'property'      => 'padding',
+				'value_pattern' => '$px',
+			),
+		),
+	)
+);
+
 // sotarble content setting
 Kirki::add_field(
 	'highnote_kirki_config',
@@ -269,6 +293,26 @@ Kirki::add_field(
 			'content' => esc_html__( 'Content', 'highnote' ),
 
 		),
+	)
+);
+
+Kirki::add_field(
+	'highnote_kirki_config',
+	array(
+		'type'      => 'typography',
+		'settings'  => 'post_heading_font_size',
+		'label'     => esc_html__( 'Post Title Font Size', 'highnote' ),
+		'section'   => 'blog_options',
+		'default'   => array(
+			'font-size' => '',
+		),
+		'output'    => array(
+			array(
+				'element' => 'article .entry-title',
+			),
+		),
+		'transport' => 'auto',
+
 	)
 );
 

@@ -364,7 +364,7 @@ Kirki::add_field(
 		'label'     => esc_html__( 'Typography Table One Price', 'highnote' ),
 		'section'   => 'frontpage_pricing_table',
 		'default'   => array(
-			'font-size'      => '56px',
+			'font-size' => '56px',
 		),
 		'output'    => array(
 			array(
