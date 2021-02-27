@@ -81,6 +81,11 @@ if ( class_exists( 'Kirki' ) ) {
 	require get_template_directory() . '/inc/customizer/sections/head-slider-section.php';
 
 	/**
+	* Header background section.
+	*/
+	require get_template_directory() . '/inc/customizer/sections/header-background.php';
+
+	/**
 	* Additional color settings.
 	*/
 	require get_template_directory() . '/inc/customizer/colors.php';
@@ -94,6 +99,7 @@ if ( class_exists( 'Kirki' ) ) {
 	* Post page section.
 	*/
 	require get_template_directory() . '/inc/customizer/sections/post-page-section.php';
+
 
 	/**
 	*
