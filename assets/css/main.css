@@ -1014,7 +1014,6 @@ body.single .navigation .column:hover figure a:before {
     visibility: visible;
 }
 
-body.single .navigation a,
 body.single .navigation span {
     color: inherit;
 }
