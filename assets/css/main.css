@@ -219,6 +219,19 @@ body.home #content {
     padding: 0;
 }
 
+#content a:hover,
+#footer a:hover,
+#wizards_slider a:hover {
+    border-bottom: 1px solid;
+}
+
+#content a.btn:hover,
+#footer a.btn:hover,
+#wizards_slider .btn:hover,
+#wizards_slider .btn a:hover {
+    border-bottom: none;
+}
+
 
 /* -- Content Section Styles -- */
 
@@ -1323,3 +1336,7 @@ section.widget p {
 
 
 /* ====== Theme Footer Styles ====== */
+
+#footer {
+    padding: 50px 0;
+}
