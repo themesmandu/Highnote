@@ -20,37 +20,30 @@ function highnote_header_background_css() {
 <style type="text/css">
 	<?php if ( get_theme_mod( 'global_header_bg' ) && ! is_front_page() ) : ?>
 		.header-wrap {background-image: url(<?php echo esc_url( get_theme_mod( 'global_header_bg' ) ); ?>);}
-		.main-navigation {position: absolute;}
 	<?php endif; ?>
 
 	<?php if ( get_theme_mod( 'blog_header_bg' ) && ! is_front_page() && is_home() ) : ?>
 		.header-wrap {background-image: url(<?php echo esc_url( get_theme_mod( 'blog_header_bg' ) ); ?>);}
-		.main-navigation {position: absolute;}
 	<?php endif; ?>
 
 	<?php if ( get_theme_mod( 'single_header_bg' ) && is_single() ) : ?>
 		.header-wrap {background-image: url(<?php echo esc_url( get_theme_mod( 'single_header_bg' ) ); ?>);}
-		.main-navigation {position: absolute;}
 	<?php endif; ?>
 
 	<?php if ( get_theme_mod( 'archive_header_bg' ) && is_archive() ) : ?>
 		.header-wrap {background-image: url(<?php echo esc_url( get_theme_mod( 'archive_header_bg' ) ); ?>);}
-		.main-navigation {position: absolute;}
 	<?php endif; ?>
 
 	<?php if ( get_theme_mod( 'search_header_bg' ) && is_search() ) : ?>
 		.header-wrap {background-image: url(<?php echo esc_url( get_theme_mod( 'search_header_bg' ) ); ?>);}
-		.main-navigation {position: absolute;}
 	<?php endif; ?>
 
 	<?php if ( get_theme_mod( 'page_header_bg' ) && is_page() ) : ?>
 		.header-wrap {background-image: url(<?php echo esc_url( get_theme_mod( 'page_header_bg' ) ); ?>);}
-		.main-navigation {position: absolute;}
 	<?php endif; ?>
 
 	<?php if ( get_theme_mod( '404_header_bg' ) && is_404() ) : ?>
 		.header-wrap {background-image: url(<?php echo esc_url( get_theme_mod( '404_header_bg' ) ); ?>);}
-		.main-navigation {position: absolute;}
 	<?php endif; ?>
 </style>
 	<?php
