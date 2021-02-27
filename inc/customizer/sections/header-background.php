@@ -16,6 +16,53 @@ Kirki::add_section(
 	)
 );
 
+Kirki::add_field(
+	'highnote_kirki_config',
+	array(
+		'type'      => 'dimensions',
+		'settings'  => 'header_background_padding',
+		'label'     => esc_html__( 'Paddings', 'highnote' ),
+		'section'   => 'header_background',
+		'default'   => array(
+			'padding-top'    => '155px',
+			'padding-right'  => '0px',
+			'padding-bottom' => '50px',
+			'padding-left'   => '0px',
+		),
+		'choices'   => array(
+			'labels' => array(
+				'padding-top'    => esc_html__( 'Padding Top', 'highnote' ),
+				'padding-right'  => esc_html__( 'Padding Right', 'highnote' ),
+				'padding-bottom' => esc_html__( 'Padding Bottom', 'highnote' ),
+				'padding-left'   => esc_html__( 'Padding Left', 'highnote' ),
+			),
+		),
+		'transport' => 'auto',
+		'output'    => array(
+			array(
+				'choice'   => 'padding-top',
+				'element'  => '#top-header .page-content',
+				'property' => 'padding-top',
+			),
+			array(
+				'choice'   => 'padding-right',
+				'element'  => '#top-header .page-content',
+				'property' => 'padding-right',
+			),
+			array(
+				'choice'   => 'padding-bottom',
+				'element'  => '#top-header .page-content',
+				'property' => 'padding-bottom',
+			),
+			array(
+				'choice'   => 'padding-left',
+				'element'  => '#top-header .page-content',
+				'property' => 'padding-left',
+			),
+		),
+	)
+);
+
 // Setting background image global
 Kirki::add_field(
 	'highnote_kirki_config',
