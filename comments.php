@@ -75,5 +75,10 @@ if ( have_comments() ) :
 
 	<?php
 	endif; // Check for have_comments().
-	comment_form();
+	comment_form(
+		array(
+			'title_reply_before' => '<h2 id="reply-title" class="comment-reply-title">',
+			'title_reply_after'  => '</h2>',
+		)
+	);
 ?>
