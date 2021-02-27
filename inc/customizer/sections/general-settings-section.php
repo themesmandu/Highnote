@@ -138,6 +138,50 @@ Kirki::add_field(
 	)
 );
 
+Kirki::add_field(
+	'highnote_kirki_config',
+	array(
+		'type'      => 'slider',
+		'settings'  => 'sidebar_padding',
+		'label'     => esc_html__( 'Sidebar Padding(px)', 'highnote' ),
+		'section'   => 'general_options',
+		'default'   => 20,
+		'choices'   => array(
+			'min'  => 0,
+			'max'  => 60,
+			'step' => 1,
+		),
+		'transport' => 'auto',
+		'output'    => array(
+			array(
+				'element'       => '#sidebar .sidebar',
+				'property'      => 'padding',
+				'value_pattern' => '$px',
+			),
+		),
+	)
+);
+
+Kirki::add_field(
+	'highnote_kirki_config',
+	array(
+		'type'      => 'typography',
+		'settings'  => 'sidebar_heading_font_size',
+		'label'     => esc_html__( 'Widget Title Font Size', 'highnote' ),
+		'section'   => 'general_options',
+		'default'   => array(
+			'font-size' => '24px',
+		),
+		'output'    => array(
+			array(
+				'element' => '#sidebar .widget-title',
+			),
+		),
+		'transport' => 'auto',
+
+	)
+);
+
 // Setting sidebar bg.
 Kirki::add_field(
 	'highnote_kirki_config',
@@ -182,6 +226,66 @@ Kirki::add_field(
 	)
 );
 
+//sidebar box shadow top-bottom
+Kirki::add_field(
+	'highnote_kirki_config',
+	array(
+		'type'     => 'slider',
+		'settings' => 'sidebar_bs_tb',
+		'label'    => esc_html__( 'Sidebar Box Shadow Top-Bottom(px)', 'highnote' ),
+		'section'  => 'general_options',
+		'default'  => 0,
+		'choices'  => array(
+			'min'  => -50,
+			'max'  => 50,
+			'step' => 1,
+		),
+		'output'   => array(
+			array(
+				'element'         => 'article.post, article.page, .single-download article, .archive article.type-download',
+				'property'        => 'box-shadow',
+				'value_pattern'   => '$px shadow_lrpx shadow_blurpx shadow_spreadpx shadow_color',
+				'pattern_replace' => array(
+					'shadow_lr'     => 'sidebar_bs_lr',
+					'shadow_blur'   => 'sidebar_bs_blur',
+					'shadow_spread' => 'sidebar_bs_spread',
+					'shadow_color'  => 'sidebar_bs_color',
+				),
+			),
+		),
+	)
+);
+
+//sidebar box shadow left-right
+Kirki::add_field(
+	'highnote_kirki_config',
+	array(
+		'type'     => 'slider',
+		'settings' => 'sidebar_bs_lr',
+		'label'    => esc_html__( 'Sidebar Box Shadow Left-Right(px)', 'highnote' ),
+		'section'  => 'general_options',
+		'default'  => 0,
+		'choices'  => array(
+			'min'  => -50,
+			'max'  => 50,
+			'step' => 1,
+		),
+		'output'   => array(
+			array(
+				'element'         => 'article.post, article.page, .single-download article, .archive article.type-download',
+				'property'        => 'box-shadow',
+				'value_pattern'   => 'shadow_tbpx $px shadow_blurpx shadow_spreadpx shadow_color',
+				'pattern_replace' => array(
+					'shadow_tb'     => 'sidebar_bs_tb',
+					'shadow_blur'   => 'sidebar_bs_blur',
+					'shadow_spread' => 'sidebar_bs_spread',
+					'shadow_color'  => 'sidebar_bs_color',
+				),
+			),
+		),
+	)
+);
+
 Kirki::add_field(
 	'highnote_kirki_config',
 	array(
@@ -199,8 +303,10 @@ Kirki::add_field(
 			array(
 				'element'         => '#sidebar .sidebar',
 				'property'        => 'box-shadow',
-				'value_pattern'   => '0px 0px $px shadow_spreadpx shadow_color',
+				'value_pattern'   => 'shadow_tbpx shadow_lrpx $px shadow_spreadpx shadow_color',
 				'pattern_replace' => array(
+					'shadow_tb'     => 'sidebar_bs_tb',
+					'shadow_lr'     => 'sidebar_bs_lr',
 					'shadow_spread' => 'sidebar_bs_spread',
 					'shadow_color'  => 'sidebar_bs_color',
 				),
@@ -226,8 +332,10 @@ Kirki::add_field(
 			array(
 				'element'         => '#sidebar .sidebar',
 				'property'        => 'box-shadow',
-				'value_pattern'   => '0px 0px shadow_blurpx $px shadow_color',
+				'value_pattern'   => 'shadow_tbpx shadow_lrpx shadow_blurpx $px shadow_color',
 				'pattern_replace' => array(
+					'shadow_tb'    => 'sidebar_bs_tb',
+					'shadow_lr'    => 'sidebar_bs_lr',
 					'shadow_color' => 'sidebar_bs_color',
 					'shadow_blur'  => 'sidebar_bs_blur',
 				),
@@ -251,8 +359,10 @@ Kirki::add_field(
 			array(
 				'element'         => '#sidebar .sidebar',
 				'property'        => 'box-shadow',
-				'value_pattern'   => '0px 0px shadow_spreadpx shadow_blurpx $',
+				'value_pattern'   => 'shadow_tbpx shadow_lrpx shadow_spreadpx shadow_blurpx $',
 				'pattern_replace' => array(
+					'shadow_tb'     => 'sidebar_bs_tb',
+					'shadow_lr'     => 'sidebar_bs_lr',
 					'shadow_spread' => 'sidebar_bs_spread',
 					'shadow_blur'   => 'sidebar_bs_blur',
 				),
