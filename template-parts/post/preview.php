@@ -4,39 +4,27 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package highnote
+ * @package Highnote
  */
 
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-
-	<?php
-	the_post_thumbnail(
-		'highnote-thumb-750-300',
-		array( 'class' => 'card-img-top' )
-	);
-	?>
-
-	<div class="card-body">
-			<?php
-			the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' );
-			?>
-		<div class="entry-summary card-text">
-			<?php highnote_entry_summary(); ?>
-		</div>
-		<footer class="entry-footer">
-			<?php highnote_entry_footer(); ?>
-		</footer>
-	</div>
-	<?php
-	if ( get_post_type() === 'post' ) {
+	<div class="post-wrap">
+		<?php
+		$highnote_standard_sortables = highnote_get_theme_option( 'blog_sortable_content_sandard' );
+		foreach ( $highnote_standard_sortables as $highnote_standard_sortable ) {
+			get_template_part( 'template-parts/post/sortable/standard/' . $highnote_standard_sortable );
+		}
 		?>
-
-	<div class="entry-meta card-footer">
-			<?php highnote_posted_on(); ?>
-			<?php highnote_posted_by(); ?>
 	</div>
+
+	<?php if ( get_post_type() === 'post' ) { ?>
+
+	<footer class="entry-footer card-footer">
+		<?php highnote_entry_footer(); ?>
+	</footer>
+
 
 		<?php
 	}

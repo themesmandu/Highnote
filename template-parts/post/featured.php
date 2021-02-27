@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package highnote
+ * @package Highnote
  */
 
 ?>
@@ -27,31 +27,29 @@ while ( $query->have_posts() ) :
 
 <!-- Begin Featured Post -->
 
-	<div class="container">
-		<div class="jumbotron p-3 p-md-5 text-white rounded bg-dark"
-		<?php
+<div class="container">
+    <div class="jumbotron featured-jumbotron" <?php
 		if ( ! empty( $thumbnail ) ) {
-			echo ' style="background: url(' . esc_url( $thumbnail[0] ) . ');"'; }
+			echo ' style="background-image: url(' . esc_url( $thumbnail[0] ) . ');"'; }
+		?>>
+
+        <div class="jumbotron-content">
+            <?php
+			the_title( sprintf( '<h2 class="featured-title"><a href="%s" rel="bookmark">', esc_url( get_permalink( $post->ID ) ) ), '</a></h2>' );
 		?>
-		>
 
-			<div class="col-md-6 px-0">
-		<?php
-			the_title( sprintf( '<h1 class="display-4 font-italic"><a href="%s" class="featured-title title text-white" rel="bookmark">', esc_url( get_permalink( $post->ID ) ) ), '</a></h1>' );
-		?>
+            <div class="paragraph">
+                <?php the_excerpt(); ?>
+            </div>
 
-			<div class="lead my-3">
-			<?php the_excerpt(); ?>
-			</div>
+        </div><!-- .col-md-6.px-0 -->
 
-			</div><!-- .col-md-6.px-0 -->
-
-		</div><!-- .jumbotron -->
-	</div><!-- .container -->
+    </div><!-- .jumbotron -->
+</div><!-- .container -->
 
 <!-- END Featured Post -->
 
-	<?php
+<?php
 	endwhile;
 	// Reset $query.
 	wp_reset_postdata();

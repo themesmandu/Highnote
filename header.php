@@ -38,8 +38,8 @@
 				get_template_part( 'template-parts/navigation/main-navbar' );
 			}
 
-			// Header Image.
-			the_custom_header_markup();
+			//header page title.
+			highnote_header_page_title();
 
 			if ( is_front_page() && ! is_home() && get_theme_mod( 'banner_toggle' ) ) {
 				// head banner on the front page if it enabled.

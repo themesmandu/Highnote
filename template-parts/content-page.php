@@ -4,42 +4,33 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package highnote
+ * @package Highnote
  */
 
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-<?php
-	the_post_thumbnail(
-		'highnote-featured-900-600',
-		array(
-			'class' => 'img-fluid rounded mb-2',
-		)
-	);
+	<?php
+	the_post_thumbnail();
 	?>
 
-<div class="card-body">
+	<div class="content">
 
-	<header class="entry-header pb-4">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-	</header>
+		<div class="entry-content">
+			<?php
+			the_content();
 
-	<div class="entry-content">
-		<?php
-		the_content();
+			wp_link_pages(
+				array(
+					'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'highnote' ),
+					'after'  => '</div>',
+				)
+			);
+			?>
+		</div>
 
-		wp_link_pages(
-			array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'highnote' ),
-				'after'  => '</div>',
-			)
-		);
-		?>
-	</div>
-
-	<?php if ( get_edit_post_link() ) : ?>
+		<?php if ( get_edit_post_link() ) : ?>
 		<footer class="entry-footer">
 			<?php
 				edit_post_link(
@@ -53,7 +44,7 @@
 				);
 			?>
 		</footer>
-	<?php endif; ?>
+		<?php endif; ?>
 
-</div><!-- .card-body -->
+	</div><!-- .content -->
 </article><!-- #post-<?php the_ID(); ?> -->

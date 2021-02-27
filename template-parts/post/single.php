@@ -4,51 +4,43 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package highnote
+ * @package Highnote
  */
 
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-<?php
-	the_post_thumbnail(
-		'highnote-featured-900-600',
-		array( 'class' => 'img-fluid rounded mb-2' )
-	);
+	<?php
+	the_post_thumbnail();
 	?>
 
-<div class="card-body">
+	<div class="content">
 
-	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-	</header>
 
-<?php
-if ( get_post_type() === 'post' ) {
-	?>
-	<hr>
-		<div class="entry-meta">
 		<?php
+		if ( get_post_type() === 'post' ) {
+			?>
+		<div class="entry-meta">
+			<?php
 			highnote_posted_on();
 			highnote_posted_by();
-		?>
+			?>
 		</div>
-	<hr>
-	<?php
-}
-?>
-
-	<?php
-	if ( has_excerpt() ) :
+			<?php
+		}
 		?>
-			<div class="lead"><?php the_excerpt(); ?></div>
-		<?php
-		endif;
-	?>
 
-	<div class="entry-content">
 		<?php
+		if ( has_excerpt() ) :
+			?>
+		<div class="lead"><?php the_excerpt(); ?></div>
+			<?php
+		endif;
+		?>
+
+		<div class="entry-content">
+			<?php
 			the_content(
 				sprintf(
 					/* translators: %s: Name of current post. Only visible to screen readers */
@@ -64,11 +56,11 @@ if ( get_post_type() === 'post' ) {
 				)
 			);
 			?>
-	</div><!-- .entry-content -->
+		</div><!-- .entry-content -->
 
-	<footer class="entry-footer">
-		<?php highnote_entry_footer(); ?>
-	</footer>
+		<footer class="entry-footer">
+			<?php highnote_entry_footer(); ?>
+		</footer>
 
-</div><!-- .card-body -->
+	</div><!-- .content -->
 </article><!-- #post-<?php the_ID(); ?> -->

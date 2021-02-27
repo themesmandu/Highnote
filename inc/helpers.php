@@ -37,3 +37,118 @@ if ( ! function_exists( 'highnote_get_theme_option' ) ) :
 	}
 
 endif;
+
+
+if ( ! function_exists( 'highnote_header_page_title' ) ) :
+
+	/**
+	 * Display page title on header.
+	 *
+	 * @since 1.0.0
+	 */
+	function highnote_header_page_title() {
+		if ( class_exists( 'woocommerce' ) ) {
+			if ( is_front_page() ) :
+				return;
+			elseif ( is_home() || is_singular() && ! is_product() ) :
+				?>
+	<div class="page-content">
+		<div class="container">
+			<h1 class="header-title"><?php single_post_title(); ?></h1>
+		</div>
+	</div>
+				<?php
+			elseif ( is_home() || is_singular() && is_product() ) :
+				?>
+	<div class="page-content">
+	</div>
+				<?php
+			elseif ( is_archive() && ! is_shop() ) :
+				?>
+	<div class="page-content">
+		<div class="container">
+			<h1 class="header-title"><?php the_archive_title(); ?></h1>
+		</div>
+	</div>
+				<?php
+			elseif ( is_archive() && is_shop() ) :
+				?>
+	<div class="page-content">
+		<div class="container">
+			<h1 class="header-title"><?php woocommerce_page_title(); ?></h1>
+		</div>
+	</div>
+				<?php
+			elseif ( is_search() ) :
+				?>
+	<div class="page-content">
+		<div class="container">
+			<h1 class="header-title">
+				<?php /* translators: %s: search query. */ ?>
+				<?php printf( esc_html__( 'Search Results for: %s', 'highnote' ), get_search_query() ); ?></h1>
+		</div>
+	</div>
+				<?php
+			elseif ( is_404() ) :
+				?>
+	<div class="page-content">
+		<div class="container">
+			<h1 class="header-title">
+				<span><?php echo __( 'Oops!', 'highnote' ); ?></span><?php echo esc_html__( ' That page can&#39;t be found.', 'highnote' ); ?>
+			</h1>
+	
+			<div class="error-404 not-found">
+				<?php get_search_form(); ?>
+			</div>
+		</div>
+	</div>
+				<?php
+			endif;
+		} else {
+			if ( is_front_page() ) :
+				return;
+		elseif ( is_home() || is_singular() ) :
+			?>
+<div class="page-content">
+	<div class="container">
+		<h1 class="header-title"><?php single_post_title(); ?></h1>
+	</div>
+</div>
+			<?php
+		elseif ( is_archive() ) :
+			?>
+<div class="page-content">
+	<div class="container">
+		<h1 class="header-title"><?php the_archive_title(); ?></h1>
+	</div>
+</div>
+			<?php
+		elseif ( is_search() ) :
+			?>
+<div class="page-content">
+	<div class="container">
+			<?php /* translators: %s: search query. */ ?>
+		<h1 class="header-title">
+			<?php printf( esc_html__( 'Search Results for: %s', 'highnote' ), get_search_query() ); ?></h1>
+	</div>
+</div>
+			<?php
+		elseif ( is_404() ) :
+			?>
+<div class="page-content">
+	<div class="container">
+		<h1 class="header-title">
+			<span><?php echo __( 'Oops!', 'highnote' ); ?></span><?php echo esc_html__( ' That page can&#39;t be found.', 'highnote' ); ?>
+		</h1>
+
+		<div class="error-404 not-found">
+			<?php get_search_form(); ?>
+		</div>
+	</div>
+</div>
+			<?php
+		endif;
+		}
+	}
+
+endif;

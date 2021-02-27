@@ -4,37 +4,20 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package highnote
+ * @package Highnote
  */
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class( 'flex-md-row box-shadow h-md-250' ); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'list-view' ); ?>>
+	<div class="row">
+	<?php
+		$highnote_list_sortables = highnote_get_theme_option( 'blog_sortable_content_list' );
+	foreach ( $highnote_list_sortables as $highnote_list_sortable ) {
+			get_template_part( 'template-parts/post/sortable/list/' . $highnote_list_sortable );
+	}
+	?>
 
-		<div class="card-body d-flex flex-column align-items-start">
-			<?php
-			the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' );
-			?>
-		<?php
-		if ( get_post_type() === 'post' ) {
-			?>
-			<div class="entry-meta mb-1">
-			<?php highnote_posted_on(); ?>
-			<?php highnote_posted_by(); ?>
-			</div>
-			<?php
-		}
-		?>
-			<div class="entry-summary card-text mb-auto">
-				<?php highnote_entry_summary(); ?>
-			</div>
-		</div>
-			<?php
-				// https://developer.wordpress.org/reference/functions/the_post_thumbnail/.
-				the_post_thumbnail(
-					array( 390, 260 ),
-					array( 'class' => 'align-self-center card-img-right flex-auto d-none d-lg-block' )
-				);
-				?>
 
+	</div>
 </article><!-- #post-<?php the_ID(); ?> -->

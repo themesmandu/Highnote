@@ -32,148 +32,7 @@ function highnote_customize_register( $wp_customize ) {
 		);
 	}
 
-	/**
-	 *
-	 * Add Section
-	 */
-	$wp_customize->add_section(
-		'blog_options',
-		array(
-			'title'      => __( 'Posts page Settings', 'highnote' ),
-			'capability' => 'edit_theme_options',
-			'priority'   => 170,
-		)
-	);
 
-	// Settings.
-
-	$wp_customize->add_setting(
-		'blog_pagination_mode',
-		array(
-			'default'           => 'standard',
-			'type'              => 'theme_mod',
-			'sanitize_callback' => 'highnote_sanitize_blog_pagination_mode',
-			'capability'        => 'edit_theme_options',
-		)
-	);
-
-	$wp_customize->add_control(
-		new WP_Customize_Control(
-			$wp_customize,
-			'blog_pagination_mode',
-			array(
-				'label'    => __( 'Posts page navigation', 'highnote' ),
-				'section'  => 'blog_options',
-				'settings' => 'blog_pagination_mode',
-				'type'     => 'select',
-				'choices'  => array(
-					'standard' => __( 'Standard', 'highnote' ),
-					'numeric'  => __( 'Numeric', 'highnote' ),
-				),
-				'priority' => '20',
-			)
-		)
-	);
-
-	$wp_customize->add_setting(
-		'more_link',
-		array(
-			'default'           => '',
-			'sanitize_callback' => 'sanitize_text_field',
-		)
-	);
-
-	$wp_customize->add_control(
-		new WP_Customize_Control(
-			$wp_customize,
-			'more_link',
-			array(
-				'label'       => __( 'Read More button', 'highnote' ),
-				'description' => __( 'Enter the button name which is a link to the full post. You can leave this blank if you want to hide the button.', 'highnote' ),
-				'section'     => 'blog_options',
-				'type'        => 'text',
-			)
-		)
-	);
-
-	/**
-	 * Post List helper function.
-	 *
-	 * @param array $args posts.
-	 */
-	function highnote_post_list( $args = array() ) {
-		$args       = wp_parse_args( $args, array( 'numberposts' => '-1' ) );
-		$posts      = get_posts( $args );
-		$output     = array();
-		$output[''] = esc_html__( '&mdash; Select Post &mdash;', 'highnote' );
-		foreach ( $posts as $post ) {
-			$thetitle  = $post->post_title;
-			$getlength = strlen( $thetitle );
-			$thelength = 32;
-
-			$thetitle = substr( $thetitle, 0, $thelength );
-			if ( $getlength > $thelength ) {
-				$thetitle .= '...';
-			};
-			$output[ $post->ID ] = sprintf( '%s', esc_html( $thetitle ) );
-		}
-		return $output;
-	}
-
-	$wp_customize->add_setting(
-		'post_dropdown_setting',
-		array(
-			'default'           => '',
-			'type'              => 'theme_mod',
-			'sanitize_callback' => 'absint',
-			'capability'        => 'edit_theme_options',
-		)
-	);
-
-	$wp_customize->add_control(
-		new WP_Customize_Control(
-			$wp_customize,
-			'post_dropdown_setting',
-			array(
-				'label'    => __( 'Featured Post', 'highnote' ),
-				'section'  => 'blog_options',
-				'settings' => 'post_dropdown_setting',
-				'type'     => 'select',
-				'choices'  => highnote_post_list(),
-				'priority' => '10',
-			)
-		)
-	);
-
-	$wp_customize->add_setting(
-		'blog_layout',
-		array(
-			'default'           => 'standard',
-			'type'              => 'theme_mod',
-			'sanitize_callback' => 'highnote_sanitize_blog_layout',
-			'capability'        => 'edit_theme_options',
-		)
-	);
-
-	$wp_customize->add_control(
-		new WP_Customize_Control(
-			$wp_customize,
-			'blog_layout',
-			array(
-				'label'    => __( 'Layout Style', 'highnote' ),
-				'section'  => 'blog_options',
-				'settings' => 'blog_layout',
-				'type'     => 'select',
-				'choices'  => array(
-					'list'     => esc_html__( 'List', 'highnote' ),
-					'standard' => esc_html__( 'Standard', 'highnote' ),
-				),
-				'priority' => '15',
-			)
-		)
-	);
-
-	// END Options.
 }
 add_action( 'customize_register', 'highnote_customize_register' );
 
@@ -230,6 +89,11 @@ if ( class_exists( 'Kirki' ) ) {
 	* General settings section.
 	*/
 	require get_template_directory() . '/inc/customizer/sections/general-settings-section.php';
+
+	/**
+	* Post page section.
+	*/
+	require get_template_directory() . '/inc/customizer/sections/post-page-section.php';
 
 	/**
 	*
