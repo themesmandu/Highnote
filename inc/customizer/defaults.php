@@ -131,8 +131,8 @@ if ( ! function_exists( 'highnote_get_default_theme_options' ) ) :
 		$defaults['feature_show_icon_mobile'] = true;
 
 		//sidebar defaults
-		$defaults['feature_show_icon'] = false;
-		$defaults['feature_show_icon'] = false;
+		$defaults['sidebar_hide_tablet'] = false;
+		$defaults['sidebar_hide_mobile'] = false;
 
 		// Pass through filter.
 		$defaults = apply_filters( 'highnote_get_default_theme_options', $defaults );
