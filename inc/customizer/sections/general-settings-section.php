@@ -141,6 +141,28 @@ Kirki::add_field(
 Kirki::add_field(
 	'highnote_kirki_config',
 	array(
+		'type'     => 'toggle',
+		'settings' => 'highnote_theme_options[sidebar_hide_tablet]',
+		'label'    => esc_html__( 'Hide Sidebar Tablet View', 'highnote' ),
+		'section'  => 'general_options',
+		'default'  => $defaults['sidebar_hide_tablet'],
+	)
+);
+
+Kirki::add_field(
+	'highnote_kirki_config',
+	array(
+		'type'     => 'toggle',
+		'settings' => 'highnote_theme_options[sidebar_hide_mobile]',
+		'label'    => esc_html__( 'Hide Sidebar Mobile View', 'highnote' ),
+		'section'  => 'general_options',
+		'default'  => $defaults['sidebar_hide_mobile'],
+	)
+);
+
+Kirki::add_field(
+	'highnote_kirki_config',
+	array(
 		'type'      => 'slider',
 		'settings'  => 'sidebar_padding',
 		'label'     => esc_html__( 'Sidebar Padding(px)', 'highnote' ),
