@@ -190,7 +190,7 @@ if ( ! function_exists( 'highnote_comment' ) ) :
 						// Display author name.
 						printf( __( '<span class="fn">%s</span> ', 'highnote' ), get_comment_author_link() );
 				?>
-				<a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ); ?>" class="date">
+				<a href="<?php echo esc_url( htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ); ?>" class="date">
 						<?php
 							/* translators: 1: date, 2: time */
 							printf(
@@ -205,7 +205,7 @@ if ( ! function_exists( 'highnote_comment' ) ) :
 					<div class="comment-text"><?php comment_text(); ?></div><!-- .comment-text -->
 						<?php
 							// Display comment moderation text.
-						if ( $comment->comment_approved === '0' ) {
+						if ( '0' === $comment->comment_approved ) {
 							?>
 					<em
 						class="comment-awaiting-moderation"><?php esc_html_e( 'Your comment is awaiting moderation.', 'highnote' ); ?></em><br />
