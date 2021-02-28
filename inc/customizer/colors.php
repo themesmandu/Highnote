@@ -243,8 +243,17 @@ Kirki::add_field(
 		'transport' => 'auto',
 		'output'    => array(
 			array(
-				'element'  => 'button, .btn-beats, input[type="submit"], slick-arrow, .slick-active button, .navbar-toggler-icon span, #cancel-comment-reply-link',
+				'element'  => 'button, .btn-beats, input[type="submit"], slick-arrow, .slick-active button, .navbar-toggler-icon span, #cancel-comment-reply-link,
+				span.page-numbers.current, .wp-block-button__link',
 				'property' => 'background-color',
+			),
+			array(
+				'element'  => '#content .is-style-outline .wp-block-button__link:hover',
+				'property' => 'border-color',
+			),
+			array(
+				'element'  => '.is-style-outline .wp-block-button__link:hover',
+				'property' => 'color',
 			),
 		),
 	)
@@ -265,7 +274,7 @@ Kirki::add_field(
 		'transport' => 'auto',
 		'output'    => array(
 			array(
-				'element'  => 'button:hover, .btn-beats:hover, input[type="submit"]:hover, slick-arrow:hover, #cancel-comment-reply-link:hover',
+				'element'  => 'button:hover, .btn-beats:hover, input[type="submit"]:hover, slick-arrow:hover, #cancel-comment-reply-link:hover, .wp-block-button__link:hover',
 				'property' => 'background-color',
 			),
 		),
@@ -287,7 +296,7 @@ Kirki::add_field(
 		'transport' => 'auto',
 		'output'    => array(
 			array(
-				'element'  => 'button, .btn-beats, input[type="submit"], slick-arrow, #cancel-comment-reply-link',
+				'element'  => 'button, .btn-beats, input[type="submit"], slick-arrow, #cancel-comment-reply-link, span.page-numbers.current, .wp-block-button__link',
 				'property' => 'color',
 			),
 		),
@@ -309,7 +318,7 @@ Kirki::add_field(
 		'transport' => 'auto',
 		'output'    => array(
 			array(
-				'element'  => 'button:hover, .btn-beats:hover, input[type="submit"]:hover, slick-arrow:hover, #cancel-comment-reply-link:hover',
+				'element'  => 'button:hover, .btn-beats:hover, input[type="submit"]:hover, slick-arrow:hover, #cancel-comment-reply-link:hover, .wp-block-button__link:hover',
 				'property' => 'color',
 			),
 		),

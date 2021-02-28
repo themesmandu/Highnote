@@ -21,7 +21,7 @@
 
 	<?php if ( get_post_type() === 'post' ) { ?>
 
-	<footer class="entry-footer card-footer">
+	<footer class="entry-footer">
 		<?php highnote_entry_footer(); ?>
 	</footer>
 

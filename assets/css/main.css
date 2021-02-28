@@ -22,7 +22,6 @@ body {
 }
 
 a {
-    color: #27b0ff;
     transition: 0.3s;
     text-decoration: none;
 }
@@ -91,12 +90,11 @@ label {
 input,
 textarea,
 select {
-    font-size: 15px;
-    color: #777777;
-    outline: none;
-    border: 1px solid rgba(0, 0, 0, 0.14);
+    font-size: 14px;
     width: 100%;
     padding: 12px 15px;
+    border: 1px solid transparent;
+    border-radius: 0;
 }
 
 input[type="submit"] {
@@ -134,7 +132,7 @@ button {
 /* -- Blockquote Styles -- */
 
 blockquote {
-    border-left: 4px solid #1e4b8e;
+    border-left: 4px solid transparent;
     padding-left: 20px;
     position: relative;
 }
@@ -146,13 +144,13 @@ blockquote:before {
     font-weight: 900;
     margin-right: 10px;
     position: absolute;
-    color: #1e4b8e;
+    color: inherit;
     opacity: 0.2;
 }
 
 blockquote p {
     font-style: italic;
-    color: #1e4b8e;
+    color: inherit;
 }
 
 
@@ -160,18 +158,23 @@ blockquote p {
 
 table {
     font-size: 13px;
-    color: #556378;
+    color: inherit;
     width: 100%;
     line-height: 2;
 }
 
-table th {
-    color: #27b0ff;
+tbody,
+td,
+tfoot,
+th,
+thead,
+tr {
+    border-width: 1px;
+    padding: 10px;
 }
 
 table caption {
     font-size: 19px;
-    color: #153f7b;
     caption-side: top;
     padding: 0 0 10px;
     line-height: 1.5;
@@ -228,7 +231,8 @@ body.home #content {
 #content a.btn:hover,
 #footer a.btn:hover,
 #wizards_slider .btn:hover,
-#wizards_slider .btn a:hover {
+#wizards_slider .btn a:hover,
+#content .wp-block-button__link:hover {
     border-bottom: none;
 }
 
@@ -823,7 +827,8 @@ article:last-child,
 .entry-meta span:last-child,
 .entry-footer span:last-child,
 .entry-footer a:nth-child(2),
-article time.updated.published {
+article time.updated.published,
+.jumbotron-content p:last-child {
     margin: 0;
 }
 
@@ -874,9 +879,8 @@ article span i {
     font-size: 14px;
 }
 
-.post .card-footer {
-    border-radius: 0;
-    border-color: rgba(0, 0, 0, .05);
+.post .entry-footer {
+    margin-top: 15px;
 }
 
 .entry-footer a {
@@ -941,8 +945,7 @@ article .more-link {
 .page-links,
 .page-links a {
     font-size: 14px;
-    font-weight: 700;
-    opacity: .8;
+    color: inherit;
     padding: 2px;
     margin: 0 10px;
     margin-right: 10px;
@@ -1101,22 +1104,22 @@ span.page-numbers.current {
 }
 
 #comments .comment-list {
-    margin-top: 32px;
+    margin: 32px 0 0;
     padding: 0;
     list-style-type: none;
 }
 
 #comments .comment-list .children {
-    padding-left: 26px;
+    padding-left: 32px;
+    list-style-type: unset;
 }
 
-#comments li {
-    padding: 20px 0;
+#comments .comment {
     margin-bottom: 20px;
 }
 
-#comments li:last-child {
-    padding-bottom: 0;
+#comments .comment:last-child {
+    margin-bottom: 0;
 }
 
 .comment-author {
@@ -1140,10 +1143,9 @@ span.page-numbers.current {
 
 .comment-metadata .fn,
 .comment-metadata .fn a {
-    font-size: 16px;
+    font-weight: 700;
     color: inherit;
     text-transform: capitalize;
-    opacity: .6;
 }
 
 .comment-metadata .fn {
@@ -1184,7 +1186,7 @@ span.page-numbers.current {
 }
 
 #commentform .required {
-    color: #dd1e26;
+    color: #ff5400;
 }
 
 .comment-form-comment {

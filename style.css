@@ -185,15 +185,32 @@ Use it to make something cool, have fun, and share what you've learned with othe
 figcaption,
 .wp-caption-text,
 .gallery-caption {
-    font-family: NunitoSemiBold;
     font-size: 14px;
-    color: #6d7683;
     margin-top: 4px;
     text-align: center;
 }
 
 .widget .gallery-caption {
     font-size: 12px;
+}
+
+
+/* -- Blog Syles -- */
+
+.wp-block-group.has-background {
+    padding: 20px;
+}
+
+.wp-block-button__link {
+    margin: 7px 0;
+}
+
+#content .is-style-outline .wp-block-button__link:hover {
+    border-bottom: 2px solid;
+}
+
+.is-style-squared .wp-block-button__link {
+    border-radius: 0;
 }
 
 

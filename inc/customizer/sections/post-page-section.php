@@ -402,7 +402,8 @@ Kirki::add_field(
 			),
 
 			array(
-				'element'  => 'input, textarea, select, .comment-respond input[type=text], .comment-respond input[type=email], .comment-respond .comment-form-comment textarea',
+				'element'  => 'input, textarea, select, .comment-respond input[type=text], .comment-respond input[type=email], .comment-respond .comment-form-comment textarea,
+				blockquote, table',
 				'property' => 'border-color',
 			),
 
