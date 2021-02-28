@@ -42,6 +42,7 @@ if ( have_comments() ) :
 		<?php
 		wp_list_comments(
 			array(
+				'callback'    => 'highnote_comment',
 				'avatar_size' => 55,
 			)
 		);
@@ -81,4 +82,4 @@ if ( have_comments() ) :
 			'title_reply_after'  => '</h2>',
 		)
 	);
-?>
+	?>
