@@ -7,7 +7,7 @@
 
 ?>
 <?php if ( get_theme_mod( 'pricing_table_title' ) || get_theme_mod( 'pricing_table_desc' ) ) : ?>
-	<section class="section_licensing section_three">
+	<section class="section-frontpage section_licensing section_three">
 		<div class="overlay"></div>
 		<div class="container">
 			<?php if ( get_theme_mod( 'pricing_table_title' ) || get_theme_mod( 'pricing_table_desc' ) ) : ?>

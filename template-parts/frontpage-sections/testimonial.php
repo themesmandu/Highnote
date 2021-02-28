@@ -8,7 +8,7 @@
 
 ?>
 <?php if (get_theme_mod('testimonial_title') || get_theme_mod('testimonial_desc')) : ?>
-	<section class="section_review section_six">
+	<section class="section-frontpage section_review section_six">
 		<div class="overlay"></div>
 		<div class="container">
 			<?php if (get_theme_mod('testimonial_title') || get_theme_mod('testimonial_desc')) : ?>

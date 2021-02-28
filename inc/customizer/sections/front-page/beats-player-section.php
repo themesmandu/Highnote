@@ -216,22 +216,22 @@ Kirki::add_field(
 		'output'    => array(
 			array(
 				'choice'   => 'padding-top',
-				'element'  => 'section.section_beats',
+				'element'  => '.section_beats',
 				'property' => 'padding-top',
 			),
 			array(
 				'choice'   => 'padding-right',
-				'element'  => 'section.section_beats',
+				'element'  => '.section_beats',
 				'property' => 'padding-right',
 			),
 			array(
 				'choice'   => 'padding-bottom',
-				'element'  => 'section.section_beats',
+				'element'  => '.section_beats',
 				'property' => 'padding-bottom',
 			),
 			array(
 				'choice'   => 'padding-left',
-				'element'  => 'section.section_beats',
+				'element'  => '.section_beats',
 				'property' => 'padding-left',
 			),
 		),
@@ -254,7 +254,7 @@ Kirki::add_field(
 		),
 		'output'   => array(
 			array(
-				'element'         => 'section.section_beats',
+				'element'         => '.section_beats',
 				'property'        => 'box-shadow',
 				'value_pattern'   => '0px 0px $px section_shadow_spreadpx section_shadow_color',
 				'pattern_replace' => array(
@@ -282,7 +282,7 @@ Kirki::add_field(
 		),
 		'output'   => array(
 			array(
-				'element'         => 'section.section_beats',
+				'element'         => '.section_beats',
 				'property'        => 'box-shadow',
 				'value_pattern'   => '0px 0px section_shadow_blurpx $px section_shadow_color',
 				'pattern_replace' => array(
@@ -308,7 +308,7 @@ Kirki::add_field(
 		),
 		'output'   => array(
 			array(
-				'element'         => 'section.section_beats',
+				'element'         => '.section_beats',
 				'property'        => 'box-shadow',
 				'value_pattern'   => '0px 0px section_shadow_spreadpx section_shadow_blurpx $',
 				'pattern_replace' => array(

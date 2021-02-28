@@ -8,7 +8,7 @@
 
 if ( get_theme_mod( 'beats_external_store' ) ) {
 	?>
-<section class="section_beats">
+<section class="section-frontpage section_beats">
 	<div class="overlay"></div>
 	<div class="container beats-container">
 		<div class="beats_store">
@@ -22,7 +22,7 @@ if ( get_theme_mod( 'beats_external_store' ) ) {
 } else {
 	if ( class_exists( 'Easy_Digital_Downloads' ) ) {
 		?>
-<section class="section_beats">
+<section class="section-frontpage section_beats">
 	<div class="overlay"></div>
 	<div class="container beats-container">
 		<div class="beats_store">

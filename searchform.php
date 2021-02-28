@@ -10,7 +10,7 @@
 
 <!-- Search Form Widget -->
 <div class="beats-search">
-	<h2 class="form-title widget-title"><?php esc_html_e( 'Search ', 'highnote' ); ?></h2>
+	<h2 class="form-title"><?php esc_html_e( 'Search ', 'highnote' ); ?></h2>
 	<div class="content">
 		<form method="get" id="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>" role="search">
 			<div class="input-group">
