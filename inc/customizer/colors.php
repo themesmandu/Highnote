@@ -243,7 +243,7 @@ Kirki::add_field(
 		'transport' => 'auto',
 		'output'    => array(
 			array(
-				'element'  => 'button, .btn-beats, input[type="submit"], slick-arrow, .slick-active button, .navbar-toggler-icon span',
+				'element'  => 'button, .btn-beats, input[type="submit"], slick-arrow, .slick-active button, .navbar-toggler-icon span, #cancel-comment-reply-link',
 				'property' => 'background-color',
 			),
 		),
@@ -265,7 +265,7 @@ Kirki::add_field(
 		'transport' => 'auto',
 		'output'    => array(
 			array(
-				'element'  => 'button:hover, .btn-beats:hover, input[type="submit"]:hover, slick-arrow:hover',
+				'element'  => 'button:hover, .btn-beats:hover, input[type="submit"]:hover, slick-arrow:hover, #cancel-comment-reply-link:hover',
 				'property' => 'background-color',
 			),
 		),
@@ -287,7 +287,7 @@ Kirki::add_field(
 		'transport' => 'auto',
 		'output'    => array(
 			array(
-				'element'  => 'button, .btn-beats, input[type="submit"], slick-arrow',
+				'element'  => 'button, .btn-beats, input[type="submit"], slick-arrow, #cancel-comment-reply-link',
 				'property' => 'color',
 			),
 		),
@@ -309,7 +309,7 @@ Kirki::add_field(
 		'transport' => 'auto',
 		'output'    => array(
 			array(
-				'element'  => 'button:hover, .btn-beats:hover, input[type="submit"]:hover, slick-arrow:hover',
+				'element'  => 'button:hover, .btn-beats:hover, input[type="submit"]:hover, slick-arrow:hover, #cancel-comment-reply-link:hover',
 				'property' => 'color',
 			),
 		),

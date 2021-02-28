@@ -143,7 +143,7 @@ add_filter( 'previous_posts_link_attributes', 'highnote_posts_link_attributes' )
  * @param string $content comment reply link class.
  */
 function highnote_comment_reply_link( $content ) {
-	$extra_classes = 'btn btn-primary';
+	$extra_classes = 'btn btn-beats';
 	return preg_replace( '/comment-reply-link/', 'comment-reply-link ' . $extra_classes, $content );
 }
 add_filter( 'comment_reply_link', 'highnote_comment_reply_link', 99 );

@@ -970,7 +970,6 @@ span.page-numbers.current {
 /* -- Single Page Styles -- */
 
 .single article {
-    padding: 20px;
     margin: 0;
 }
 
@@ -984,8 +983,7 @@ span.page-numbers.current {
 
 .single .navigation,
 .single-download .navigation {
-    border-top: 1px solid rgba(255, 255, 255, .1);
-    padding: 20px;
+    margin-top: 1px;
 }
 
 .nav_direction {
@@ -1085,11 +1083,10 @@ span.page-numbers.current {
 }
 
 
-/* -- Comment Form Styles -- */
+/* -- Comment And Respont Form Styles -- */
 
 #comments,
 #respond {
-    padding: 20px;
     margin: 32px 0 0;
 }
 
@@ -1125,6 +1122,7 @@ span.page-numbers.current {
 .comment-author {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .comment-meta figure {
@@ -1145,8 +1143,11 @@ span.page-numbers.current {
     font-size: 16px;
     color: inherit;
     text-transform: capitalize;
-    display: block;
     opacity: .6;
+}
+
+.comment-metadata .fn {
+    display: block;
 }
 
 .comment-metadata .date {
@@ -1175,7 +1176,7 @@ span.page-numbers.current {
     border: none;
     padding: 6px 16px;
     display: block;
-    letter-spacing: 1px;
+    letter-spacing: .5px;
 }
 
 .comment-notes {
@@ -1192,7 +1193,10 @@ span.page-numbers.current {
 
 #respond label {
     color: inherit;
-    font-weight: 500;
+}
+
+#respond .form-submit {
+    margin-bottom: 0;
 }
 
 .comment-form-author,
@@ -1205,27 +1209,26 @@ span.page-numbers.current {
 
 #commentform .comment-form-cookies-consent {
     display: flex;
-    margin: 32px 0;
+    align-items: center;
 }
 
 #commentform .comment-form-cookies-consent input {
     width: 20px;
-    margin: auto 0;
     cursor: pointer;
 }
 
 #commentform .comment-form-cookies-consent label {
-    font-weight: 300;
-    color: #777777;
-    margin: auto 0 auto 5px;
+    margin-left: 7px;
 }
 
 #cancel-comment-reply-link {
     display: inline-block;
     padding: 10px 25px;
     margin-left: 10px;
-    background: #4460af;
-    color: #ffffff;
+}
+
+#content #cancel-comment-reply-link:hover {
+    border: none;
 }
 
 #comments .page-numbers {
