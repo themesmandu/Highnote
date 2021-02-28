@@ -338,28 +338,6 @@ Kirki::add_field(
 	)
 );
 
-// Blog Post: Footer Background.
-Kirki::add_field(
-	'highnote_kirki_config',
-	array(
-		'type'      => 'color',
-		'settings'  => 'entry_footer_bgcolor',
-		'label'     => __( 'Blog Post: Footer Background', 'highnote' ),
-		'section'   => 'blog_options',
-		'default'   => $defaults['entry_footer_bgcolor'],
-		'choices'   => array(
-			'alpha' => true,
-		),
-		'transport' => 'auto',
-		'output'    => array(
-			array(
-				'element'  => '.card-footer',
-				'property' => 'background-color',
-			),
-		),
-	)
-);
-
 // Entry/Post/Page Title Color.
 Kirki::add_field(
 	'highnote_kirki_config',

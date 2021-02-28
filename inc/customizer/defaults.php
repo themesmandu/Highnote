@@ -27,7 +27,6 @@ if ( ! function_exists( 'highnote_get_default_theme_options' ) ) :
 		$defaults['title_color']                    = '#31396b';       //Entry/Post/Page Title Color
 		$defaults['content_color']                  = '#3f3f45';       //Entry/Post/Page content Color
 		$defaults['entry_bgcolor']                  = 'rgba(255,255,255,1)';     //Entry Card Background.
-		$defaults['entry_footer_bgcolor']           = '#ffffff';      //Entry Card: Footer Background.
 		$defaults['wgt_title_color']                = '#020407';       //Widget Title Color.
 		$defaults['link_color']                     = 'rgba(247,99,27,0.7)';        //Text Link Color.
 		$defaults['body_color']                     = '#212121';        //body color Color.
