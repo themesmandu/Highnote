@@ -248,7 +248,7 @@ Kirki::add_field(
 				'property' => 'background-color',
 			),
 			array(
-				'element'  => '#content .is-style-outline .wp-block-button__link:hover',
+				'element'  => '.is-style-outline .wp-block-button__link:hover',
 				'property' => 'border-color',
 			),
 			array(

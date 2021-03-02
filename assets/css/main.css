@@ -26,18 +26,24 @@ a {
     text-decoration: none;
 }
 
-a:link {
+a:hover {
+    border-bottom: 1px solid;
     cursor: pointer;
+    text-decoration: none;
+}
+
+a.btn:hover,
+#footer a.btn:hover,
+#wizards_slider .btn:hover,
+#wizards_slider .btn a:hover,
+.wp-block-button__link:hover {
+    border-bottom: none;
 }
 
 a:focus,
 a:active {
     outline: 1px solid #212121;
     box-shadow: none;
-}
-
-a:hover {
-    text-decoration: none;
 }
 
 
@@ -114,6 +120,18 @@ input[type="number"]::-webkit-outer-spin-button {
 
 select {
     padding-left: 8px;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    padding: unset;
+    width: auto;
+    cursor: pointer;
+}
+
+input[type="radio"] {
+    width: auto;
+    height: auto;
 }
 
 
@@ -220,20 +238,6 @@ table caption {
 
 body.home #content {
     padding: 0;
-}
-
-#content a:hover,
-#footer a:hover,
-#wizards_slider a:hover {
-    border-bottom: 1px solid;
-}
-
-#content a.btn:hover,
-#footer a.btn:hover,
-#wizards_slider .btn:hover,
-#wizards_slider .btn a:hover,
-#content .wp-block-button__link:hover {
-    border-bottom: none;
 }
 
 
@@ -1289,7 +1293,6 @@ section.widget p {
 }
 
 .widget li {
-    font-weight: 500;
     color: inherit;
     border-bottom: 1px solid rgba(0, 0, 0, .05);
     margin-bottom: 15px;

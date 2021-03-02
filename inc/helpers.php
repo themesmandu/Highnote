@@ -152,3 +152,37 @@ if ( ! function_exists( 'highnote_header_page_title' ) ) :
 	}
 
 endif;
+
+/**
+ * Add extra items in menu
+ *
+ * @since 1.0.0
+ *
+ * @param array $items item to b added.
+ * @param object $args args object.
+ */
+
+function highnote_add_menu_item( $items, $args ) {
+	if ( class_exists( 'Easy_Digital_Downloads' ) ) {
+		if ( 'primary' === $args->theme_location ) {
+			ob_start();
+			the_widget( 'edd_cart_widget' );
+			$widget = ob_get_clean();
+			$items .= '<li class="beats_cart menu-item">
+		<button class="btn-cart btn-beats">
+			<p><i class="fas fa-shopping-cart"></i> 
+			<span class="cart-count edd-cart-quantity">' . edd_get_cart_quantity() . '</span> Beats</p>
+		</button>
+
+		<div class="cart_content">
+			<div class="cart-wrap">' . $widget . '</div>
+		</div>
+	</li>';
+
+		}
+	}
+	return $items;
+}
+if ( get_theme_mod( 'mainmenu_cart_toggle', true ) ) {
+	add_filter( 'wp_nav_menu_items', 'highnote_add_menu_item', 10, 2 );
+}

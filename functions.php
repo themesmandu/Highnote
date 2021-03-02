@@ -139,10 +139,10 @@ add_action( 'widgets_init', 'highnote_widgets_init' );
 function highnote_scripts() {
 
 	// Bootstrap reboot styles.
-	wp_enqueue_style( 'highnote-bootstrap-reboot', get_template_directory_uri() . '/vendor/bootstrap-src/css/bootstrap-reboot.min.css', array( 'highnote-style' ), '5.0.0' );
+	wp_enqueue_style( 'bootstrap-reboot', get_template_directory_uri() . '/vendor/bootstrap-src/css/bootstrap-reboot.min.css', array( 'highnote-style' ), '5.0.0' );
 
 	// Bootstrap styles.
-	wp_enqueue_style( 'highnote-bootstrap', get_template_directory_uri() . '/vendor/bootstrap-src/css/bootstrap.min.css', array( 'highnote-style' ), '5.0.0' );
+	wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/vendor/bootstrap-src/css/bootstrap.min.css', array( 'highnote-style' ), '5.0.0' );
 
 	// Theme styles.
 	wp_enqueue_style( 'highnote-style', get_stylesheet_uri(), array(), wp_get_theme()->get( 'Version' ) );
@@ -160,11 +160,11 @@ function highnote_scripts() {
 	wp_enqueue_style( 'custom-image-slider-css', get_theme_file_uri( '/assets/css/custom-image-slider.css' ), array( 'highnote-style' ), wp_get_theme()->get( 'Version' ) );
 
 	// Add font-awesome fonts, used in the main stylesheet.
-	wp_enqueue_style( 'highnote-font-awesome', get_theme_file_uri( '/assets/font-awesome-5.7.2/css/all.css' ), array( 'highnote-style' ), '5.7.2' );
+	wp_enqueue_style( 'font-awesome', get_theme_file_uri( '/assets/font-awesome-5.7.2/css/all.css' ), array( 'highnote-style' ), '5.7.2' );
 	
 	// Bootstrap core JavaScript: jQuery first, then Popper.js, then Bootstrap JS.
 	wp_enqueue_script( 'jquery' );
-	wp_enqueue_script( 'highnote-bootstrap', get_template_directory_uri() . '/vendor/bootstrap-src/js/bootstrap.bundle.min.js', array(), '5.0.0', true );
+	wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/vendor/bootstrap-src/js/bootstrap.bundle.min.js', array(), '5.0.0', true );
 
 	if ( is_front_page() && ! is_home() && get_theme_mod( 'slider_toggle' ) ) {
 		// jQuery of custom image slider
@@ -175,10 +175,10 @@ function highnote_scripts() {
 	wp_enqueue_script( 'highnote-basic', get_template_directory_uri() . '/assets/js/basic.js', array(), wp_get_theme()->get( 'Version' ), true );
 
 	// Theme added JavaScript: Added by Developers For Slick Slider.
-	wp_enqueue_script( 'highnote-slick', get_template_directory_uri() . '/assets/js/slick.js', array(), wp_get_theme()->get( 'Version' ), true );
+	wp_enqueue_script( 'slick', get_template_directory_uri() . '/assets/js/slick.js', array(), wp_get_theme()->get( 'Version' ), true );
 
 	// Font Nunito And Advent Pro
-	wp_enqueue_style( 'highnote-custom-google-fonts', 'https://fonts.googleapis.com/css?family=Advent+Pro:400,600,700|Nunito:400,600,700&display=swap', false );
+	wp_enqueue_style( 'custom-google-fonts', 'https://fonts.googleapis.com/css?family=Advent+Pro:400,600,700|Nunito:400,600,700&display=swap', false );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
