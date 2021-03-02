@@ -23,5 +23,9 @@ if ( get_theme_mod( 'beats_external_store' ) ) {
 
 
 if ( get_theme_mod( 'highnote_player_shortcode' ) ) {
-	echo do_shortcode( get_theme_mod( 'highnote_player_shortcode' ) );
-}
+	?>
+	<section class="section-frontpage section_beats">
+	<div class="overlay"></div>
+	<?php echo do_shortcode( get_theme_mod( 'highnote_player_shortcode' ) ); ?>
+	</section>
+<?php } ?>
