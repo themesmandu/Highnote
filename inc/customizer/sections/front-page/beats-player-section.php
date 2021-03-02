@@ -85,6 +85,135 @@ Kirki::add_field(
 	)
 );
 
+Kirki::add_field(
+	'highnote_kirki_config',
+	array(
+		'type'      => 'dimensions',
+		'settings'  => 'beats_player_padding',
+		'label'     => esc_html__( 'Section Paddings', 'highnote-player' ),
+		'section'   => 'highnote_beats_player',
+		'default'   => array(
+			'padding-top'    => '90px',
+			'padding-right'  => '0px',
+			'padding-bottom' => '90px',
+			'padding-left'   => '0px',
+		),
+		'choices'   => array(
+			'labels' => array(
+				'padding-top'    => esc_html__( 'Padding Top', 'highnote-player' ),
+				'padding-right'  => esc_html__( 'Padding Right', 'highnote-player' ),
+				'padding-bottom' => esc_html__( 'Padding Bottom', 'highnote-player' ),
+				'padding-left'   => esc_html__( 'Padding Left', 'highnote-player' ),
+			),
+		),
+		'transport' => 'auto',
+		'output'    => array(
+			array(
+				'choice'   => 'padding-top',
+				'element'  => '.section_beats',
+				'property' => 'padding-top',
+			),
+			array(
+				'choice'   => 'padding-right',
+				'element'  => '.section_beats',
+				'property' => 'padding-right',
+			),
+			array(
+				'choice'   => 'padding-bottom',
+				'element'  => '.section_beats',
+				'property' => 'padding-bottom',
+			),
+			array(
+				'choice'   => 'padding-left',
+				'element'  => '.section_beats',
+				'property' => 'padding-left',
+			),
+		),
+	)
+);
+
+//section box shadow
+Kirki::add_field(
+	'highnote_kirki_config',
+	array(
+		'type'     => 'slider',
+		'settings' => 'beats_section_bs_blur',
+		'label'    => esc_html__( 'Section Box Shadow Blur(px)', 'highnote-player' ),
+		'section'  => 'highnote_beats_player',
+		'default'  => 0,
+		'choices'  => array(
+			'min'  => 0,
+			'max'  => 50,
+			'step' => 1,
+		),
+		'output'   => array(
+			array(
+				'element'         => '.section_beats',
+				'property'        => 'box-shadow',
+				'value_pattern'   => '0px 0px $px section_shadow_spreadpx section_shadow_color',
+				'pattern_replace' => array(
+					'section_shadow_spread' => 'beats_section_bs_spread',
+					'section_shadow_color'  => 'beats_section_bs_color',
+				),
+			),
+		),
+	)
+);
+
+//section box shadow
+Kirki::add_field(
+	'highnote_kirki_config',
+	array(
+		'type'     => 'slider',
+		'settings' => 'beats_section_bs_spread',
+		'label'    => esc_html__( 'Section Box Shadow Spread(px)', 'highnote-player' ),
+		'section'  => 'highnote_beats_player',
+		'default'  => 0,
+		'choices'  => array(
+			'min'  => 0,
+			'max'  => 50,
+			'step' => 1,
+		),
+		'output'   => array(
+			array(
+				'element'         => '.section_beats',
+				'property'        => 'box-shadow',
+				'value_pattern'   => '0px 0px section_shadow_blurpx $px section_shadow_color',
+				'pattern_replace' => array(
+					'section_shadow_color' => 'beats_section_bs_color',
+					'section_shadow_blur'  => 'beats_section_bs_blur',
+				),
+			),
+		),
+	)
+);
+
+//section box shadow
+Kirki::add_field(
+	'highnote_kirki_config',
+	array(
+		'type'     => 'color',
+		'settings' => 'beats_section_bs_color',
+		'label'    => __( 'Section Box Shadow Color', 'highnote-player' ),
+		'section'  => 'highnote_beats_player',
+		'default'  => 'rgba(0,0,0,.7)',
+		'choices'  => array(
+			'alpha' => true,
+		),
+		'output'   => array(
+			array(
+				'element'         => '.section_beats',
+				'property'        => 'box-shadow',
+				'value_pattern'   => '0px 0px section_shadow_spreadpx section_shadow_blurpx $',
+				'pattern_replace' => array(
+					'section_shadow_spread' => 'beats_section_bs_spread',
+					'section_shadow_blur'   => 'beats_section_bs_blur',
+				),
+			),
+		),
+	)
+);
+
 // Setting player shortcode.
 Kirki::add_field(
 	'highnote_kirki_config',
