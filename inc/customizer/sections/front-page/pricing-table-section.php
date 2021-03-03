@@ -352,6 +352,17 @@ Kirki::add_field(
 				'type'  => 'checkbox',
 				'label' => esc_html__( 'Highlight Table', 'highnote' ),
 			),
+			'table_column_animation'  => array(
+				'type'    => 'radio',
+				'label'   => esc_html__( 'Column Animation', 'highnote' ),
+				'default' => '',
+				'choices' => array(
+					'left'   => esc_html__( 'Left', 'highnote' ),
+					'right'  => esc_html__( 'Right', 'highnote' ),
+					'top'    => esc_html__( 'Top', 'highnote' ),
+					'bottom' => esc_html__( 'Bottom', 'highnote' ),
+				),
+			),
 		),
 	)
 );
@@ -450,6 +461,17 @@ Kirki::add_field(
 			'table_features'          => array(
 				'type'  => 'textarea',
 				'label' => esc_html__( 'Features', 'highnote' ),
+			),
+			'table_column_animation'  => array(
+				'type'    => 'radio',
+				'label'   => esc_html__( 'Column Animation', 'highnote' ),
+				'default' => '',
+				'choices' => array(
+					'left'   => esc_html__( 'Left', 'highnote' ),
+					'right'  => esc_html__( 'Right', 'highnote' ),
+					'top'    => esc_html__( 'Top', 'highnote' ),
+					'bottom' => esc_html__( 'Bottom', 'highnote' ),
+				),
 			),
 		),
 	)

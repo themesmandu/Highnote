@@ -35,7 +35,7 @@
 								$column_class = 3;
 							}
 							?>
-							<div class="col-lg-<?php echo esc_attr( $column_class ); ?> column <?php echo esc_attr( $active_table['table_highlight'] ? 'highlighted' : '' ); ?>">
+							<div class="col-lg-<?php echo esc_attr( $column_class ); ?> column <?php echo esc_attr( $active_table['table_highlight'] ? 'highlighted' : '' ); ?> view-<?php echo esc_attr( $active_table['table_column_animation'] ); ?>">
 								<div class="col-wrap">
 									<div class="col-content">
 										<?php if ( $active_table['table_title'] ) : ?>
@@ -68,7 +68,7 @@
 				<div class="row custom_beat_row">
 					<?php foreach ( $active_tables_two as $key => $active_table_two ) : ?>
 						<?php $table_currency_two = '<span class="currency">' . $active_table_two['table_currency'] . '</span>'; ?>
-						<div class="col-lg-6 column">
+						<div class="col-lg-6 column view-<?php echo esc_attr( $active_table_two['table_column_animation'] ); ?>">
 							<div class="column-wrap">
 								<div class="header-wrap">
 									<?php if ( $active_table_two['table_title'] || $active_table_two['table_subtitle'] ) : ?>

@@ -319,21 +319,32 @@ Kirki::add_field(
 		'button_label' => esc_html__( 'Add New Testimonial', 'highnote' ),
 		'settings'     => 'testimonials',
 		'fields'       => array(
-			'name'            => array(
+			'name'             => array(
 				'type'  => 'text',
 				'label' => esc_html__( 'Client Name', 'highnote' ),
 			),
-			'testimony'       => array(
+			'testimony'        => array(
 				'type'  => 'textarea',
 				'label' => esc_html__( 'Testimony', 'highnote' ),
 			),
-			'image'           => array(
+			'image'            => array(
 				'type'  => 'image',
 				'label' => esc_html__( 'Picture', 'highnote' ),
 			),
-			'companynamerank' => array(
+			'companynamerank'  => array(
 				'type'  => 'text',
 				'label' => esc_html__( 'Company Name/Rank', 'highnote' ),
+			),
+			'column_animation' => array(
+				'type'    => 'radio',
+				'label'   => esc_html__( 'Column Animation', 'highnote' ),
+				'default' => '',
+				'choices' => array(
+					'left'   => esc_html__( 'Left', 'highnote' ),
+					'right'  => esc_html__( 'Right', 'highnote' ),
+					'top'    => esc_html__( 'Top', 'highnote' ),
+					'bottom' => esc_html__( 'Bottom', 'highnote' ),
+				),
 			),
 		),
 	)
@@ -477,7 +488,7 @@ Kirki::add_field(
 		),
 	)
 );
- 
+
 //odd box shadow top-bottom
 Kirki::add_field(
 	'highnote_kirki_config',

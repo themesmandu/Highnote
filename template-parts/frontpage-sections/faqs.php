@@ -24,9 +24,9 @@
 			$active_faqs = get_theme_mod( 'front_faqs' );
 			if ( $active_faqs ) {
 				?>
-				<div class="accordion column-1 <?php echo ( 'two' === get_theme_mod( 'faqs_column' ) ? 'column-2' : '' ); ?>" id="beatsAccordian">
+				<div class="accordion column-1<?php echo ( 'two' === get_theme_mod( 'faqs_column' ) ? ' column-2' : '' ); ?> view-<?php echo esc_attr( get_theme_mod( 'faqs_column_animation' ) ); ?>" id="beatsAccordian">
 					<?php foreach ( $active_faqs as $key => $active_faq ) : ?>
-						<div class="accordion-item <?php echo esc_attr( $active_faq['faqs_expand'] ? 'active' : '' ); ?>">
+						<div class="accordion-item<?php echo esc_attr( $active_faq['faqs_expand'] ? ' active' : '' ); ?>">
 							<?php if ( $active_faq['faq_question'] ) : ?>
 								<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-<?php echo esc_attr( $key ); ?>" aria-expanded="true" aria-controls="collapseOne">
 									<?php echo esc_html( $active_faq['faq_question'] ); ?>

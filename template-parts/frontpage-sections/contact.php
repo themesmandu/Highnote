@@ -20,11 +20,13 @@
 			<?php endif; ?>
 		</div>
 		<?php endif; ?>
+		<div class="column view-<?php echo esc_attr( get_theme_mod( 'contact_column_animation' ) ); ?>">
 		<?php
 		if ( get_theme_mod( 'contact_shortcode' ) ) :
 			echo do_shortcode( get_theme_mod( 'contact_shortcode' ) );
 			endif;
 		?>
+		</div>
 	</div>
 </section>
 <?php endif; ?>

@@ -353,27 +353,38 @@ Kirki::add_field(
 		'button_label' => esc_html__( 'Add New Feature', 'highnote' ),
 		'settings'     => 'front_features',
 		'fields'       => array(
-			'feature_title'       => array(
+			'feature_title'            => array(
 				'type'  => 'textarea',
 				'label' => esc_html__( 'Feature Title', 'highnote' ),
 			),
-			'feature_icon'        => array(
+			'feature_icon'             => array(
 				'type'        => 'text',
 				'label'       => esc_html__( 'Feature Icon', 'highnote' ),
 				'description' => esc_html__( 'Font Awesome icons. Ex: fas fa-ad ', 'highnote' ) . ' <a href="https://fontawesome.com/v5.14.0/icons/" target="_blank"><strong>' . esc_html__( 'View All', 'highnote' ) . ' </strong></a>',
 
 			),
-			'feature_subtitle'    => array(
+			'feature_subtitle'         => array(
 				'type'  => 'text',
 				'label' => esc_html__( 'Feature Sub-Title', 'highnote' ),
 			),
-			'feature_description' => array(
+			'feature_description'      => array(
 				'type'  => 'textarea',
 				'label' => esc_html__( 'Feature Description', 'highnote' ),
 			),
-			'feature_highlight'   => array(
+			'feature_highlight'        => array(
 				'type'  => 'checkbox',
 				'label' => esc_html__( 'Highlight This Feature', 'highnote' ),
+			),
+			'feature_column_animation' => array(
+				'type'    => 'radio',
+				'label'   => esc_html__( 'Column Animation', 'highnote' ),
+				'default' => '',
+				'choices' => array(
+					'left'   => esc_html__( 'Left', 'highnote' ),
+					'right'  => esc_html__( 'Right', 'highnote' ),
+					'top'    => esc_html__( 'Top', 'highnote' ),
+					'bottom' => esc_html__( 'Bottom', 'highnote' ),
+				),
 			),
 		),
 	)

@@ -566,4 +566,39 @@ Kirki::add_field(
 	)
 );
 
+Kirki::add_field(
+	'highnote_kirki_config',
+	array(
+		'type'     => 'radio-buttonset',
+		'settings' => 'offer_column_one_animation',
+		'label'    => esc_html__( 'Column One Animation', 'highnote' ),
+		'section'  => 'frontpage_offer',
+		'default'  => '',
+		'choices'  => array(
+			'left'   => esc_html__( 'Left', 'highnote' ),
+			'right'  => esc_html__( 'Right', 'highnote' ),
+			'top'    => esc_html__( 'Top', 'highnote' ),
+			'bottom' => esc_html__( 'Bottom', 'highnote' ),
+		),
+	)
+);
+
+Kirki::add_field(
+	'highnote_kirki_config',
+	array(
+		'type'     => 'radio-buttonset',
+		'settings' => 'offer_column_two_animation',
+		'label'    => esc_html__( 'Column Two Animation', 'highnote' ),
+		'section'  => 'frontpage_offer',
+		'default'  => '',
+		'choices'  => array(
+			'left'   => esc_html__( 'Left', 'highnote' ),
+			'right'  => esc_html__( 'Right', 'highnote' ),
+			'top'    => esc_html__( 'Top', 'highnote' ),
+			'bottom' => esc_html__( 'Bottom', 'highnote' ),
+		),
+	)
+);
+
+
 
