@@ -8,6 +8,10 @@
     margin: 0 auto;
 }
 
+.main-navigation a:hover {
+    border-bottom: none;
+}
+
 .nav-search .navbar-nav {
     margin: auto;
     flex-wrap: wrap;

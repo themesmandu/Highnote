@@ -787,6 +787,13 @@ body.home #content {
 }
 
 
+/* --  [Section Beats] Styles -- */
+
+.section_beats .btn-download:hover {
+    border-bottom: none;
+}
+
+
 /* -- Blog Page Styles -- */
 
 .featured-jumbotron {
