@@ -349,4 +349,21 @@ Kirki::add_field(
 	)
 );
 
+Kirki::add_field(
+	'highnote_kirki_config',
+	array(
+		'type'     => 'radio-buttonset',
+		'settings' => 'about_column_animation',
+		'label'    => esc_html__( 'Column Animation', 'highnote' ),
+		'section'  => 'frontpage_about',
+		'default'  => '',
+		'choices'  => array(
+			'left'   => esc_html__( 'Left', 'highnote' ),
+			'right'  => esc_html__( 'Right', 'highnote' ),
+			'top'    => esc_html__( 'Top', 'highnote' ),
+			'bottom' => esc_html__( 'Bottom', 'highnote' ),
+		),
+	)
+);
+
 
