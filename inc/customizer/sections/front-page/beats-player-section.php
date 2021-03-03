@@ -91,7 +91,7 @@ Kirki::add_field(
 		'type'      => 'dimensions',
 		'settings'  => 'beats_player_padding',
 		'label'     => esc_html__( 'Section Paddings', 'highnote-player' ),
-		'section'   => 'highnote_beats_player',
+		'section'   => 'frontpage_beats_player',
 		'default'   => array(
 			'padding-top'    => '90px',
 			'padding-right'  => '0px',
@@ -139,7 +139,7 @@ Kirki::add_field(
 		'type'     => 'slider',
 		'settings' => 'beats_section_bs_blur',
 		'label'    => esc_html__( 'Section Box Shadow Blur(px)', 'highnote-player' ),
-		'section'  => 'highnote_beats_player',
+		'section'  => 'frontpage_beats_player',
 		'default'  => 0,
 		'choices'  => array(
 			'min'  => 0,
@@ -167,7 +167,7 @@ Kirki::add_field(
 		'type'     => 'slider',
 		'settings' => 'beats_section_bs_spread',
 		'label'    => esc_html__( 'Section Box Shadow Spread(px)', 'highnote-player' ),
-		'section'  => 'highnote_beats_player',
+		'section'  => 'frontpage_beats_player',
 		'default'  => 0,
 		'choices'  => array(
 			'min'  => 0,
@@ -195,7 +195,7 @@ Kirki::add_field(
 		'type'     => 'color',
 		'settings' => 'beats_section_bs_color',
 		'label'    => __( 'Section Box Shadow Color', 'highnote-player' ),
-		'section'  => 'highnote_beats_player',
+		'section'  => 'frontpage_beats_player',
 		'default'  => 'rgba(0,0,0,.7)',
 		'choices'  => array(
 			'alpha' => true,
