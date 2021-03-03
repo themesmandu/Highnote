@@ -42,7 +42,7 @@ a.btn:hover,
 
 a:focus,
 a:active {
-    outline: 1px solid #212121;
+    outline: 1px solid;
     box-shadow: none;
 }
 

@@ -17,8 +17,19 @@ jQuery(document).ready(function($) {
         }
     });
 
-    // Added class on dropdown menu span
+    if ($(document).width() > 1200) {
+        //Open item cart on cart button hover
+        $('.main-navigation .beats_cart').hover(function() {
+            $(this).children('.cart_content').fadeIn(100);
+        });
+
+        $('.main-navigation .beats_cart').on('mouseleave', function() {
+            $(this).children('.cart_content').fadeOut(100);
+        });
+    }
+
     if ($(document).width() <= 1200) {
+        // Added class on dropdown menu span
         $('.menu-item-has-children').append('<span class="caret"></span>');
 
         $('.caret').click(function() {
@@ -29,6 +40,16 @@ jQuery(document).ready(function($) {
             if ($(e.target).is('.caret, .sub-menu, .sub-menu li, .sub-menu a') === false) {
                 $('.menu-item-has-children').removeClass('menu-open');
             }
+        });
+
+        //Show cart contents on cart button click
+        $('.main-navigation .nav-cart .btn-cart').click(function() {
+            $('.main-navigation .nav-cart .cart_content').fadeIn().toggleClass('appear');
+            $('.main-navigation #navbarCollapse').addClass('overlay');
+        });
+        $('.main-navigation .nav-cart .cart_content .btn-close').click(function() {
+            $('.main-navigation .nav-cart .cart_content').fadeOut().removeClass('appear');
+            $('.main-navigation #navbarCollapse').removeClass('overlay');
         });
     }
 
@@ -67,7 +88,7 @@ jQuery(document).ready(function($) {
         if (medScreen.matches) {
 
             const focusableElements =
-                'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
+                'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"]), .btn-beats';
             const modal = document.querySelector('#navbarCollapse');
 
             const firstFocusableElement = modal.querySelectorAll(focusableElements)[0];

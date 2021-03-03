@@ -12,7 +12,7 @@
     border-bottom: none;
 }
 
-.nav-search .navbar-nav {
+.main-navigation .navbar-nav {
     margin: auto;
     flex-wrap: wrap;
 }
@@ -112,6 +112,137 @@
     color: #ffffff;
 }
 
+
+/* -- Navbar Cart Dropdown Styles -- */
+
+.main-navigation .nav-cart {
+    position: relative;
+    margin-left: 15px;
+}
+
+.main-navigation .nav-cart .cart_content {
+    display: none;
+    width: 270px;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    padding-top: 15px;
+    z-index: 9;
+}
+
+.main-navigation .cart_content::before {
+    content: '';
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    transform: rotate( 45deg);
+    top: 10px;
+    right: 10px;
+    background: #ffffff;
+    z-index: -1;
+}
+
+.main-navigation .nav-cart .cart_content .btn-close {
+    display: none;
+}
+
+.main-navigation .cart_content .widget {
+    padding: 15px;
+    background-color: #ffffff;
+}
+
+.main-navigation .cart_content .edd-cart-number-of-items {
+    font-size: 16px;
+    font-style: normal;
+    border-bottom: 1px solid;
+    padding-bottom: 8px;
+}
+
+.main-navigation .cart_content ul {
+    padding: 0;
+}
+
+.main-navigation .cart_content li {
+    color: #808080;
+    list-style-type: none;
+    margin: 0 0 15px;
+    padding: 0 18px 0 0;
+    border: none;
+    position: relative;
+}
+
+.main-navigation .cart_content li:last-child {
+    margin: 0;
+}
+
+.main-navigation .cart_content .cart_item.empty {
+    font-size: 14px;
+    text-align: right;
+    margin: 0;
+    padding: 0;
+}
+
+.main-navigation .cart_content li.edd_total {
+    font-weight: 600;
+    letter-spacing: .2px;
+    margin: 22px 0 15px;
+    padding: 10px 0;
+    background-color: transparent;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+}
+
+.main-navigation .cart_content li.edd_checkout a {
+    font-size: 13px;
+    display: inline-block;
+    padding: 8px 12px;
+    border: 1px solid;
+}
+
+.main-navigation .cart_content li.edd_checkout a:hover {
+    background-color: #808080;
+    color: #ffffff;
+}
+
+.main-navigation .edd-cart-item-price {
+    font-weight: 600;
+}
+
+.main-navigation .edd-cart-item-separator {
+    display: none;
+}
+
+.main-navigation .cart-total {
+    float: right;
+}
+
+.main-navigation .edd-remove-from-cart {
+    font-size: 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    border: none;
+}
+
+.main-navigation .edd-remove-from-cart:focus {
+    outline: none;
+}
+
+.main-navigation .edd-remove-from-cart:hover {
+    border: none;
+    transform: rotate(90deg);
+}
+
+.main-navigation .edd-remove-from-cart:after {
+    content: '\f00d';
+    font-family: 'Font Awesome\ 5 Free';
+    font-size: 12px;
+    font-weight: 900;
+}
+
 @media (min-width: 1201px) {
     .menu-item-has-children>a::after {
         content: "\f078";
@@ -196,6 +327,42 @@
         right: 100%;
         padding-right: 1px;
     }
+    /* -- Navbar Cart Dropdown Styles -- */
+    .main-navigation .nav-cart .cart_content {
+        position: fixed;
+        top: 0;
+        right: -270px;
+        bottom: 0;
+        padding: 0;
+        transition: .3s ease-in-out;
+    }
+    .main-navigation .nav-cart .cart_content.appear {
+        display: block;
+        right: 0;
+    }
+    .main-navigation .cart_content::before {
+        display: none;
+    }
+    .main-navigation .cart_content .widget {
+        padding: 0;
+    }
+    .main-navigation .cart_content .cart-wrap {
+        height: 100%;
+        padding: 15px;
+        background-color: #ffffff;
+    }
+    .main-navigation .nav-cart .cart_content .btn-close {
+        display: block;
+    }
+    .main-navigation #navbarCollapse .cart_content::after {
+        content: '';
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: -1;
+    }
 }
 
 @media (max-width: 991px) {
@@ -209,11 +376,13 @@
         background: rgba(255, 255, 255, 0);
         top: 0;
         bottom: 0;
-        left: 0;
+        left: 270px;
         right: 0;
     }
     body.page-overlay #content,
-    body.page-overlay #footer {
+    body.page-overlay #footer,
+    body.page-overlay .jumbotron.header_jumbotron,
+    body.page-overlay #wizards_slider {
         filter: blur(4px);
     }
     /* -- Navnar Collapse Hamburger Menu Animation Styles -- */
@@ -224,6 +393,7 @@
     .navbar-toggler:focus {
         box-shadow: none;
         outline: 1px solid;
+        background-color: transparent;
     }
     .navbar-toggler-icon {
         width: 26px;
@@ -254,7 +424,7 @@
         top: 14px;
     }
     #navbarCollapse .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon span:nth-child(1) {
-        top: 11px;
+        top: 6px;
         transform: rotate(135deg);
     }
     #navbarCollapse .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon span:nth-child(2) {
@@ -262,7 +432,7 @@
         left: -60px;
     }
     #navbarCollapse .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon span:nth-child(3) {
-        top: 11px;
+        top: 6px;
         transform: rotate(-135deg);
     }
     .main-navigation .menu-item-has-children {
@@ -286,7 +456,7 @@
     .main-navigation ul ul li.focus>ul {
         position: unset;
         width: auto;
-        padding: 0 0 0 22px;
+        padding: 0 0 0 18px;
         box-shadow: none;
     }
     .main-navigation .sub-menu .menu-item .nav-link,
@@ -310,8 +480,11 @@
         filter: unset;
         pointer-events: unset;
     }
+    #navbarCollapse .navbar-toggler[aria-expanded="true"]:focus {
+        border: 1px solid;
+    }
     .navbar.navbar.appear-left .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon span:nth-child(1) {
-        top: 11px;
+        top: 6px;
         transform: rotate(135deg);
     }
     .navbar.navbar.appear-left .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon span:nth-child(2) {
@@ -319,7 +492,7 @@
         left: -60px;
     }
     .navbar.navbar.appear-left .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon span:nth-child(3) {
-        top: 11px;
+        top: 6px;
         transform: rotate(-135deg);
     }
     .navbar.appear-left .navbar-collapse {
@@ -361,5 +534,9 @@
     .navbar.appear-left .sub-menu .menu-item .nav-link,
     .navbar.appear-left .menu-item.menu-item-has-children .caret::before {
         color: #ffffff;
+    }
+    /* -- Navbar Cart Dropdown Styles -- */
+    .main-navigation .nav-cart {
+        margin: 10px 0 0;
     }
 }

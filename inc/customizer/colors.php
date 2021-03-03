@@ -58,7 +58,7 @@ Kirki::add_field(
 		'transport'   => 'auto',
 		'output'      => array(
 			array(
-				'element'  => '.navbar-fixed.fixed-top, .appear-left #navbarCollapse.responsive',
+				'element'  => '.navbar-fixed.fixed-top, .appear-left #navbarCollapse.responsive, .main-navigation #navbarCollapse.overlay .cart_content::after',
 				'property' => 'background-color',
 			),
 		),
