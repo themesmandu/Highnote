@@ -145,9 +145,4 @@ jQuery(document).ready(function($) {
             }
         });
     });
-
-    $('.section_licensing .column:nth-child(odd),.testimonialslide .slick-slide:nth-child(odd) .test_slide').addClass('view-top');
-    $('.section_about .column:nth-child(odd), .section_offer .column:nth-child(odd)').addClass('view-left');
-    $('.section_features .column:nth-child(odd), .section_licensing .column:nth-child(even), .section_about .column:nth-child(even)').addClass('view-right');
-    $('.section_features .column:nth-child(even), .testimonialslide .slick-slide:nth-child(even) .test_slide, .section_offer .column:nth-child(even)').addClass('view-bottom');
 });
