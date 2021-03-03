@@ -12,7 +12,7 @@
 		<div class="overlay"></div>
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-6 column view-<?php echo esc_attr( get_theme_mod( 'about_column_animation' ) ); ?>">
+				<div class="col-lg-6 column view-<?php echo esc_attr( get_theme_mod( 'about_column_one_animation' ) ); ?>">
 					<div class="section_header">
 						<?php if ( get_theme_mod( 'about_title' ) ) : ?>
 							<h2 class="section-heading"><?php echo esc_html( get_theme_mod( 'about_title' ) ); ?></h2>
@@ -32,7 +32,7 @@
 				</div>
 
 				<?php if ( get_theme_mod( 'about_featured_img' ) ) : ?>
-					<div class="col-lg-6 column order-left">
+					<div class="col-lg-6 column order-left view-<?php echo esc_attr( get_theme_mod( 'about_column_two_animation' ) ); ?>">
 						<figure>
 							<img src="<?php echo esc_url( get_theme_mod( 'about_featured_img' ) ); ?>" />
 						</figure>
