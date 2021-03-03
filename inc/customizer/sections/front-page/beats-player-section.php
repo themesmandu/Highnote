@@ -226,3 +226,21 @@ Kirki::add_field(
 );
 
 
+// setting external beat store.
+Kirki::add_field(
+	'highnote_kirki_config',
+	array(
+		'type'        => 'code',
+		'settings'    => 'beats_external_store',
+		'label'       => esc_html__( 'External Store Code', 'beatsmandu' ),
+		'description' => esc_html__( 'Note: this setting will disable player and use external store', 'beatsmandu' ),
+		'section'     => 'frontpage_beats_player',
+		'choices'     => array(
+			'language' => 'html',
+			'language' => 'css',
+			'language' => 'js',
+		),
+	)
+);
+
+

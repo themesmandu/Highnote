@@ -19,13 +19,14 @@ if ( get_theme_mod( 'beats_external_store' ) ) {
 	</div>
 </section>
 	<?php
-}
+} else {
 
 
-if ( get_theme_mod( 'highnote_player_shortcode' ) ) {
-	?>
+	if ( get_theme_mod( 'highnote_player_shortcode' ) ) {
+		?>
 	<section class="section-frontpage section_beats">
 	<div class="overlay"></div>
-	<?php echo do_shortcode( get_theme_mod( 'highnote_player_shortcode' ) ); ?>
+		<?php echo do_shortcode( get_theme_mod( 'highnote_player_shortcode' ) ); ?>
 	</section>
+	<?php } ?>
 <?php } ?>
