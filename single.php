@@ -28,7 +28,7 @@ get_header();
 			get_template_part( 'template-parts/post/single', get_post_format() );
 			?>
 			<?php if ( ! is_attachment() ) { ?>
-				<nav class="navigation">
+				<nav class="navigation post-navigation">
 					<div class="nav_direction">
 						<?php
 						$prev_post = get_previous_post();

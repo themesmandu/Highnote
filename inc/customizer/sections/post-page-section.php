@@ -331,7 +331,7 @@ Kirki::add_field(
 		'transport' => 'auto',
 		'output'    => array(
 			array(
-				'element'  => 'article.post, article.page, .single-post .navigation, #comments, #respond, .single-download article, .archive article.type-download',
+				'element'  => 'article.post, article.page, .single .post-navigation.navigation, #comments, #respond, .single-download article, .archive article.type-download',
 				'property' => 'background-color',
 			),
 		),
@@ -405,7 +405,7 @@ Kirki::add_field(
 		'transport' => 'auto',
 		'output'    => array(
 			array(
-				'element'  => '.entry-footer, .entry-meta, .single-post .navigation .column',
+				'element'  => '.entry-footer, .entry-meta, .navigation.post-navigation .column',
 				'property' => 'color',
 			),
 		),

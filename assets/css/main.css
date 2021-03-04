@@ -89,7 +89,7 @@ li {
 
 label {
     font-size: 14px;
-    color: #353638;
+    color: inherit;
     display: block;
 }
 
@@ -127,6 +127,7 @@ input[type="radio"] {
     padding: unset;
     width: auto;
     cursor: pointer;
+    margin: 0 5px 0 0;
 }
 
 input[type="radio"] {
@@ -698,10 +699,6 @@ body.home #content {
 
 /* -- Section Seven [Section Contact] Styles -- */
 
-.section_contact label {
-    color: inherit;
-}
-
 .section_contact form p:nth-last-child(2) {
     margin-bottom: 0;
 }
@@ -850,7 +847,6 @@ article figure {
 article .attachment-post-thumbnail {
     height: auto;
     width: auto;
-    min-height: 250px;
 }
 
 article .entry-title {
@@ -995,73 +991,72 @@ span.page-numbers.current {
     margin: 16px 0 0;
 }
 
-.single .navigation,
-.single-download .navigation {
+.navigation.post-navigation {
     margin-top: 1px;
 }
 
-.nav_direction {
+.post-navigation .nav_direction {
     display: flex;
     flex-wrap: wrap;
     margin: 0 -15px;
 }
 
-.single-post .navigation .column {
+.post-navigation .nav_direction .column {
     width: 50%;
     padding: 0 15px;
     display: flex;
     overflow: hidden;
 }
 
-.single-post .navigation .column figure {
+.post-navigation .nav_direction .column figure {
     height: 60px;
     margin: 0 20px 0 0;
     display: inline-block;
 }
 
-.single-post .navigation .column img {
+.post-navigation .nav_direction .column img {
     width: 60px;
     height: 60px;
     max-width: 60px;
     transition: all 0.3s;
 }
 
-.single-post .navigation .column figure {
+.post-navigation .nav_direction .column figure {
     position: relative;
 }
 
-.single-post .navigation .column figure a:before {
+.post-navigation .nav_direction .column figure a:before {
     content: '';
     background: rgba(0, 0, 0, .6);
     visibility: hidden;
 }
 
-.single-post .navigation .column:hover figure a:before {
+.post-navigation .nav_direction .column:hover figure a:before {
     visibility: visible;
 }
 
-.single-post .navigation span {
+.post-navigation .nav_direction span {
     color: inherit;
     font-weight: 300;
     display: block;
 }
 
-.single-post .navigation .column h4 {
+.post-navigation .nav_direction .column h4 {
     font-size: inherit;
     font-weight: 500;
     margin: 0;
 }
 
-.single-post .next_post {
+.post-navigation .nav_direction .next_post {
     text-align: right;
     margin-left: auto;
 }
 
-.single-post .next_post .next_title {
+.post-navigation .nav_direction .next_post .next_title {
     margin-left: auto;
 }
 
-.single-post .navigation .next_post figure {
+.post-navigation .nav_direction .next_post figure {
     margin: 0 0 0 20px;
 }
 
