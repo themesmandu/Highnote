@@ -1,0 +1,77 @@
+/* ====== EDD Added Plugin Styles ====== */
+
+
+/* -- Single Page Styles --*/
+
+.single .edd_download_purchase_form {
+    margin: 20px 0 0;
+}
+
+.single .edd_download_purchase_form .edd_price_options {
+    margin: 0;
+}
+
+.single .edd_download_purchase_form .edd_price_options ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -8px;
+}
+
+.single .edd_download_purchase_form .edd_price_options li {
+    width: 33.33333%;
+    padding: 0 8px;
+    margin-bottom: 16px;
+}
+
+.single .edd_download_purchase_form .edd_price_options .price-list-2 li,
+.single .edd_download_purchase_form .edd_price_options .price-list-1 li {
+    width: 50%;
+}
+
+.single .edd_download_purchase_form .edd_price_options label {
+    position: relative;
+    padding: 12px;
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+
+.single .edd_download_purchase_form .edd_price_options .selected label {
+    cursor: initial;
+}
+
+.single .edd_download_purchase_form .edd_price_options label input[type="radio"] {
+    visibility: hidden;
+    position: absolute;
+    right: 15px;
+    top: 10px;
+}
+
+.single .edd_download_purchase_form .edd_price_options .edd_price_option_price {
+    font-size: 22px;
+    font-weight: 700;
+    display: block;
+    margin-top: 8px;
+    line-height: 1.2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.single .edd_download_purchase_form .btn-beats {
+    font-size: 14px;
+}
+
+.single .edd_download_purchase_form .edd_price_options .edd_price_option_sep {
+    display: none;
+}
+
+@media (max-width: 991px) {
+    .single .edd_download_purchase_form .edd_price_options li {
+        width: 50%;
+    }
+}
+
+@media (max-width: 576px) {
+    .single .edd_download_purchase_form .edd_price_options li {
+        width: 100%;
+    }
+}

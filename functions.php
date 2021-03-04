@@ -161,6 +161,9 @@ function highnote_scripts() {
 
 	// Add font-awesome fonts, used in the main stylesheet.
 	wp_enqueue_style( 'font-awesome', get_theme_file_uri( '/assets/font-awesome-5.7.2/css/all.css' ), array( 'highnote-style' ), '5.7.2' );
+
+	// Loading EDD styles stylesheet.
+	wp_enqueue_style( 'edd-styles-css', get_theme_file_uri( '/assets/css/edd-styles.css' ), array( 'highnote-style' ), wp_get_theme()->get( 'Version' ) );
 	
 	// Bootstrap core JavaScript: jQuery first, then Popper.js, then Bootstrap JS.
 	wp_enqueue_script( 'jquery' );
@@ -176,6 +179,9 @@ function highnote_scripts() {
 
 	// Theme added JavaScript: Added by Developers For Slick Slider.
 	wp_enqueue_script( 'slick', get_template_directory_uri() . '/assets/js/slick.js', array(), wp_get_theme()->get( 'Version' ), true );
+
+	// Theme added EDD plugin: Added by Developers.
+	wp_enqueue_script( 'highnote-edd-plugin', get_template_directory_uri() . '/assets/js/edd-plugin.js', array(), wp_get_theme()->get( 'Version' ), true );
 
 	// Font Nunito And Advent Pro
 	wp_enqueue_style( 'custom-google-fonts', 'https://fonts.googleapis.com/css?family=Advent+Pro:400,600,700|Nunito:400,600,700&display=swap', false );

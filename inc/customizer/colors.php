@@ -244,15 +244,39 @@ Kirki::add_field(
 		'output'    => array(
 			array(
 				'element'  => 'button, .btn-beats, input[type="submit"], slick-arrow, .slick-active button, .navbar-toggler-icon span, #cancel-comment-reply-link,
-				span.page-numbers.current, .wp-block-button__link',
+				span.page-numbers.current, .wp-block-button__link, .single .edd_download_purchase_form .edd_price_options .selected label,
+				.single .edd_download_purchase_form .edd_price_options label:hover',
 				'property' => 'background-color',
 			),
 			array(
-				'element'  => '.is-style-outline .wp-block-button__link:hover',
+				'element'  => '.is-style-outline .wp-block-button__link:hover, .single .edd_download_purchase_form .edd_price_options label',
 				'property' => 'border-color',
 			),
 			array(
-				'element'  => '.is-style-outline .wp-block-button__link:hover',
+				'element'  => '.is-style-outline .wp-block-button__link:hover, .single .edd_download_purchase_form .edd_price_options label',
+				'property' => 'color',
+			),
+		),
+	)
+);
+
+// Button Text Color.
+Kirki::add_field(
+	'highnote_kirki_config',
+	array(
+		'type'      => 'color',
+		'settings'  => 'beats_btn_text_color',
+		'label'     => __( 'Button Text Color', 'highnote' ),
+		'section'   => 'colors',
+		'default'   => $defaults['beats_btn_text_color'],
+		'choices'   => array(
+			'alpha' => true,
+		),
+		'transport' => 'auto',
+		'output'    => array(
+			array(
+				'element'  => 'button, .btn-beats, input[type="submit"], slick-arrow, #cancel-comment-reply-link, span.page-numbers.current, .wp-block-button__link,
+				.single .edd_download_purchase_form .edd_price_options .selected label, .single .edd_download_purchase_form .edd_price_options label:hover',
 				'property' => 'color',
 			),
 		),
@@ -276,28 +300,6 @@ Kirki::add_field(
 			array(
 				'element'  => 'button:hover, .btn-beats:hover, input[type="submit"]:hover, slick-arrow:hover, #cancel-comment-reply-link:hover, .wp-block-button__link:hover',
 				'property' => 'background-color',
-			),
-		),
-	)
-);
-
-// Button Text Color.
-Kirki::add_field(
-	'highnote_kirki_config',
-	array(
-		'type'      => 'color',
-		'settings'  => 'beats_btn_text_color',
-		'label'     => __( 'Button Text Color', 'highnote' ),
-		'section'   => 'colors',
-		'default'   => $defaults['beats_btn_text_color'],
-		'choices'   => array(
-			'alpha' => true,
-		),
-		'transport' => 'auto',
-		'output'    => array(
-			array(
-				'element'  => 'button, .btn-beats, input[type="submit"], slick-arrow, #cancel-comment-reply-link, span.page-numbers.current, .wp-block-button__link',
-				'property' => 'color',
 			),
 		),
 	)

@@ -1061,37 +1061,6 @@ span.page-numbers.current {
 }
 
 
-/* -- Single Download Page Styles -- */
-
-.single-download article {
-    padding: 20px;
-}
-
-.single-download .edd_download_purchase_form {
-    margin: 20px 0 0;
-}
-
-.single-download article .edd_price_option_name,
-.single-download article .edd_price_option_price {
-    color: inherit !important;
-}
-
-.single-download article .edd_download_purchase_form .edd_price_options li {
-    margin: 20px 0 0;
-}
-
-.single-download article .edd_download_purchase_form .edd_price_options span.edd_price_option_price {
-    font-size: 20px;
-}
-
-.single-download article .edd_go_to_checkout,
-.single-download article .edd_purchase_submit_wrapper a.edd-add-to-cart.edd-has-js,
-.single-download article .edd-cart-added-alert {
-    font-size: 16px;
-    padding: 8px 20px;
-}
-
-
 /* -- Comment And Respont Form Styles -- */
 
 #comments,
