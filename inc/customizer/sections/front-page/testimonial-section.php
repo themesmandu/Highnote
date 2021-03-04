@@ -781,17 +781,3 @@ Kirki::add_field(
 );
 
 
-
-// Setting custom css.
-Kirki::add_field(
-	'highnote_kirki_config',
-	array(
-		'type'        => 'toggle',
-		'settings'    => 'testimonial_css',
-		'label'       => esc_html__( 'Use Theme Custom Designs', 'highnote' ),
-		'description' => esc_html__( 'Note: This option doesnot work visually on customizer preview. Please check front end after publishing', 'highnote' ),
-		'section'     => 'frontpage_testimonial',
-		'default'     => '1',
-	)
-);
-
