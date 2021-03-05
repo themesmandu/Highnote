@@ -1,7 +1,7 @@
-(function (wp, $) {
+(function(wp, $) {
 
-    wp.customize.bind('ready', function () {
-        wp.customize('blog_layout', function (setting) {
+    wp.customize.bind('ready', function() {
+        wp.customize('blog_layout', function(setting) {
             var value = setting.get();
             toggleLayoutSettings(value);
         });
@@ -9,9 +9,9 @@
 
     });
 
-    wp.customize.control('blog_layout', function (control) {
+    wp.customize.control('blog_layout', function(control) {
 
-        control.container.on('click', '.image-select', function (event) {
+        control.container.on('click', '.image-select', function(event) {
             event.stopPropagation();
 
             /*On layout change*/
