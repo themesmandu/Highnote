@@ -786,6 +786,10 @@ body.home #content {
 
 /* --  [Section Beats] Styles -- */
 
+.section-frontpage.section_beats {
+    overflow: unset;
+}
+
 .section_beats .btn-download:hover {
     border-bottom: none;
 }

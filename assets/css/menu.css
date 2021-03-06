@@ -27,6 +27,14 @@
     outline-color: #ffffff;
 }
 
+.main-navigation #searchform {
+    min-width: 270px;
+}
+
+.main-navigation #searchform input::placeholder {
+    font-size: 14px;
+}
+
 
 /* -- Nabbar Above Content Styles -- */
 
