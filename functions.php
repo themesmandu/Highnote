@@ -130,6 +130,21 @@ function highnote_widgets_init() {
 			'after_title'   => '</h2>',
 		)
 	);
+
+	for ( $i = 1; $i <= 4; $i++ ) {
+		register_sidebar(
+			array(
+				/* translators: %d: footer widget number. */
+				'name'          => sprintf( esc_html__( 'Footer Widgets %d', 'highnote' ), $i ),
+				'id'            => 'footer-' . $i,
+				'description'   => esc_html__( 'Add widgets here.', 'highnote' ),
+				'before_widget' => '<div id="%1$s" class="widget %2$s">',
+				'after_widget'  => '</div>',
+				'before_title'  => '<h5 class="widget-title">',
+				'after_title'   => '</h5>',
+			)
+		);
+	}
 }
 add_action( 'widgets_init', 'highnote_widgets_init' );
 
