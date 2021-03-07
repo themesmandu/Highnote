@@ -19,12 +19,12 @@
     margin-bottom: 12px;
 }
 
-#customize-control-beatsmandu_theme_options-slider_animations ul {
+#customize-control-highnote_theme_options-slider_animations ul {
     column-count: 3;
 }
 
-#customize-control-beats_player_color_start {
-    margin: 0;
+.customize-control-widget_form:not(.widget-rendered) .widget-top {
+    opacity: 1;
 }
 
 .wp-color-result-text {

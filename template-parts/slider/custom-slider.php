@@ -11,7 +11,7 @@ if ( is_front_page() && ! is_home() && get_theme_mod( 'slider_toggle' ) ) : ?>
 	if ( $active_sliders ) {
 		?>
 
-<div id="wizards_slider">
+<section id="wizards_slider">
 	<div class="slide-img-wrap">
 		<ul class="slider-list">
 		<?php foreach ( $active_sliders as $active_slider ) : ?>
@@ -39,7 +39,7 @@ if ( is_front_page() && ! is_home() && get_theme_mod( 'slider_toggle' ) ) : ?>
 
 	</div>
 		<?php endif; ?>
-</div>
+</section>
 
 <?php } ?>
 	<?php endif; ?>

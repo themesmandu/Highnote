@@ -22,7 +22,7 @@ for ( $i = 1; $i <= 4; $i++ ) {
 	}
 }
 ?>
-<footer id="footer<?php echo esc_attr( ( 0 !== count( $active ) ) ? ' with-widgets' : '' ); ?>">
+<footer id="footer" class="footer<?php echo esc_attr( ( 0 !== count( $active ) ) ? ' with-widgets' : '' ); ?>">
 	<div class="overlay"></div>
 	<div class="container">
 		<?php
@@ -37,7 +37,7 @@ for ( $i = 1; $i <= 4; $i++ ) {
 				$highnote_footer_class = 'col-lg-12';
 			}
 			?>
-			<div id="footer-widgets" class="row content">
+			<div id="footer-widgets" class="row content widget-area">
 				<?php foreach ( $active as $footer_widget_id ) : ?>
 					<div class="<?php echo esc_attr( $highnote_footer_class ); ?> col-sm-6 column">
 						<?php dynamic_sidebar( 'footer-' . $footer_widget_id ); ?>

@@ -20,14 +20,8 @@
     .order-right {
         order: 1;
     }
-    section.section-frontpage {
-        padding: 50px 0;
-    }
     .container-boxed {
         max-width: 682px;
-    }
-    .section-frontpage .section_header {
-        margin-bottom: 32px;
     }
     .custom_beat_row .column,
     .section_about .column {

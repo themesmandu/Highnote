@@ -18,7 +18,7 @@ jQuery(document).ready(function($) {
     });
 
     if ($(document).width() <= 1200) {
-        // Added class on dropdown menu span
+        // Add class on dropdown menu span
         $('.menu-item-has-children').append('<span class="caret"></span>');
 
         $('.caret').click(function() {

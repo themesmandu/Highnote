@@ -194,7 +194,7 @@ Kirki::add_field(
 		'transport' => 'auto',
 		'output'    => array(
 			array(
-				'element'  => 'a, .widget.widget_edd_cart_widget li a',
+				'element'  => 'a, .widget-area .widget_edd_cart_widget li a',
 				'property' => 'color',
 			),
 
@@ -221,7 +221,7 @@ Kirki::add_field(
 		'transport' => 'auto',
 		'output'    => array(
 			array(
-				'element'  => 'a:hover, .widget.widget_edd_cart_widget li a:hover',
+				'element'  => 'a:hover, .widget-area .widget_edd_cart_widget li a:hover',
 				'property' => 'color',
 			),
 		),

@@ -130,12 +130,14 @@
 
 .main-navigation .nav-cart .cart_content {
     display: none;
+    font-size: 14px;
     width: 270px;
     position: absolute;
     top: 100%;
     right: 0;
     padding-top: 15px;
     z-index: 9;
+    animation: fadeInUp .2s ease-in;
 }
 
 .main-navigation .cart_content::before {
@@ -202,6 +204,7 @@
 
 .main-navigation .cart_content li.edd_checkout a {
     font-size: 13px;
+    color: inherit;
     display: inline-block;
     padding: 8px 12px;
     border: 1px solid;
@@ -226,6 +229,7 @@
 
 .main-navigation .edd-remove-from-cart {
     font-size: 0;
+    color: inherit;
     position: absolute;
     top: 0;
     bottom: 0;
@@ -343,6 +347,7 @@
         bottom: 0;
         padding: 0;
         transition: .3s ease-in-out;
+        animation: unset;
     }
     .main-navigation .nav-cart .cart_content.appear {
         display: block;

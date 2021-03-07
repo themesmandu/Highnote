@@ -227,7 +227,7 @@ table caption {
 
 .header_jumbotron .btn-beats {
     padding: 10px 25px;
-    margin: 42px 0 0;
+    margin: 5% 0 0;
 }
 
 
@@ -719,10 +719,6 @@ body.home #content {
 
 
 /* -- Section Eight [Section Offer] Styles -- */
-
-.section_offer {
-    padding: 172px 0 90px;
-}
 
 .section_offer .row {
     align-items: center;
@@ -1254,20 +1250,20 @@ span.page-numbers.current {
     margin-bottom: 20px;
 }
 
-section.widget p {
+section .widget-area p {
     color: inherit
 }
 
-.widget.widget ul {
+.widget-area .widget ul {
     margin: 0;
     padding-left: 18px;
 }
 
-.widget.widget ul ul {
+.widget-area .widget ul ul {
     padding-left: 8px;
 }
 
-.widget.widget li {
+.widget-area .widget li {
     color: inherit;
     border-bottom: 1px solid rgba(0, 0, 0, .05);
     margin-bottom: 15px;
@@ -1275,19 +1271,19 @@ section.widget p {
     list-style-type: square;
 }
 
-.widget.widget li:last-child {
+.widget-area .widget li:last-child {
     border: none;
     margin: 0;
     padding: 0;
 }
 
-.widget.widget li a {
+.widget-area .widget li a {
     padding: 0;
     color: inherit;
 }
 
-.widget.widget li .post-date,
-.widget.widget li .comment-author-link {
+.widget-area .widget li .post-date,
+.widget-area .widget li .comment-author-link {
     font-size: 14px;
     color: inherit;
     text-transform: capitalize;
@@ -1295,46 +1291,52 @@ section.widget p {
     opacity: .5;
 }
 
-.widget.widget_tag_cloud a {
+.widget-area .widget_tag_cloud a {
     display: inline-block;
     border: 1px solid #e4e7eb;
     padding: 8px 12px;
     margin-bottom: 4px;
-}
-
-.widget.widget_tag_cloud a:hover {
     border-color: inherit;
 }
 
-.widget.widget .menu-item-has-children:after {
+.widget-area .widget .menu-item-has-children:after {
     display: none;
 }
 
-.widget.widget_search .form-title {
+.widget-area .widget_search .form-title {
     display: none;
 }
 
-.widget.widget_calendar table {
+.widget-area .widget_calendar table {
     text-align: center;
     border-color: inherit;
 }
 
-.widget.widget_calendar table th {
+.widget-area .widget_calendar table th {
     box-shadow: inset 0 0 5px;
     padding: 5px;
 }
 
-.widget.widget_calendar table td {
+.widget-area .widget_calendar table td {
     padding: 5px;
 }
 
-.widget.widget_calendar table #today,
-.widget.widget_calendar table td.pad {
+.widget-area .widget_calendar table #today,
+.widget-area .widget_calendar table td.pad {
     box-shadow: inset 0 0 5px;
 }
 
-.widget.widget_calendar .wp-calendar-nav {
+.widget-area .widget_calendar .wp-calendar-nav {
     margin-top: 10px;
+}
+
+.widget-area .widget_nav_menu a {
+    display: initial;
+}
+
+.widget-area .widget_nav_menu .menu-item-has-children>a::after,
+.widget-area .widget_nav_menu .menu-item-has-children .caret {
+    display: none;
 }
 
 
@@ -1353,6 +1355,62 @@ section.widget p {
     position: relative;
 }
 
-#footer .widget-title {
-    font-size: 24px;
+#footer .widget-area .column .widget {
+    margin-bottom: 30px;
+}
+
+#footer .widget-area .column .widget:nth-last-child(1) {
+    margin-bottom: 0;
+}
+
+#footer .widget-area li {
+    padding-bottom: 0;
+    border: none;
+}
+
+#footer .widget-area .widget_nav_menu li li {
+    margin-bottom: 0;
+}
+
+
+/* -- Footer Content Styles -- */
+
+#footer .footer_content_wrap {
+    text-align: center;
+}
+
+#footer.with-widgets .footer_content_wrap {
+    margin-top: 38px;
+}
+
+#footer .footer_content_wrap .beats-heading {
+    margin: 10px 0;
+}
+
+#footer .footer_content_wrap .site-info {
+    margin: 10px 0;
+}
+
+#footer .footer_content_wrap .site-info p {
+    margin: 0;
+}
+
+#footer .footer_content_wrap ul {
+    padding: 0;
+    margin: 10px 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+#footer .footer_content_wrap li {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 8px;
+}
+
+#footer .footer_content_wrap li a {
+    padding: 0;
+    display: initial;
 }
