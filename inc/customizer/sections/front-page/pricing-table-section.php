@@ -363,6 +363,11 @@ Kirki::add_field(
 					'bottom' => esc_html__( 'Bottom', 'highnote' ),
 				),
 			),
+			'table_column_animation_speed' => array(
+				'type'    => 'number',
+				'label'   => esc_html__( 'Column Animation Speed (secs)', 'highnote' ),
+				'default' => '',
+			),
 		),
 	)
 );
@@ -472,6 +477,11 @@ Kirki::add_field(
 					'top'    => esc_html__( 'Top', 'highnote' ),
 					'bottom' => esc_html__( 'Bottom', 'highnote' ),
 				),
+			),
+			'table_column_animation_speed' => array(
+				'type'    => 'number',
+				'label'   => esc_html__( 'Column Animation Speed (secs)', 'highnote' ),
+				'default' => '',
 			),
 		),
 	)

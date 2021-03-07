@@ -338,3 +338,27 @@ Kirki::add_field(
 		),
 	)
 );
+
+Kirki::add_field(
+	'highnote_kirki_config',
+	array(
+		'type'      => 'slider',
+		'settings'  => 'contact_column_animation_speed',
+		'label'     => esc_html__( 'Column Animation Speed (Secs)', 'highnote' ),
+		'section'   => 'frontpage_contact',
+		'default'   => '',
+		'choices'   => array(
+			'min'  => 0,
+			'max'  => 10,
+			'step' => 1,
+		),
+		'transport' => 'auto',
+		'output'    => array(
+			array(
+				'element'       => '',
+				'property'      => '',
+				'value_pattern' => '',
+			),
+		),
+	)
+);

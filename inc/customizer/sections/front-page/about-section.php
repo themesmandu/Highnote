@@ -369,6 +369,30 @@ Kirki::add_field(
 Kirki::add_field(
 	'highnote_kirki_config',
 	array(
+		'type'      => 'slider',
+		'settings'  => 'about_column_one_animation_speed',
+		'label'     => esc_html__( 'Column One Animation Speed (Secs)', 'highnote' ),
+		'section'   => 'frontpage_about',
+		'default'   => '',
+		'choices'   => array(
+			'min'  => 0,
+			'max'  => 10,
+			'step' => 1,
+		),
+		'transport' => 'auto',
+		'output'    => array(
+			array(
+				'element'       => '',
+				'property'      => '',
+				'value_pattern' => '',
+			),
+		),
+	)
+);
+
+Kirki::add_field(
+	'highnote_kirki_config',
+	array(
 		'type'     => 'radio-buttonset',
 		'settings' => 'about_column_two_animation',
 		'label'    => esc_html__( 'Column Two Animation', 'highnote' ),
@@ -379,6 +403,30 @@ Kirki::add_field(
 			'right'  => esc_html__( 'Right', 'highnote' ),
 			'top'    => esc_html__( 'Top', 'highnote' ),
 			'bottom' => esc_html__( 'Bottom', 'highnote' ),
+		),
+	)
+);
+
+Kirki::add_field(
+	'highnote_kirki_config',
+	array(
+		'type'      => 'slider',
+		'settings'  => 'about_column_two_animation_speed',
+		'label'     => esc_html__( 'Column Two Animation Speed (Secs)', 'highnote' ),
+		'section'   => 'frontpage_about',
+		'default'   => '',
+		'choices'   => array(
+			'min'  => 0,
+			'max'  => 10,
+			'step' => 1,
+		),
+		'transport' => 'auto',
+		'output'    => array(
+			array(
+				'element'       => '',
+				'property'      => '',
+				'value_pattern' => '',
+			),
 		),
 	)
 );

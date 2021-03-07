@@ -221,4 +221,5 @@ function highnote_sidebar_mediascreen_css() {
 }
 
 
-	add_action( 'wp_head', 'highnote_sidebar_mediascreen_css', 9999 );
+add_action( 'wp_head', 'highnote_sidebar_mediascreen_css', 9999 );
+
