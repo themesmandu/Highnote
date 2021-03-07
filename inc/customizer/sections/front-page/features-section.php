@@ -424,7 +424,7 @@ Kirki::add_field(
 	array(
 		'type'     => 'toggle',
 		'settings' => 'highnote_theme_options[feature_show_icon]',
-		'label'    => esc_html__( 'Show Icon', 'highnote' ),
+		'label'    => esc_html__( 'Show Left Icon', 'highnote' ),
 		'section'  => 'frontpage_features',
 		'default'  => $defaults['feature_show_icon'],
 	)
@@ -435,7 +435,7 @@ Kirki::add_field(
 	array(
 		'type'     => 'toggle',
 		'settings' => 'highnote_theme_options[feature_show_icon_tablet]',
-		'label'    => esc_html__( 'Show Icon Tablet View', 'highnote' ),
+		'label'    => esc_html__( 'Show Left Icon Tablet View', 'highnote' ),
 		'section'  => 'frontpage_features',
 		'default'  => $defaults['feature_show_icon_tablet'],
 	)
@@ -446,7 +446,7 @@ Kirki::add_field(
 	array(
 		'type'     => 'toggle',
 		'settings' => 'highnote_theme_options[feature_show_icon_mobile]',
-		'label'    => esc_html__( 'Show Icon Mobile View', 'highnote' ),
+		'label'    => esc_html__( 'Show Left Icon Mobile View', 'highnote' ),
 		'section'  => 'frontpage_features',
 		'default'  => $defaults['feature_show_icon_mobile'],
 	)

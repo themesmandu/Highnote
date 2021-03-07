@@ -408,9 +408,15 @@ body.home #content {
 }
 
 .section_features .count {
+    display: inline-flex;
     font-size: 85px;
     font-weight: 600;
     line-height: 1;
+    margin: 0 0 15px;
+}
+
+.section_features .count i {
+    margin: 0;
 }
 
 .section_features .column .title {

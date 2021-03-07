@@ -177,13 +177,13 @@ function highnote_feature_section_icon_mediascreen_css() {
 <style type="text/css">
 @media (max-width: 991px) and (min-width: 768px) {
 	<?php if ( ! highnote_get_theme_option( 'feature_show_icon_tablet' ) ) : ?>
-	.section_features .column i {display: none;}
+	.section_features .column i.icon {display: none;}
 	<?php endif; ?>
 }
 
 @media (max-width: 767px) {
 	<?php if ( ! highnote_get_theme_option( 'feature_show_icon_mobile' ) ) : ?>
-	.section_features .column i {display: none;}
+	.section_features .column i.icon {display: none;}
 	<?php endif; ?>
 }
 </style>
