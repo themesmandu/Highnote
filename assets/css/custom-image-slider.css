@@ -13,6 +13,7 @@
 
 #wizards_slider .slider-list li {
     float: left;
+    list-style-type: none;
 }
 
 #wizards_slider img {
@@ -176,6 +177,8 @@
 
 .slider-title button a {
     font-size: 18px;
+    color: inherit;
+    transition: .1s;
 }
 
 @media (max-width:1200px) {
