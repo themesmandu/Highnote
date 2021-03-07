@@ -27,7 +27,7 @@
 				?>
 				<div class="testimonialslide">
 					<?php foreach ( $active_tesimonials as $key => $active_tesimonial ) : ?>
-						<div class="test_slide view-<?php echo esc_attr( $active_tesimonial['column_animation'] ); ?>">
+						<div class="test_slide view-<?php echo esc_attr( $active_tesimonial['column_animation'] ); ?>" style="animation-duration:<?php echo esc_attr( $active_tesimonial['column_animation_speed'] ); ?>s;">
 							<?php if ( $active_tesimonial['image'] ) : ?>
 								<img src="<?php echo esc_url( wp_get_attachment_url( $active_tesimonial['image'] ) ); ?>" alt="<?php echo esc_html__( 'Testinomial Image', 'highnote' ); ?>">
 							<?php endif; ?>

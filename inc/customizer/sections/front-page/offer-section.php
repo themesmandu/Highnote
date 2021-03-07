@@ -593,15 +593,15 @@ Kirki::add_field(
 		'default'   => '',
 		'choices'   => array(
 			'min'  => 0,
-			'max'  => 10,
-			'step' => 1,
+			'max'  => 5,
+			'step' => 0.1,
 		),
 		'transport' => 'auto',
 		'output'    => array(
 			array(
-				'element'       => '',
-				'property'      => '',
-				'value_pattern' => '',
+				'element'       => '.section_offer .column:first-child',
+				'property'      => 'animation-duration',
+				'value_pattern' => '$s',
 			),
 		),
 	)
@@ -634,15 +634,15 @@ Kirki::add_field(
 		'default'   => '',
 		'choices'   => array(
 			'min'  => 0,
-			'max'  => 10,
-			'step' => 1,
+			'max'  => 5,
+			'step' => 0.1,
 		),
 		'transport' => 'auto',
 		'output'    => array(
 			array(
-				'element'       => '',
-				'property'      => '',
-				'value_pattern' => '',
+				'element'       => '.section_offer .column:last-child',
+				'property'      => 'animation-duration',
+				'value_pattern' => '$s',
 			),
 		),
 	)

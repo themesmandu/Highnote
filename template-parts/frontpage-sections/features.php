@@ -33,7 +33,7 @@
 					$column_class_feature = 3;
 				}
 				?>
-			<div class="col-md-<?php echo esc_attr( $column_class_feature ); ?> column <?php echo esc_attr( $active_feature['feature_highlight'] ? 'selected' : '' ); ?> view-<?php echo esc_attr( $active_feature['feature_column_animation'] ); ?>">
+			<div class="col-md-<?php echo esc_attr( $column_class_feature ); ?> column <?php echo esc_attr( $active_feature['feature_highlight'] ? 'selected' : '' ); ?> view-<?php echo esc_attr( $active_feature['feature_column_animation'] ); ?>" style="animation-duration:<?php echo esc_attr( $active_feature['feature_column_animation_speed'] ); ?>s;">
 				<div class="column-content">
 					<?php if ( $active_feature['feature_icon'] && highnote_get_theme_option( 'feature_show_icon' ) ) : ?>
 					<i class="<?php echo esc_html( $active_feature['feature_icon'] ); ?>"></i>
