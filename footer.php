@@ -22,7 +22,7 @@ for ( $i = 1; $i <= 4; $i++ ) {
 	}
 }
 ?>
-<footer id="footer<?php echo esc_attr(0 !== count( $active ) ? ' with-widgets' : ''; ?>">
+<footer id="footer<?php echo esc_attr( ( 0 !== count( $active ) ) ? ' with-widgets' : '' ); ?>">
 	<div class="overlay"></div>
 	<div class="container">
 		<?php
