@@ -50,7 +50,9 @@ if ( ! function_exists( 'highnote_setup' ) ) :
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus(
 			array(
-				'primary' => esc_html__( 'Primary', 'highnote' ),
+				'primary' => esc_html__( 'Primary Menu', 'highnote' ),
+				'social'  => esc_html__( 'Social Menu', 'highnote' ),
+				'footer'  => esc_html__( 'Footer Menu', 'highnote' ),
 			)
 		);
 

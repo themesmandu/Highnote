@@ -100,6 +100,11 @@ if ( class_exists( 'Kirki' ) ) {
 	*/
 	require get_template_directory() . '/inc/customizer/sections/post-page-section.php';
 
+	/**
+	* Footer section.
+	*/
+	require get_template_directory() . '/inc/customizer/sections/footer-settings-section.php';
+
 
 	/**
 	*
