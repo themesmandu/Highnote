@@ -120,3 +120,23 @@ Kirki::add_field(
 	)
 );
 
+Kirki::add_field(
+	'highnote_kirki_config',
+	array(
+		'type'      => 'typography',
+		'settings'  => 'footer_heading_font_size',
+		'label'     => esc_html__( 'Footer Widget Title Font Size', 'highnote' ),
+		'section'   => 'footer_options',
+		'default'   => array(
+			'font-size' => '24px',
+		),
+		'output'    => array(
+			array(
+				'element' => '#footer .widget-title',
+			),
+		),
+		'transport' => 'auto',
+
+	)
+);
+
