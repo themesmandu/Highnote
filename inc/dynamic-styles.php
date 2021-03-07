@@ -109,7 +109,7 @@ function highnote_typography_mediascreen_css() {
 		<?php endif; ?>
 
 		<?php if ( get_theme_mod( 'typography_slider_banner_tablet' ) ) : ?>
-		.beats-heading {font-size: <?php echo esc_html( $highnote_sb_heading_tablet['font-size'] ); ?>;line-height: <?php echo esc_html( $highnote_sb_heading_tablet['line-height'] ); ?>;}
+		header .beats-heading {font-size: <?php echo esc_html( $highnote_sb_heading_tablet['font-size'] ); ?>;line-height: <?php echo esc_html( $highnote_sb_heading_tablet['line-height'] ); ?>;}
 		<?php endif; ?>
 		<?php if ( get_theme_mod( 'typography_slider_banner_subheading_tablet' ) ) : ?>
 		.beats-sub-heading {font-size: <?php echo esc_html( $highnote_sb_subheading_tablet['font-size'] ); ?>;line-height: <?php echo esc_html( $highnote_sb_subheading_tablet['line-height'] ); ?>;}
@@ -143,7 +143,7 @@ function highnote_typography_mediascreen_css() {
 		<?php endif; ?>
 
 		<?php if ( get_theme_mod( 'typography_slider_banner_mobile' ) ) : ?>
-		.beats-heading {font-size: <?php echo esc_html( $highnote_sb_heading_mobile['font-size'] ); ?>;line-height: <?php echo esc_html( $highnote_sb_heading_mobile['line-height'] ); ?>;}
+		header .beats-heading {font-size: <?php echo esc_html( $highnote_sb_heading_mobile['font-size'] ); ?>;line-height: <?php echo esc_html( $highnote_sb_heading_mobile['line-height'] ); ?>;}
 		<?php endif; ?>
 		<?php if ( get_theme_mod( 'typography_slider_banner_subheading_mobile' ) ) : ?>
 		.beats-sub-heading {font-size: <?php echo esc_html( $highnote_sb_subheading_mobile['font-size'] ); ?>;line-height: <?php echo esc_html( $highnote_sb_subheading_mobile['line-height'] ); ?>;}

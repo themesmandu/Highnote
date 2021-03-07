@@ -233,6 +233,10 @@ Kirki::add_field(
 				'element'  => '#sidebar .sidebar',
 				'property' => 'background-color',
 			),
+			array(
+				'element'  => '.widget.widget_calendar table th, .widget.widget_calendar table #today, .widget.widget_calendar table td.pad',
+				'property' => 'color',
+			),
 		),
 	)
 );
@@ -254,6 +258,14 @@ Kirki::add_field(
 			array(
 				'element'  => '#sidebar .sidebar',
 				'property' => 'color',
+			),
+			array(
+				'element'  => '.widget.widget_calendar table th, .widget.widget_calendar table #today, .widget.widget_calendar table td.pad',
+				'property' => 'background-color',
+			),
+			array(
+				'element'  => '.widget.widget_calendar table th, .widget.widget_calendar table #today, .widget.widget_calendar table td.pad',
+				'property' => 'border-color',
 			),
 		),
 	)

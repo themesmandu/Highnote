@@ -56,6 +56,10 @@ Kirki::add_field(
 				'element'  => '#footer .overlay',
 				'property' => 'background',
 			),
+			array(
+				'element'  => '#footer .widget.widget_calendar table th, #footer .widget.widget_calendar table #today, #footer .widget.widget_calendar table td.pad',
+				'property' => 'color',
+			),
 		),
 	)
 );
@@ -77,6 +81,14 @@ Kirki::add_field(
 			array(
 				'element'  => '#footer',
 				'property' => 'color',
+			),
+			array(
+				'element'  => '#footer .widget.widget_calendar table th, #footer .widget.widget_calendar table #today, #footer .widget.widget_calendar table td.pad',
+				'property' => 'background-color',
+			),
+			array(
+				'element'  => '#footer .widget.widget_calendar table th, #footer .widget.widget_calendar table #today, #footer .widget.widget_calendar table td.pad',
+				'property' => 'border-color',
 			),
 		),
 	)

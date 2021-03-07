@@ -1,28 +1,18 @@
-/* -- CUstomizer Styles -- */
+/* -- Customizer Tablet Iframe Viwing Style -- */
+
+.preview-tablet .wp-full-overlay-main {
+    width: 768px;
+}
+
+
+/* -- Customizer Styles -- */
 
 .customize-control {
     margin-bottom: 28px;
 }
 
-#customize-control-beats_player_color_start,
-#customize-control-beats_player_navbar_bg,
-#customize-control-beats_player_navbar_text_color,
-#customize-control-beats_player_navbar_btn_color,
-#customize-control-beats_player_navbar_btn_text_color,
-#customize-control-beats_player_bg,
-#customize-control-beats_player_text_color,
-#customize-control-beats_player_btn_assets,
-#customize-control-beats_player_btn_text_color,
-#customize-control-beats_player_btn_added,
-#customize-control-beats_player_btn_added_text_color,
-#customize-control-beats_player_now_playing_bg,
-#customize-control-now_playing_text_color,
-#customize-control-beats_player_shared_bg_color,
-#customize-control-now_playing_btn_color,
-#customize-control-now_playing_btn_text_color,
-#customize-control-beats_player_shared_btn_color,
-#customize-control-beats_player_shared_btn_text_color {
-    margin-bottom: 12px;
+.customize-control-kirki-slider .wrapper {
+    padding: 5px 0;
 }
 
 #sub-accordion-section-colors .customize-control {
@@ -49,7 +39,7 @@
     height: 26px !important;
 }
 
-.customize-control-kirki-radio-image > .image {
+.customize-control-kirki-radio-image>.image {
     flex-wrap: nowrap;
     margin: 0 -10px;
 }
@@ -66,15 +56,15 @@
     padding: 0 10px;
 }
 
-.customize-control-kirki-radio-image input + label img {
+.customize-control-kirki-radio-image input+label img {
     transition: .2s ease-in-out;
     border: 2px solid transparent;
 }
 
-.customize-control-kirki-radio-image input:checked + label img {
+.customize-control-kirki-radio-image input:checked+label img {
     border: 2px solid #00a0d2;
 }
 
-.customize-control-kirki-toggle input:checked + .switch:after {
+.customize-control-kirki-toggle input:checked+.switch:after {
     background: #00a0d2;
 }

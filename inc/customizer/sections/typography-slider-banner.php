@@ -33,7 +33,7 @@ Kirki::add_field(
 		),
 		'output'    => array(
 			array(
-				'element' => '.beats-heading',
+				'element' => 'header .beats-heading',
 			),
 		),
 		'transport' => 'auto',

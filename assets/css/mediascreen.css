@@ -57,6 +57,14 @@
     .post-navigation .nav_direction .column:last-child {
         margin: 0;
     }
+    /* -- Footer Styles -- */
+    #footer #footer-widgets .column {
+        margin-bottom: 32px;
+    }
+    #footer #footer-widgets .column:nth-last-child(1),
+    #footer #footer-widgets .column:nth-last-child(2) {
+        margin-bottom: 0;
+    }
 }
 
 @media (max-width: 767px) {
@@ -94,6 +102,10 @@
     }
     .featured-jumbotron {
         padding: 0;
+    }
+    /* -- Footer Styles -- */
+    #footer #footer-widgets .column:nth-last-child(2) {
+        margin-bottom: 32px;
     }
 }
 

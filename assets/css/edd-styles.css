@@ -1,52 +1,64 @@
 /* ====== EDD Added Plugin Styles ====== */
 
 
+/* -- Button Styles -- */
+
+.edd-submit.button.blue {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 0;
+    outline: none !important;
+    background-image: none;
+}
+
+
 /* -- Single Page Styles --*/
 
-.single .edd_download_purchase_form {
+.edd_download_purchase_form {
     margin: 20px 0 0;
 }
 
-.single .edd_download_purchase_form .edd_price_options {
+.edd_download_purchase_form .edd_price_options {
     margin: 0;
 }
 
-.single .edd_download_purchase_form .edd_price_options ul {
+.edd_download_purchase_form .edd_price_options ul {
     display: flex;
     flex-wrap: wrap;
     margin: 0 -8px;
+    padding: 0;
 }
 
-.single .edd_download_purchase_form .edd_price_options li {
+.edd_download_purchase_form .edd_price_options li {
     width: 33.33333%;
     padding: 0 8px;
     margin-bottom: 16px;
 }
 
-.single .edd_download_purchase_form .edd_price_options .price-list-2 li,
-.single .edd_download_purchase_form .edd_price_options .price-list-1 li {
+.edd_download_purchase_form .edd_price_options .price-list-2 li,
+.edd_download_purchase_form .edd_price_options .price-list-1 li {
     width: 50%;
 }
 
-.single .edd_download_purchase_form .edd_price_options label {
+.edd_download_purchase_form .edd_price_options label {
     position: relative;
     padding: 12px;
     cursor: pointer;
     border: 1px solid transparent;
 }
 
-.single .edd_download_purchase_form .edd_price_options .selected label {
+.edd_download_purchase_form .edd_price_options .selected label {
     cursor: initial;
 }
 
-.single .edd_download_purchase_form .edd_price_options label input[type="radio"] {
+.edd_download_purchase_form .edd_price_options label input[type="radio"] {
     visibility: hidden;
     position: absolute;
     right: 15px;
     top: 10px;
 }
 
-.single .edd_download_purchase_form .edd_price_options .edd_price_option_price {
+.edd_download_purchase_form .edd_price_options .edd_price_option_price {
     font-size: 22px;
     font-weight: 700;
     display: block;
@@ -56,22 +68,55 @@
     text-overflow: ellipsis;
 }
 
-.single .edd_download_purchase_form .btn-beats {
+.edd_download_purchase_form .btn-beats {
     font-size: 14px;
 }
 
-.single .edd_download_purchase_form .edd_price_options .edd_price_option_sep {
+.edd_download_purchase_form .edd_price_options .edd_price_option_sep {
     display: none;
 }
 
+
+/* -- Widget Styles -- */
+
+.widget.widget_edd_product_details li:last-child {
+    padding: 0 8px;
+}
+
+.widget.widget_edd_product_details .edd-meta {
+    margin: 10px 0 0;
+}
+
+.widget.widget_edd_cart_widget .edd-cart-number-of-items {
+    font-style: normal;
+    color: inherit;
+    opacity: .7;
+}
+
+.widget.widget_edd_cart_widget ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+.widget.widget_edd_cart_widget li {
+    list-style-type: none;
+    margin-bottom: 0;
+    border: none;
+}
+
+.widget.widget_edd_cart_widget .cart_item {
+    padding: 0;
+    background-color: transparent;
+}
+
 @media (max-width: 991px) {
-    .single .edd_download_purchase_form .edd_price_options li {
+    .edd_download_purchase_form .edd_price_options li {
         width: 50%;
     }
 }
 
 @media (max-width: 576px) {
-    .single .edd_download_purchase_form .edd_price_options li {
+    .edd_download_purchase_form .edd_price_options li {
         width: 100%;
     }
 }
