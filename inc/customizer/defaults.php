@@ -126,8 +126,8 @@ if ( ! function_exists( 'highnote_get_default_theme_options' ) ) :
 
 		// feature section show icon
 		$defaults['feature_show_icon']        = true;
-		$defaults['feature_show_icon_tablet'] = true;
-		$defaults['feature_show_icon_mobile'] = true;
+		$defaults['feature_show_icon_tablet'] = false;
+		$defaults['feature_show_icon_mobile'] = false;
 
 		//sidebar defaults
 		$defaults['sidebar_hide_tablet'] = false;
