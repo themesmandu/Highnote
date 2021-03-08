@@ -558,12 +558,12 @@ body.home #content {
 
 .custom_beat_row .price .currency {
     font-size: 16px;
-    margin-right: 7px;
+    margin: 0 7px 0 0;
     vertical-align: middle;
 }
 
 .custom_beat_row .price .currency.last {
-    margin-left: 7px;
+    margin: 0 0 0 7px;
 }
 
 .custom_beat_row .btn-contact {
