@@ -83,7 +83,7 @@
 									<?php endif; ?>
 									<?php if ( $active_table_two['table_price'] ) : ?>
 									<h4 class="price">
-										<?php echo wp_kses_post( 'first' === $active_table_two['table_currency_position'] ? $table_currency_two : '' ); ?><?php echo wp_kses_post( $active_table_two['table_price'] ); ?><?php echo wp_kses_post( 'last' === $active_table_two['table_currency_position'] ? $table_currency_two : '' ); ?>
+										<?php echo wp_kses_post( 'first' === $active_table_two['table_currency_position'] ? $table_currency_two : '' ); ?><?php echo wp_kses_post( $active_table_two['table_price'] ); ?><?php echo wp_kses_post( 'last' === $active_table_two['table_currency_position'] ? '<span class="currency last">' . $active_table_two['table_currency'] . '</span>' : '' ); ?>
 									</h4>
 									<?php endif; ?>
 									<?php if ( $active_table_two['table_button_label'] ) : ?>
