@@ -60,25 +60,25 @@ function highnote_register_required_plugins() {
 	$plugins = array(
 
 		array(
-			'name'     => esc_html__( 'One Click Demo Import', 'beatsmandu' ),
+			'name'     => esc_html__( 'One Click Demo Import', 'highnote' ),
 			'slug'     => 'one-click-demo-import',
 			'required' => false,
 		),
 
 		array(
-			'name'     => esc_html__( 'Contact Form 7', 'beatsmandu' ),
+			'name'     => esc_html__( 'Contact Form 7', 'highnote' ),
 			'slug'     => 'contact-form-7',
 			'required' => false,
 		),
 
 		array(
-			'name'     => esc_html__( 'Easy Digital Downloads', 'beatsmandu' ),
+			'name'     => esc_html__( 'Easy Digital Downloads', 'highnote' ),
 			'slug'     => 'easy-digital-downloads',
 			'required' => false,
 		),
 
 		array(
-			'name'     => esc_html__( 'Kirki Customizer Framework', 'beatsmandu' ),
+			'name'     => esc_html__( 'Kirki Customizer Framework', 'highnote' ),
 			'slug'     => 'kirki',
 			'required' => false,
 		),

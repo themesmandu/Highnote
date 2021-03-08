@@ -2,7 +2,7 @@
 /**
  * Template part for displaying fronpage Features section
  *
- * @package Beatsmandu
+ * @package Highnote
  */
 
 

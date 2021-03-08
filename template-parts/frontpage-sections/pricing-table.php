@@ -2,7 +2,7 @@
 /**
  * Template part for displaying fronpage Pricing Table section
  *
- * @package Beatsmandu
+ * @package Highnote
  */
 
 ?>

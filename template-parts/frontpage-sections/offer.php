@@ -2,7 +2,7 @@
 /**
  * Template part for displaying fronpage offer section
  *
- * @package Beatsmandu
+ * @package Highnote
  */
 
 ?>

@@ -2,7 +2,7 @@
 /**
  * Template part for displaying fronpage contact section
  *
- * @package Beatsmandu
+ * @package Highnote
  */
 
 ?>

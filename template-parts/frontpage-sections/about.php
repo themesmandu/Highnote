@@ -3,7 +3,7 @@
 /**
  * Template part for displaying fronpage about section
  *
- * @package Beatsmandu
+ * @package Highnote
  */
 
 ?>

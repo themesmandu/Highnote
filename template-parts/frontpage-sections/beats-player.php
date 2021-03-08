@@ -2,7 +2,7 @@
 /**
  * Template part for displaying fronpage beats player section
  *
- * @package Beatsmandu
+ * @package Highnote
  */
 
 

@@ -90,7 +90,7 @@ Kirki::add_field(
 	array(
 		'type'      => 'dimensions',
 		'settings'  => 'beats_player_padding',
-		'label'     => esc_html__( 'Section Paddings', 'highnote-player' ),
+		'label'     => esc_html__( 'Section Paddings', 'highnote' ),
 		'section'   => 'frontpage_beats_player',
 		'default'   => array(
 			'padding-top'    => '90px',
@@ -100,10 +100,10 @@ Kirki::add_field(
 		),
 		'choices'   => array(
 			'labels' => array(
-				'padding-top'    => esc_html__( 'Padding Top', 'highnote-player' ),
-				'padding-right'  => esc_html__( 'Padding Right', 'highnote-player' ),
-				'padding-bottom' => esc_html__( 'Padding Bottom', 'highnote-player' ),
-				'padding-left'   => esc_html__( 'Padding Left', 'highnote-player' ),
+				'padding-top'    => esc_html__( 'Padding Top', 'highnote' ),
+				'padding-right'  => esc_html__( 'Padding Right', 'highnote' ),
+				'padding-bottom' => esc_html__( 'Padding Bottom', 'highnote' ),
+				'padding-left'   => esc_html__( 'Padding Left', 'highnote' ),
 			),
 		),
 		'transport' => 'auto',
@@ -138,7 +138,7 @@ Kirki::add_field(
 	array(
 		'type'     => 'slider',
 		'settings' => 'beats_section_bs_blur',
-		'label'    => esc_html__( 'Section Box Shadow Blur(px)', 'highnote-player' ),
+		'label'    => esc_html__( 'Section Box Shadow Blur(px)', 'highnote' ),
 		'section'  => 'frontpage_beats_player',
 		'default'  => 0,
 		'choices'  => array(
@@ -166,7 +166,7 @@ Kirki::add_field(
 	array(
 		'type'     => 'slider',
 		'settings' => 'beats_section_bs_spread',
-		'label'    => esc_html__( 'Section Box Shadow Spread(px)', 'highnote-player' ),
+		'label'    => esc_html__( 'Section Box Shadow Spread(px)', 'highnote' ),
 		'section'  => 'frontpage_beats_player',
 		'default'  => 0,
 		'choices'  => array(
@@ -194,7 +194,7 @@ Kirki::add_field(
 	array(
 		'type'     => 'color',
 		'settings' => 'beats_section_bs_color',
-		'label'    => __( 'Section Box Shadow Color', 'highnote-player' ),
+		'label'    => __( 'Section Box Shadow Color', 'highnote' ),
 		'section'  => 'frontpage_beats_player',
 		'default'  => 'rgba(0,0,0,.7)',
 		'choices'  => array(
@@ -232,8 +232,8 @@ Kirki::add_field(
 	array(
 		'type'        => 'code',
 		'settings'    => 'beats_external_store',
-		'label'       => esc_html__( 'External Store Code', 'beatsmandu' ),
-		'description' => esc_html__( 'Note: this setting will disable player and use external store', 'beatsmandu' ),
+		'label'       => esc_html__( 'External Store Code', 'highnote' ),
+		'description' => esc_html__( 'Note: this setting will disable player and use external store', 'highnote' ),
 		'section'     => 'frontpage_beats_player',
 		'choices'     => array(
 			'language' => 'html',
