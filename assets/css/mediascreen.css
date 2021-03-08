@@ -109,6 +109,13 @@
     .featured-jumbotron {
         padding: 0;
     }
+    /* -- Frontpage Section Styles -- */
+    section.section-frontpage {
+        padding: 50px 0;
+    }
+    .without-banner-slider section.section-frontpage:first-child {
+        padding-top: 120px;
+    }
     /* -- Footer Styles -- */
     #footer #footer-widgets .column:nth-last-child(2) {
         margin-bottom: 32px;
