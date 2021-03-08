@@ -891,7 +891,8 @@ article span i {
 }
 
 .entry-meta a,
-.entry-footer a {
+.entry-footer a,
+.bypostauthor {
     font-size: 14px;
 }
 
@@ -915,6 +916,10 @@ article.list-view figure {
 
 article.post .entry-meta {
     margin: 20px 0 10px;
+}
+
+.single article.post .entry-meta {
+    margin: 0 0 10px;
 }
 
 article.post .entry-summary p:last-child {
