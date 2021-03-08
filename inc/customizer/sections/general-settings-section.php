@@ -2,7 +2,7 @@
 /**
  * General settings section.
  *
- * @package Beatsmandu
+ * @package Highnote
  */
 
 

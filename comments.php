@@ -7,7 +7,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Beatsmandu
+ * @package Highnote
  */
 
 if ( post_password_required() ) {

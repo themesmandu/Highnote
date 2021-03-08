@@ -2,7 +2,7 @@
 /**
  * Theme specific dynamic styles.
  *
- * @package Beatsmandu
+ * @package Highnote
  */
 
 /**

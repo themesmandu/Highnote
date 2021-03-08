@@ -232,8 +232,8 @@ Kirki::add_field(
 	array(
 		'type'        => 'code',
 		'settings'    => 'beats_external_store',
-		'label'       => esc_html__( 'External Store Code', 'beatsmandu' ),
-		'description' => esc_html__( 'Note: this setting will disable player and use external store', 'beatsmandu' ),
+		'label'       => esc_html__( 'External Store Code', 'highnote' ),
+		'description' => esc_html__( 'Note: this setting will disable player and use external store', 'highnote' ),
 		'section'     => 'frontpage_beats_player',
 		'choices'     => array(
 			'language' => 'html',

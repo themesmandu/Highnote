@@ -3,7 +3,7 @@
 /**
  * Template part for displaying fronpage Testimonial section
  *
- * @package Beatsmandu
+ * @package Highnote
  */
 
 ?>

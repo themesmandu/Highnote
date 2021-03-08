@@ -2,7 +2,7 @@
 /**
  * Theme specific dynamic scripts.
  *
- * @package Beatsmandu
+ * @package Highnote
  */
 
 // Image Slider ko jQuery ho hai
