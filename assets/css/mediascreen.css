@@ -26,6 +26,9 @@
     .with-banner .jumbotron.header_jumbotron {
         padding: 250px 0 190px;
     }
+    .without-banner-slider section.section-frontpage:first-child {
+        padding-top: 140px;
+    }
     .container-boxed {
         max-width: 682px;
     }
