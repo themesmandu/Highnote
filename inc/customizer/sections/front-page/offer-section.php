@@ -133,22 +133,22 @@ Kirki::add_field(
 		'output'    => array(
 			array(
 				'choice'   => 'padding-top',
-				'element'  => 'section_offer',
+				'element'  => '.section_offer',
 				'property' => 'padding-top',
 			),
 			array(
 				'choice'   => 'padding-right',
-				'element'  => 'section_offer',
+				'element'  => '.section_offer',
 				'property' => 'padding-right',
 			),
 			array(
 				'choice'   => 'padding-bottom',
-				'element'  => 'section_offer',
+				'element'  => '.section_offer',
 				'property' => 'padding-bottom',
 			),
 			array(
 				'choice'   => 'padding-left',
-				'element'  => 'section_offer',
+				'element'  => '.section_offer',
 				'property' => 'padding-left',
 			),
 		),
