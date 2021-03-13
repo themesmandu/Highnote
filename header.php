@@ -52,5 +52,7 @@
 			<?php get_template_part( 'template-parts/slider/custom-slider' ); ?>
 
 		</header><!-- #masthead -->
-
+<?php if ( ! is_404() ) { ?>
 		<div id="content" class="content-wrap">
+	<?php
+}

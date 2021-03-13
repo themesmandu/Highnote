@@ -11,10 +11,10 @@
  */
 
 ?>
-
+<?php if ( ! is_404() ) { ?>
 </div><!-- #content -->
-
-<?php
+	<?php
+}
 		$active = array();
 for ( $i = 1; $i <= 4; $i++ ) {
 	if ( is_active_sidebar( 'footer-' . $i ) ) {
