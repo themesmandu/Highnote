@@ -50,7 +50,7 @@ if ( have_comments() ) :
 	</ul>
 
 
-
+	<?php if ( paginate_comments_links( array( 'echo' => false ) ) ) { ?>
 	<div class="comment_pagination">
 		<?php
 			paginate_comments_links(
@@ -62,8 +62,8 @@ if ( have_comments() ) :
 			);
 		?>
 	</div>
-
-	<?php
+		<?php
+	}
 
 	// If comments are closed and there are comments, let's leave a little note, shall we?
 	if ( ! comments_open() ) :
