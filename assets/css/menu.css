@@ -170,6 +170,7 @@
 
 .main-navigation .cart_content ul {
     padding: 0;
+    margin: 0;
 }
 
 .main-navigation .cart_content li {
@@ -395,7 +396,8 @@
     body.page-overlay #content,
     body.page-overlay #footer,
     body.page-overlay .jumbotron.header_jumbotron,
-    body.page-overlay #wizards_slider {
+    body.page-overlay #wizards_slider,
+    body.page-overlay .page-content {
         filter: blur(4px);
     }
     /* -- Navnar Collapse Hamburger Menu Animation Styles -- */
