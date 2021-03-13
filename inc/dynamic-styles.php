@@ -193,7 +193,7 @@ function highnote_feature_section_icon_mediascreen_css() {
 
 	add_action( 'wp_head', 'highnote_feature_section_icon_mediascreen_css', 9999 );
 
-	/**
+/**
  * Output generated a line of CSS from customizer values in header output.
  *
  * @link https://codex.wordpress.org/Theme_Customization_API#Sample_Theme_Customization_Class
@@ -222,4 +222,23 @@ function highnote_sidebar_mediascreen_css() {
 
 
 add_action( 'wp_head', 'highnote_sidebar_mediascreen_css', 9999 );
+	/**
+ * Output generated a line of CSS from customizer values in header output.
+ *
+ * @link https://codex.wordpress.org/Theme_Customization_API#Sample_Theme_Customization_Class
+ *
+ * Used by hook: 'wp_head'
+ *
+ * @see add_action('wp_head',$func)
+ */
+function highnote_anchor_tag_underline() {
+?>
+<style type="text/css">
+
+	<?php if ( get_theme_mod( 'link_underline' ) ) : ?>
+	#sidebar {display: none;}
+	<?php endif; ?>
+
+
+add_action( 'wp_head', 'highnote_anchor_tag_underline', 9999 );
 
