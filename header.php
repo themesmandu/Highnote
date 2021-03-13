@@ -22,7 +22,7 @@
 
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
-	<div id="page" class="site<?php echo esc_attr( ( is_front_page() && ! is_home() && get_theme_mod( 'banner_toggle' ) && get_theme_mod( 'menubar_absolute' ) ) ? ' with-banner' : '' ); ?><?php echo esc_attr( ( is_front_page() && ! is_home() && ! get_theme_mod( 'slider_toggle' ) && ! get_theme_mod( 'banner_toggle' ) && get_theme_mod( 'menubar_absolute' ) ) ? ' without-banner-slider' : '' ); ?>">
+	<div id="page" class="site<?php echo esc_attr( ( is_front_page() && ! is_home() && get_theme_mod( 'banner_toggle' ) && get_theme_mod( 'menubar_absolute' ) ) ? ' with-banner' : '' ); ?><?php echo esc_attr( ( is_front_page() && ! is_home() && ! get_theme_mod( 'slider_toggle' ) && ! get_theme_mod( 'banner_toggle' ) && get_theme_mod( 'menubar_absolute' ) ) ? ' without-banner-slider' : '' ); ?><?php echo esc_attr((get_theme_mod('menubar_absolute')) ? ' navbar-above-content' : ''); ?>">
 		<header id="top-header" class="site-header" role="banner">
 			<?php if ( get_theme_mod( 'skip_to_content_toggle' ) ) : ?>
 				<a class="skip-link screen-reader-text btn btn-beats" href="#content"><?php esc_html_e( 'To the content', 'highnote' ); ?></a>
