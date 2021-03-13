@@ -232,13 +232,15 @@ add_action( 'wp_head', 'highnote_sidebar_mediascreen_css', 9999 );
  * @see add_action('wp_head',$func)
  */
 function highnote_anchor_tag_underline() {
-?>
+	?>
 <style type="text/css">
 
-	<?php if ( get_theme_mod( 'link_underline' ) ) : ?>
+	<?php if ( highnote_get_theme_option( 'link_underline' ) ) : ?>
 	#sidebar {display: none;}
 	<?php endif; ?>
 
+	<?php
+}
 
 add_action( 'wp_head', 'highnote_anchor_tag_underline', 9999 );
 
